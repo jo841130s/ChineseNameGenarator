@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mwn-XV-YYK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -118,6 +118,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="113"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="L3X-sW-uk4">
+            <objects>
+                <viewController id="mwn-XV-YYK" customClass="HistoryViewController" customModule="Chinese_Name_Generator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XGu-ja-MIM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPZ-PI-rxX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0e-rT-0vy">
+                                        <rect key="frame" x="140.5" y="25" width="133" height="50"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="b0e-rT-0vy" firstAttribute="centerY" secondItem="YPZ-PI-rxX" secondAttribute="centerY" id="76m-dS-5oV"/>
+                                    <constraint firstAttribute="height" constant="100" id="c2K-ng-bdc"/>
+                                    <constraint firstItem="b0e-rT-0vy" firstAttribute="centerX" secondItem="YPZ-PI-rxX" secondAttribute="centerX" id="c5U-nu-Kca"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qlm-1N-3XG">
+                                <rect key="frame" x="0.0" y="152" width="414" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="1af-g6-Idj" customClass="HistoryTableViewCell" customModule="Chinese_Name_Generator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1af-g6-Idj" id="C0b-dN-C1p">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020/03/05" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUh-oy-ZzQ">
+                                                    <rect key="frame" x="306" y="34.5" width="68" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A0d-n3-ycv">
+                                                    <rect key="frame" x="20" y="11" width="38" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="A0d-n3-ycv" secondAttribute="height" multiplier="1:1" id="j3f-cO-9j8"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChineseName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WW8-ZK-Coj">
+                                                    <rect key="frame" x="68" y="18" width="123" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="A0d-n3-ycv" firstAttribute="leading" secondItem="C0b-dN-C1p" secondAttribute="leading" constant="20" id="Apo-mx-lFd"/>
+                                                <constraint firstItem="WW8-ZK-Coj" firstAttribute="leading" secondItem="A0d-n3-ycv" secondAttribute="trailing" constant="10" id="NqU-gV-p20"/>
+                                                <constraint firstItem="A0d-n3-ycv" firstAttribute="top" secondItem="C0b-dN-C1p" secondAttribute="topMargin" id="eAI-VJ-UFa"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bUh-oy-ZzQ" secondAttribute="trailing" constant="20" id="hWV-Gd-cuK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bUh-oy-ZzQ" secondAttribute="bottom" id="juw-q3-cZD"/>
+                                                <constraint firstItem="WW8-ZK-Coj" firstAttribute="centerY" secondItem="C0b-dN-C1p" secondAttribute="centerY" id="tEX-wc-2Vv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="A0d-n3-ycv" secondAttribute="bottom" id="zDX-BW-WNF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chineseNameLabel" destination="WW8-ZK-Coj" id="Xow-CZ-kPZ"/>
+                                            <outlet property="frontImage" destination="A0d-n3-ycv" id="QZ6-no-I3S"/>
+                                            <outlet property="timeLabel" destination="bUh-oy-ZzQ" id="zkS-Co-2lm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qlm-1N-3XG" firstAttribute="leading" secondItem="hYV-LF-mCd" secondAttribute="leading" id="02h-Dt-Piz"/>
+                            <constraint firstItem="hYV-LF-mCd" firstAttribute="trailing" secondItem="YPZ-PI-rxX" secondAttribute="trailing" id="7zs-y0-NgE"/>
+                            <constraint firstItem="qlm-1N-3XG" firstAttribute="top" secondItem="YPZ-PI-rxX" secondAttribute="bottom" constant="8" symbolic="YES" id="9Eg-vC-Wc2"/>
+                            <constraint firstItem="YPZ-PI-rxX" firstAttribute="top" secondItem="hYV-LF-mCd" secondAttribute="top" id="FJN-GI-E2V"/>
+                            <constraint firstItem="hYV-LF-mCd" firstAttribute="bottom" secondItem="qlm-1N-3XG" secondAttribute="bottom" id="ZM4-Hj-6Zm"/>
+                            <constraint firstItem="YPZ-PI-rxX" firstAttribute="leading" secondItem="hYV-LF-mCd" secondAttribute="leading" id="eiN-yv-bDe"/>
+                            <constraint firstItem="hYV-LF-mCd" firstAttribute="trailing" secondItem="qlm-1N-3XG" secondAttribute="trailing" id="y3C-A2-8EI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hYV-LF-mCd"/>
+                    </view>
+                    <connections>
+                        <outlet property="historyTableView" destination="qlm-1N-3XG" id="cXB-Oa-zXc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXF-5e-v4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="113"/>
         </scene>
     </scenes>
     <resources>

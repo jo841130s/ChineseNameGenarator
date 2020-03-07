@@ -13,6 +13,8 @@
 		04975DC02413886000EC257F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04975DBF2413886000EC257F /* Assets.xcassets */; };
 		04975DC32413886000EC257F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04975DC12413886000EC257F /* LaunchScreen.storyboard */; };
 		04975DCB24138B0D00EC257F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DCA24138B0D00EC257F /* HomeViewController.swift */; };
+		04975DCD241392B900EC257F /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DCC241392B900EC257F /* HistoryTableViewCell.swift */; };
+		04975DD1241393EE00EC257F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DD0241393EE00EC257F /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		04975DC22413886000EC257F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04975DC42413886000EC257F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04975DCA24138B0D00EC257F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		04975DCC241392B900EC257F /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		04975DD0241393EE00EC257F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		04975DB52413885C00EC257F /* Chinese Name Generator */ = {
 			isa = PBXGroup;
 			children = (
+				04975DCF241393D400EC257F /* ViewController */,
+				04975DCE241393CC00EC257F /* Model */,
 				04975DB62413885C00EC257F /* AppDelegate.swift */,
 				04975DB82413885C00EC257F /* SceneDelegate.swift */,
 				04975DBC2413885C00EC257F /* Main.storyboard */,
 				04975DBF2413886000EC257F /* Assets.xcassets */,
 				04975DC12413886000EC257F /* LaunchScreen.storyboard */,
 				04975DC42413886000EC257F /* Info.plist */,
-				04975DCA24138B0D00EC257F /* HomeViewController.swift */,
 			);
 			path = "Chinese Name Generator";
+			sourceTree = "<group>";
+		};
+		04975DCE241393CC00EC257F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04975DCC241392B900EC257F /* HistoryTableViewCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04975DCF241393D400EC257F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04975DCA24138B0D00EC257F /* HomeViewController.swift */,
+				04975DD0241393EE00EC257F /* HistoryViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +162,8 @@
 			files = (
 				04975DB72413885C00EC257F /* AppDelegate.swift in Sources */,
 				04975DB92413885C00EC257F /* SceneDelegate.swift in Sources */,
+				04975DCD241392B900EC257F /* HistoryTableViewCell.swift in Sources */,
+				04975DD1241393EE00EC257F /* HistoryViewController.swift in Sources */,
 				04975DCB24138B0D00EC257F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
