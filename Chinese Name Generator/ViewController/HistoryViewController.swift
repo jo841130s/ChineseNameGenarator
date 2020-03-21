@@ -35,5 +35,21 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let nextViewController = NameInformationViewController(chineseName: "黃貫中")
+        if #available(iOS 13.0, *) {
+            if let nextController = storyboard?.instantiateViewController(identifier: "NameInformationViewController") as? NameInformationViewController {
+                nextController.chineseName = nameArray[indexPath.row]
+                show(nextController, sender: nil)
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
