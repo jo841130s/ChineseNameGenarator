@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042704E02428E1D20036ADCE /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042704DF2428E1D20036ADCE /* GenderViewController.swift */; };
+		042704E22428E5C40036ADCE /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042704E12428E5C40036ADCE /* NameViewController.swift */; };
+		042704E52428E7550036ADCE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 042704E42428E7550036ADCE /* IQKeyboardManagerSwift */; };
+		042704E72428E8C00036ADCE /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042704E62428E8C00036ADCE /* CountryViewController.swift */; };
 		04975DB72413885C00EC257F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DB62413885C00EC257F /* AppDelegate.swift */; };
 		04975DB92413885C00EC257F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DB82413885C00EC257F /* SceneDelegate.swift */; };
 		04975DBE2413885C00EC257F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04975DBC2413885C00EC257F /* Main.storyboard */; };
@@ -17,10 +21,17 @@
 		04975DD1241393EE00EC257F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DD0241393EE00EC257F /* HistoryViewController.swift */; };
 		04975DD324139BAB00EC257F /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DD224139BAB00EC257F /* TipsViewController.swift */; };
 		04975DD5241E446D00EC257F /* NameInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DD4241E446D00EC257F /* NameInformationViewController.swift */; };
+		04FA037D2428EE3C003F1A4F /* BirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA037C2428EE3C003F1A4F /* BirthViewController.swift */; };
+		04FA037F2428F115003F1A4F /* TraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA037E2428F115003F1A4F /* TraitsViewController.swift */; };
+		04FA03822428F2DC003F1A4F /* TraitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA03802428F2DC003F1A4F /* TraitsCell.swift */; };
+		04FA03832428F2DC003F1A4F /* TraitsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FA03812428F2DC003F1A4F /* TraitsCell.xib */; };
 		58E7A92C326CB25CFF3E22CE /* Pods_Chinese_Name_Generator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0E1259CDA6FC1913DCC515 /* Pods_Chinese_Name_Generator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042704DF2428E1D20036ADCE /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		042704E12428E5C40036ADCE /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		042704E62428E8C00036ADCE /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
 		04975DB32413885C00EC257F /* Chinese Name Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chinese Name Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04975DB62413885C00EC257F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04975DB82413885C00EC257F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +44,10 @@
 		04975DD0241393EE00EC257F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		04975DD224139BAB00EC257F /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		04975DD4241E446D00EC257F /* NameInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInformationViewController.swift; sourceTree = "<group>"; };
+		04FA037C2428EE3C003F1A4F /* BirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewController.swift; sourceTree = "<group>"; };
+		04FA037E2428F115003F1A4F /* TraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsViewController.swift; sourceTree = "<group>"; };
+		04FA03802428F2DC003F1A4F /* TraitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsCell.swift; sourceTree = "<group>"; };
+		04FA03812428F2DC003F1A4F /* TraitsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TraitsCell.xib; sourceTree = "<group>"; };
 		86FCBE58501262DACCE22DF4 /* Pods-Chinese Name Generator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinese Name Generator.debug.xcconfig"; path = "Target Support Files/Pods-Chinese Name Generator/Pods-Chinese Name Generator.debug.xcconfig"; sourceTree = "<group>"; };
 		CF39B51973AA804844D0E05C /* Pods-Chinese Name Generator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinese Name Generator.release.xcconfig"; path = "Target Support Files/Pods-Chinese Name Generator/Pods-Chinese Name Generator.release.xcconfig"; sourceTree = "<group>"; };
 		FE0E1259CDA6FC1913DCC515 /* Pods_Chinese_Name_Generator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chinese_Name_Generator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58E7A92C326CB25CFF3E22CE /* Pods_Chinese_Name_Generator.framework in Frameworks */,
+				042704E52428E7550036ADCE /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				04975DCC241392B900EC257F /* HistoryTableViewCell.swift */,
+				04FA03802428F2DC003F1A4F /* TraitsCell.swift */,
+				04FA03812428F2DC003F1A4F /* TraitsCell.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +116,11 @@
 				04975DD0241393EE00EC257F /* HistoryViewController.swift */,
 				04975DD224139BAB00EC257F /* TipsViewController.swift */,
 				04975DD4241E446D00EC257F /* NameInformationViewController.swift */,
+				042704DF2428E1D20036ADCE /* GenderViewController.swift */,
+				042704E12428E5C40036ADCE /* NameViewController.swift */,
+				042704E62428E8C00036ADCE /* CountryViewController.swift */,
+				04FA037C2428EE3C003F1A4F /* BirthViewController.swift */,
+				04FA037E2428F115003F1A4F /* TraitsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -136,6 +159,9 @@
 			dependencies = (
 			);
 			name = "Chinese Name Generator";
+			packageProductDependencies = (
+				042704E42428E7550036ADCE /* IQKeyboardManagerSwift */,
+			);
 			productName = "Chinese Name Generator";
 			productReference = 04975DB32413885C00EC257F /* Chinese Name Generator.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +190,9 @@
 				Base,
 			);
 			mainGroup = 04975DAA2413885C00EC257F;
+			packageReferences = (
+				042704E32428E7550036ADCE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 04975DB42413885C00EC257F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,6 +209,7 @@
 			files = (
 				04975DC32413886000EC257F /* LaunchScreen.storyboard in Resources */,
 				04975DC02413886000EC257F /* Assets.xcassets in Resources */,
+				04FA03832428F2DC003F1A4F /* TraitsCell.xib in Resources */,
 				04975DBE2413885C00EC257F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,12 +247,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				04975DB72413885C00EC257F /* AppDelegate.swift in Sources */,
+				042704E02428E1D20036ADCE /* GenderViewController.swift in Sources */,
 				04975DB92413885C00EC257F /* SceneDelegate.swift in Sources */,
+				042704E72428E8C00036ADCE /* CountryViewController.swift in Sources */,
 				04975DD324139BAB00EC257F /* TipsViewController.swift in Sources */,
 				04975DCD241392B900EC257F /* HistoryTableViewCell.swift in Sources */,
+				04FA03822428F2DC003F1A4F /* TraitsCell.swift in Sources */,
+				042704E22428E5C40036ADCE /* NameViewController.swift in Sources */,
 				04975DD1241393EE00EC257F /* HistoryViewController.swift in Sources */,
 				04975DD5241E446D00EC257F /* NameInformationViewController.swift in Sources */,
+				04FA037D2428EE3C003F1A4F /* BirthViewController.swift in Sources */,
 				04975DCB24138B0D00EC257F /* HomeViewController.swift in Sources */,
+				04FA037F2428F115003F1A4F /* TraitsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +460,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		042704E32428E7550036ADCE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		042704E42428E7550036ADCE /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 042704E32428E7550036ADCE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04975DAB2413885C00EC257F /* Project object */;
 }
