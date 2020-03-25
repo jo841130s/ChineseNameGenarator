@@ -13,6 +13,7 @@ class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var tableView: UITableView!
     
     var traits = ["Artful","Beatiful","Handsome","Clever","Calm","Diligent","Elegant","Excellent","Friendly","Happy","Healthy","Lucky","Powerful","Rich","Virtous","Wise"]
+    var isSelected = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,20 +31,25 @@ class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "TraitsCell", for: indexPath) as! TraitsCell
         cell.traitLabel.text = traits[indexPath.row]
         cell.selectionStyle = .none
+        if isSelected[indexPath.row] {
+            cell.brushImageView.image = #imageLiteral(resourceName: "brush")
+        } else {
+            cell.brushImageView.image = .none
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! TraitsCell
-        var alpha : CGFloat = 0
-        if cell.brushImageView.alpha == 0 {
-            alpha = 1
-        }
-        UIView.animate(withDuration: 0.5) {
-            cell.brushImageView.alpha = alpha
+        isSelected[indexPath.row] = true
+        tableView.reloadData()
+    }
+    
+    func userTraits() {
+        for i in 0...traits.count-1 {
+            if isSelected[i] {
+                print(traits[i])
+            }
         }
     }
     
-
-
 }
