@@ -10,7 +10,17 @@ import UIKit
 
 class TipsViewController: UIViewController {
     
+    @IBOutlet var titleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if UserData().isForeigner == false {
+            titleLabel.text = "提示"
+        }
     }
+    
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

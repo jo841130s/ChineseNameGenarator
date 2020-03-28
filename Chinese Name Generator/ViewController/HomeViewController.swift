@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
         setButton(button: startButton)
         setButton(button: historyButton)
         setButton(button: tipsButton)
+        UserData().setUserData(data: false, name: "isForeigner")
     }
     
     func spinMiddleImage(){

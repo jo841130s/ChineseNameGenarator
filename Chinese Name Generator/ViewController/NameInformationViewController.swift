@@ -67,7 +67,7 @@ class NameInformationViewController: UIViewController, UITableViewDelegate, UITa
         return 50
     }
 
-    @IBAction func backButtonPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func backButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
 }

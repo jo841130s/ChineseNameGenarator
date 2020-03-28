@@ -40,7 +40,7 @@ class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        isSelected[indexPath.row] = true
+        isSelected[indexPath.row] = !isSelected[indexPath.row]
         tableView.reloadData()
     }
     

@@ -47,9 +47,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    @IBAction func backButtonPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
-    
     
 }

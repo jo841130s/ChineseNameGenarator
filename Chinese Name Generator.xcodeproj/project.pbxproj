@@ -21,6 +21,8 @@
 		04975DD1241393EE00EC257F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DD0241393EE00EC257F /* HistoryViewController.swift */; };
 		04975DD324139BAB00EC257F /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DD224139BAB00EC257F /* TipsViewController.swift */; };
 		04975DD5241E446D00EC257F /* NameInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DD4241E446D00EC257F /* NameInformationViewController.swift */; };
+		04E74FCD242F538E0001EFCE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E74FCC242F538E0001EFCE /* UserData.swift */; };
+		04E74FCF242F5B080001EFCE /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E74FCE242F5B080001EFCE /* PreferenceViewController.swift */; };
 		04FA037D2428EE3C003F1A4F /* BirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA037C2428EE3C003F1A4F /* BirthViewController.swift */; };
 		04FA037F2428F115003F1A4F /* TraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA037E2428F115003F1A4F /* TraitsViewController.swift */; };
 		04FA03822428F2DC003F1A4F /* TraitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA03802428F2DC003F1A4F /* TraitsCell.swift */; };
@@ -44,6 +46,8 @@
 		04975DD0241393EE00EC257F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		04975DD224139BAB00EC257F /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		04975DD4241E446D00EC257F /* NameInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInformationViewController.swift; sourceTree = "<group>"; };
+		04E74FCC242F538E0001EFCE /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		04E74FCE242F5B080001EFCE /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		04FA037C2428EE3C003F1A4F /* BirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewController.swift; sourceTree = "<group>"; };
 		04FA037E2428F115003F1A4F /* TraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsViewController.swift; sourceTree = "<group>"; };
 		04FA03802428F2DC003F1A4F /* TraitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsCell.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 				04975DCC241392B900EC257F /* HistoryTableViewCell.swift */,
 				04FA03802428F2DC003F1A4F /* TraitsCell.swift */,
 				04FA03812428F2DC003F1A4F /* TraitsCell.xib */,
+				04E74FCC242F538E0001EFCE /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				042704E62428E8C00036ADCE /* CountryViewController.swift */,
 				04FA037C2428EE3C003F1A4F /* BirthViewController.swift */,
 				04FA037E2428F115003F1A4F /* TraitsViewController.swift */,
+				04E74FCE242F5B080001EFCE /* PreferenceViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -246,8 +252,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E74FCF242F5B080001EFCE /* PreferenceViewController.swift in Sources */,
 				04975DB72413885C00EC257F /* AppDelegate.swift in Sources */,
 				042704E02428E1D20036ADCE /* GenderViewController.swift in Sources */,
+				04E74FCD242F538E0001EFCE /* UserData.swift in Sources */,
 				04975DB92413885C00EC257F /* SceneDelegate.swift in Sources */,
 				042704E72428E8C00036ADCE /* CountryViewController.swift in Sources */,
 				04975DD324139BAB00EC257F /* TipsViewController.swift in Sources */,
