@@ -23,6 +23,11 @@
 		04975DD5241E446D00EC257F /* NameInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DD4241E446D00EC257F /* NameInformationViewController.swift */; };
 		04E74FCD242F538E0001EFCE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E74FCC242F538E0001EFCE /* UserData.swift */; };
 		04E74FCF242F5B080001EFCE /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E74FCE242F5B080001EFCE /* PreferenceViewController.swift */; };
+		04E74FD12435D91B0001EFCE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E74FD02435D91B0001EFCE /* ResultViewController.swift */; };
+		04E74FD42435D99C0001EFCE /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E74FD22435D99C0001EFCE /* ResultCell.swift */; };
+		04E74FD52435D99C0001EFCE /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E74FD32435D99C0001EFCE /* ResultCell.xib */; };
+		04E74FD82435E7990001EFCE /* NameInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E74FD62435E7990001EFCE /* NameInformationCell.swift */; };
+		04E74FD92435E7990001EFCE /* NameInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E74FD72435E7990001EFCE /* NameInformationCell.xib */; };
 		04FA037D2428EE3C003F1A4F /* BirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA037C2428EE3C003F1A4F /* BirthViewController.swift */; };
 		04FA037F2428F115003F1A4F /* TraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA037E2428F115003F1A4F /* TraitsViewController.swift */; };
 		04FA03822428F2DC003F1A4F /* TraitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA03802428F2DC003F1A4F /* TraitsCell.swift */; };
@@ -48,6 +53,11 @@
 		04975DD4241E446D00EC257F /* NameInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInformationViewController.swift; sourceTree = "<group>"; };
 		04E74FCC242F538E0001EFCE /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		04E74FCE242F5B080001EFCE /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
+		04E74FD02435D91B0001EFCE /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		04E74FD22435D99C0001EFCE /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		04E74FD32435D99C0001EFCE /* ResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
+		04E74FD62435E7990001EFCE /* NameInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInformationCell.swift; sourceTree = "<group>"; };
+		04E74FD72435E7990001EFCE /* NameInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameInformationCell.xib; sourceTree = "<group>"; };
 		04FA037C2428EE3C003F1A4F /* BirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewController.swift; sourceTree = "<group>"; };
 		04FA037E2428F115003F1A4F /* TraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsViewController.swift; sourceTree = "<group>"; };
 		04FA03802428F2DC003F1A4F /* TraitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsCell.swift; sourceTree = "<group>"; };
@@ -110,6 +120,10 @@
 				04FA03802428F2DC003F1A4F /* TraitsCell.swift */,
 				04FA03812428F2DC003F1A4F /* TraitsCell.xib */,
 				04E74FCC242F538E0001EFCE /* UserData.swift */,
+				04E74FD22435D99C0001EFCE /* ResultCell.swift */,
+				04E74FD32435D99C0001EFCE /* ResultCell.xib */,
+				04E74FD62435E7990001EFCE /* NameInformationCell.swift */,
+				04E74FD72435E7990001EFCE /* NameInformationCell.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +141,7 @@
 				04FA037C2428EE3C003F1A4F /* BirthViewController.swift */,
 				04FA037E2428F115003F1A4F /* TraitsViewController.swift */,
 				04E74FCE242F5B080001EFCE /* PreferenceViewController.swift */,
+				04E74FD02435D91B0001EFCE /* ResultViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -216,7 +231,9 @@
 				04975DC32413886000EC257F /* LaunchScreen.storyboard in Resources */,
 				04975DC02413886000EC257F /* Assets.xcassets in Resources */,
 				04FA03832428F2DC003F1A4F /* TraitsCell.xib in Resources */,
+				04E74FD92435E7990001EFCE /* NameInformationCell.xib in Resources */,
 				04975DBE2413885C00EC257F /* Main.storyboard in Resources */,
+				04E74FD52435D99C0001EFCE /* ResultCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +272,9 @@
 				04E74FCF242F5B080001EFCE /* PreferenceViewController.swift in Sources */,
 				04975DB72413885C00EC257F /* AppDelegate.swift in Sources */,
 				042704E02428E1D20036ADCE /* GenderViewController.swift in Sources */,
+				04E74FD12435D91B0001EFCE /* ResultViewController.swift in Sources */,
 				04E74FCD242F538E0001EFCE /* UserData.swift in Sources */,
+				04E74FD42435D99C0001EFCE /* ResultCell.swift in Sources */,
 				04975DB92413885C00EC257F /* SceneDelegate.swift in Sources */,
 				042704E72428E8C00036ADCE /* CountryViewController.swift in Sources */,
 				04975DD324139BAB00EC257F /* TipsViewController.swift in Sources */,
@@ -265,6 +284,7 @@
 				04975DD1241393EE00EC257F /* HistoryViewController.swift in Sources */,
 				04975DD5241E446D00EC257F /* NameInformationViewController.swift in Sources */,
 				04FA037D2428EE3C003F1A4F /* BirthViewController.swift in Sources */,
+				04E74FD82435E7990001EFCE /* NameInformationCell.swift in Sources */,
 				04975DCB24138B0D00EC257F /* HomeViewController.swift in Sources */,
 				04FA037F2428F115003F1A4F /* TraitsViewController.swift in Sources */,
 			);

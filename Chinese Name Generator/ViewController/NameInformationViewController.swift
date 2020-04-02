@@ -24,48 +24,51 @@ class NameInformationViewController: UIViewController, UITableViewDelegate, UITa
         chineseNameLabel.text = chineseName
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UINib(nibName: "NameInformationCell", bundle: nil), forCellReuseIdentifier: "NameInformationCell")
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 2
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return howToRead?.count ?? 0
-        case 1:
-            return basicInfo?.count ?? 0
-        default:
-            return 0
-        }
+//        switch section {
+//        case 0:
+//            return howToRead?.count ?? 0
+//        case 1:
+//            return basicInfo?.count ?? 0
+//        default:
+//            return 0
+//        }
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        if indexPath.section == 0 {
-            cell.textLabel?.text = howToRead?[indexPath.row]
-        } else if indexPath.section == 1 {
-            cell.textLabel?.text = basicInfo?[indexPath.row]
-        }
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        if indexPath.section == 0 {
+//            cell.textLabel?.text = howToRead?[indexPath.row]
+//        } else if indexPath.section == 1 {
+//            cell.textLabel?.text = basicInfo?[indexPath.row]
+//        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NameInformationCell", for: indexPath) as! NameInformationCell
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "How to Read"
-        case 1:
-            return "Meaning"
-        default:
-            return nil
-        }
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        switch section {
+//        case 0:
+//            return "How to Read"
+//        case 1:
+//            return "Meaning"
+//        default:
+//            return nil
+//        }
+//    }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
-    }
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 50
+//    }
 
     @IBAction func backButton(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
