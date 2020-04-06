@@ -7,30 +7,42 @@
 //
 
 import UIKit
+import Alamofire
 
-class PreferenceViewController: UIViewController {
+class PreferenceViewController: UIViewController, JsonDelegate {
 
     @IBOutlet var tableView: UITableView!
     var cellTitle = ["123","234","456"]
+    let jsonBuilder = JSONBuilder()
+    var nameData : NameData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        jsonBuilder.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        UserData().setUserData(data: 3, name: "Name")
+        jsonBuilder.requestNameData()
     }
-    */
-
+    
+    func nameDataReceived(data: NameData) {
+        nameData = data
+        performSegue(withIdentifier: "goResult", sender: self)
+    }
+    
+    func nameDataNotReceived() {
+        print("data not received")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! ResultViewController
+        controller.namesData = nameData
+    }
+    
 }
 
 extension PreferenceViewController : UITableViewDelegate, UITableViewDataSource {

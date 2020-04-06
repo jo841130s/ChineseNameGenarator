@@ -36,5 +36,14 @@ class GenderViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func viewWillDisappear(_ animated: Bool) {
+        var gender = "Male"
+        if genderSegmentControl.selectedSegmentIndex == 0 {
+            gender = "Male"
+        } else if genderSegmentControl.selectedSegmentIndex == 1 {
+            gender = "Female"
+        }
+        UserData().setUserData(data: gender, name: "Gender")
+    }
 
 }

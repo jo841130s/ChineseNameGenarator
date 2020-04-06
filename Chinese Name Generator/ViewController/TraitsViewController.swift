@@ -44,12 +44,18 @@ class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.reloadData()
     }
     
-    func userTraits() {
+    func userTraits() -> [String] {
+        var userTraits : [String] = []
         for i in 0...traits.count-1 {
             if isSelected[i] {
-                print(traits[i])
+                userTraits.append(traits[i])
             }
         }
+        return userTraits
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        UserData().setUserData(data: userTraits(), name: "Traits")
     }
     
 }

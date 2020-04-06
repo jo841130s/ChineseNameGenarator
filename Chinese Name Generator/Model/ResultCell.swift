@@ -9,9 +9,8 @@
 import UIKit
 
 class ResultCell: UITableViewCell {
-
-    @IBOutlet var firstWord: UILabel!
     
+    @IBOutlet var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

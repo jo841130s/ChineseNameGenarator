@@ -16,8 +16,6 @@ class BirthViewController: UIViewController {
     @IBOutlet var horoscopeLabel: UILabel!
     @IBOutlet var horoscopeImageView: UIImageView!
     
-    var userBirthday = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.addTarget(self, action: #selector(BirthViewController.caculateZodiac), for: UIControl.Event.valueChanged)
@@ -89,10 +87,10 @@ class BirthViewController: UIViewController {
         }
     }
     
-    func chageDateToString(){
+    func userBirthDay()->String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        userBirthday = dateFormatter.string(from: datePicker.date)
+        return dateFormatter.string(from: datePicker.date)
     }
     
     func updateZodiac(zodiac:String){
@@ -103,6 +101,10 @@ class BirthViewController: UIViewController {
     func updateHoroscope(horoscope:String){
         horoscopeLabel.text = horoscope
         horoscopeImageView.image = UIImage(named: horoscope)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        UserData().setUserData(data: userBirthDay(), name: "Birth")
     }
     
 }

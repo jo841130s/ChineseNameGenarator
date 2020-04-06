@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JML-4n-HWc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s0F-5B-lkA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,7 +64,7 @@
                                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="A02-cy-edx" kind="show" id="D8c-eI-Dfa"/>
+                                                    <segue destination="zVI-h9-YuM" kind="show" id="gHe-Rn-3OP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcw-Xa-UVb">
@@ -130,22 +130,6 @@
             </objects>
             <point key="canvasLocation" x="312" y="113"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="P37-rV-SAp">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="A02-cy-edx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7hf-ez-hV7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6FF-VM-AT9"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1Hk-pi-byc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o5t-yH-NoE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1612" y="790"/>
-        </scene>
         <!--Gender View Controller-->
         <scene sceneID="q4o-G6-zPV">
             <objects>
@@ -201,6 +185,9 @@
                                         <state key="normal" title="Next">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="TGu-LU-Rhp" kind="show" id="jWb-wZ-yf5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,7 +203,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPO-co-lv0">
                                 <rect key="frame" x="30" y="212" width="354" height="530"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Elk-98-Yob">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Elk-98-Yob">
                                         <rect key="frame" x="113.5" y="453" width="127" height="48"/>
                                         <segments>
                                             <segment title="Male"/>
@@ -226,7 +213,7 @@
                                             <action selector="genderSegmentControl:" destination="zVI-h9-YuM" eventType="valueChanged" id="2dv-8R-F6s"/>
                                         </connections>
                                     </segmentedControl>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="male" translatesAutoresizingMaskIntoConstraints="NO" id="5xk-Ki-Qho">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male" translatesAutoresizingMaskIntoConstraints="NO" id="5xk-Ki-Qho">
                                         <rect key="frame" x="30" y="30" width="294" height="393"/>
                                     </imageView>
                                 </subviews>
@@ -255,6 +242,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jiQ-ZV-01g"/>
                     </view>
+                    <navigationItem key="navigationItem" id="n1B-LT-laT"/>
                     <connections>
                         <outlet property="genderImageView" destination="5xk-Ki-Qho" id="bt7-M1-DZ7"/>
                         <outlet property="genderSegmentControl" destination="Elk-98-Yob" id="TbO-eQ-dSo"/>
@@ -262,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1p-u3-sFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="790"/>
+            <point key="canvasLocation" x="1612" y="826"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="L3X-sW-uk4">
@@ -492,6 +480,9 @@
                                         <state key="normal" title="Next">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="L4F-eK-XCD" kind="show" id="HSR-aQ-ULU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -545,6 +536,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vaU-r0-MW2"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HMp-vd-5z6"/>
                     <connections>
                         <outlet property="firstNameTextField" destination="CEk-67-zMT" id="tfB-vp-v7L"/>
                         <outlet property="lastNameTextField" destination="cCR-EP-DV5" id="Ncp-zy-Wh3"/>
@@ -552,7 +544,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1h9-pK-UE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3104" y="790"/>
+            <point key="canvasLocation" x="2351" y="826"/>
         </scene>
         <!--Country View Controller-->
         <scene sceneID="N3I-bO-SEc">
@@ -609,6 +601,9 @@
                                         <state key="normal" title="Next">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Bt7-hd-33d" kind="show" id="LBZ-rd-Tog"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -650,13 +645,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EHA-jP-gO2"/>
                     </view>
+                    <navigationItem key="navigationItem" id="E9M-Yv-vUS"/>
                     <connections>
                         <outlet property="countryPickerView" destination="mk5-FQ-FuV" id="dqs-VW-eTs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hT7-t9-ru3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3817" y="790"/>
+            <point key="canvasLocation" x="3064" y="826"/>
         </scene>
         <!--Birth View Controller-->
         <scene sceneID="acM-Fa-ACH">
@@ -713,6 +709,9 @@
                                         <state key="normal" title="Next">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="JPy-dw-nKb" kind="show" id="N9J-pd-Ew7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -741,10 +740,10 @@
                                         <rect key="frame" x="0.0" y="246" width="354" height="254"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="17f-5a-vn9">
-                                                <rect key="frame" x="20" y="-82.5" width="314" height="419"/>
+                                                <rect key="frame" x="20" y="4" width="314" height="246.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2tI-gP-pOt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="419"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="246.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese Zodiac" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-ja-n3m">
                                                                 <rect key="frame" x="0.0" y="0.0" width="152" height="17.5"/>
@@ -759,12 +758,12 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Monkey" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-u2-gPg">
-                                                                <rect key="frame" x="0.0" y="72.5" width="152" height="346.5"/>
+                                                                <rect key="frame" x="0.0" y="72.5" width="152" height="174"/>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-ql-CGI">
-                                                        <rect key="frame" x="162" y="0.0" width="152" height="419"/>
+                                                        <rect key="frame" x="162" y="0.0" width="152" height="246.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horoscope" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISg-94-csd">
                                                                 <rect key="frame" x="0.0" y="0.0" width="152" height="18"/>
@@ -779,7 +778,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Capricorn" translatesAutoresizingMaskIntoConstraints="NO" id="CEk-Ba-kJu">
-                                                                <rect key="frame" x="0.0" y="74" width="152" height="345"/>
+                                                                <rect key="frame" x="0.0" y="74" width="152" height="172.5"/>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
@@ -821,6 +820,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="boR-aI-QLx"/>
                     </view>
+                    <navigationItem key="navigationItem" id="x9g-WE-Ehm"/>
                     <connections>
                         <outlet property="chineseZodiacImageView" destination="yoK-u2-gPg" id="dHf-Ja-l8e"/>
                         <outlet property="chineseZodiacLabel" destination="4Cx-4k-tNX" id="L0W-hB-gjl"/>
@@ -831,7 +831,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOY-7D-AVX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4540.579710144928" y="789.50892857142856"/>
+            <point key="canvasLocation" x="3788" y="826"/>
         </scene>
         <!--Traits View Controller-->
         <scene sceneID="oT0-nj-RyS">
@@ -888,6 +888,9 @@
                                         <state key="normal" title="Next">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="eKi-dN-zPg" kind="show" id="dTF-uj-dTl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -931,13 +934,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HIU-4E-9TD"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lwX-MV-lwx"/>
                     <connections>
                         <outlet property="tableView" destination="Eeu-Ir-pHr" id="qGh-nT-9HL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whe-NB-51g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4541" y="1481"/>
+            <point key="canvasLocation" x="3788" y="1517"/>
         </scene>
         <!--Tips View Controller-->
         <scene sceneID="mCM-1b-a2P">
@@ -1122,6 +1126,9 @@
                                         <state key="normal" title="Next">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="eKi-dN-zPg" eventType="touchUpInside" id="Rro-of-L6L"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1227,18 +1234,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L7l-Ri-dvy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dbD-8a-Zlg"/>
                     <connections>
                         <outlet property="tableView" destination="r4i-d2-PA1" id="GWp-5D-eT6"/>
+                        <segue destination="x3C-VP-nme" kind="show" identifier="goResult" id="We1-ld-G72"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XxN-Wa-d7S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3815.9420289855075" y="1480.5803571428571"/>
+            <point key="canvasLocation" x="3064" y="1517"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="xiH-16-KIM">
             <objects>
-                <viewController id="x3C-VP-nme" customClass="ResultViewController" customModule="Chinese_Name_Generator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" id="x3C-VP-nme" customClass="ResultViewController" customModule="Chinese_Name_Generator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uqh-sc-Z7j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1323,13 +1332,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yn9-uF-Z52"/>
                     </view>
+                    <navigationItem key="navigationItem" id="73a-Cr-4ZQ"/>
                     <connections>
                         <outlet property="tableView" destination="Xms-dy-57e" id="PdO-Cm-rMT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMN-HM-8NM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3103" y="1481"/>
+            <point key="canvasLocation" x="2351" y="1517"/>
         </scene>
     </scenes>
     <resources>

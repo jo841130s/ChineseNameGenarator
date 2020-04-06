@@ -11,6 +11,8 @@
 		042704E22428E5C40036ADCE /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042704E12428E5C40036ADCE /* NameViewController.swift */; };
 		042704E52428E7550036ADCE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 042704E42428E7550036ADCE /* IQKeyboardManagerSwift */; };
 		042704E72428E8C00036ADCE /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042704E62428E8C00036ADCE /* CountryViewController.swift */; };
+		044F7D802439CC42007B64E4 /* JSONBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F7D7F2439CC42007B64E4 /* JSONBuilder.swift */; };
+		044F7D822439D227007B64E4 /* NamesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F7D812439D227007B64E4 /* NamesData.swift */; };
 		04975DB72413885C00EC257F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DB62413885C00EC257F /* AppDelegate.swift */; };
 		04975DB92413885C00EC257F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DB82413885C00EC257F /* SceneDelegate.swift */; };
 		04975DBE2413885C00EC257F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04975DBC2413885C00EC257F /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		042704DF2428E1D20036ADCE /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		042704E12428E5C40036ADCE /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		042704E62428E8C00036ADCE /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		044F7D7F2439CC42007B64E4 /* JSONBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONBuilder.swift; sourceTree = "<group>"; };
+		044F7D812439D227007B64E4 /* NamesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesData.swift; sourceTree = "<group>"; };
 		04975DB32413885C00EC257F /* Chinese Name Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chinese Name Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04975DB62413885C00EC257F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04975DB82413885C00EC257F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				04E74FD32435D99C0001EFCE /* ResultCell.xib */,
 				04E74FD62435E7990001EFCE /* NameInformationCell.swift */,
 				04E74FD72435E7990001EFCE /* NameInformationCell.xib */,
+				044F7D7F2439CC42007B64E4 /* JSONBuilder.swift */,
+				044F7D812439D227007B64E4 /* NamesData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +180,7 @@
 				04975DAF2413885C00EC257F /* Sources */,
 				04975DB02413885C00EC257F /* Frameworks */,
 				04975DB12413885C00EC257F /* Resources */,
+				E8BD8B39B1BD9FA68116C4D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +269,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E8BD8B39B1BD9FA68116C4D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chinese Name Generator/Pods-Chinese Name Generator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chinese Name Generator/Pods-Chinese Name Generator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chinese Name Generator/Pods-Chinese Name Generator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -281,9 +305,11 @@
 				04975DCD241392B900EC257F /* HistoryTableViewCell.swift in Sources */,
 				04FA03822428F2DC003F1A4F /* TraitsCell.swift in Sources */,
 				042704E22428E5C40036ADCE /* NameViewController.swift in Sources */,
+				044F7D802439CC42007B64E4 /* JSONBuilder.swift in Sources */,
 				04975DD1241393EE00EC257F /* HistoryViewController.swift in Sources */,
 				04975DD5241E446D00EC257F /* NameInformationViewController.swift in Sources */,
 				04FA037D2428EE3C003F1A4F /* BirthViewController.swift in Sources */,
+				044F7D822439D227007B64E4 /* NamesData.swift in Sources */,
 				04E74FD82435E7990001EFCE /* NameInformationCell.swift in Sources */,
 				04975DCB24138B0D00EC257F /* HomeViewController.swift in Sources */,
 				04FA037F2428F115003F1A4F /* TraitsViewController.swift in Sources */,

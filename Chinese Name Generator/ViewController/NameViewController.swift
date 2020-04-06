@@ -21,6 +21,10 @@ class NameViewController: UIViewController {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
     }
 
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        let userData = UserData()
+        userData.setUserData(data: firstNameTextField.text ?? "", name: "FirstName")
+        userData.setUserData(data: lastNameTextField.text ?? "", name: "LastName")
+    }
     
 }

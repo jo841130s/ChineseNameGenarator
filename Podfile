@@ -6,5 +6,8 @@ target 'Chinese Name Generator' do
   use_frameworks!
 
   # Pods for Chinese Name Generator
+  
+  pod 'Alamofire', '~> 5.1'
+  pod 'SwiftyJSON', '~> 4.0'
 
 end

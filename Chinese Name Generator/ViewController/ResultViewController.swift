@@ -11,6 +11,7 @@ import UIKit
 class ResultViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    var namesData : NameData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,12 @@ class ResultViewController: UIViewController {
 extension ResultViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 9
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as! ResultCell
+        cell.nameLabel.text = namesData?.names[indexPath.row].traditional
         return cell
     }
     

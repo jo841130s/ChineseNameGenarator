@@ -21,4 +21,8 @@ class UserData {
         userDefaults.set(data, forKey: name)
     }
     
+    func userData(name:String) -> Any?{
+        return userDefaults.object(forKey: name)
+    }
+    
 }
