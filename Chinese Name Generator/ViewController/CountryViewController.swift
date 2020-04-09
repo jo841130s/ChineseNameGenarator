@@ -11,6 +11,8 @@ import UIKit
 class CountryViewController: UIViewController {
 
     @IBOutlet var countryPickerView: UIPickerView!
+    var selectedCountry = "Australia"
+    let userData = UserData()
     
     let countriesArray = ["Australia", "Belgium", "Bulgaria", "Canada", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "India", "Indonesia", "Latvia", "Lithuania", "Luxembourg", "Malaysia", "Myanmar", "Malta", "Netherlands", "New Zealand", "Peru", "Philippines", "Poland", "Portugal", "Romania", "Singapore", "Slovakia", "Slovenia", "Spain", "Sweden", "Taiwan", "Thailand", "United Kingdom", "USA", "Vietnam", "Others"]
     
@@ -20,9 +22,12 @@ class CountryViewController: UIViewController {
         countryPickerView.dataSource = self
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
-        let selectedNum = countryPickerView.selectedRow(inComponent: 0)
-        UserData().setUserData(data: countriesArray[selectedNum], name: "Counrty")
+        userData.setUserData(data: selectedCountry, name: "Country")
     }
 
 }
@@ -39,6 +44,10 @@ extension CountryViewController : UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return countriesArray[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedCountry = countriesArray[row]
     }
     
 }

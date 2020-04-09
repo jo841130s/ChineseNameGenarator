@@ -21,6 +21,10 @@ class NameViewController: UIViewController {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
     }
 
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         let userData = UserData()
         userData.setUserData(data: firstNameTextField.text ?? "", name: "FirstName")

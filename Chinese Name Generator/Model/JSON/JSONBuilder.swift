@@ -20,11 +20,10 @@ class JSONBuilder {
             if let data = response.data, let namesData = try?
                 decoder.decode(NameData.self, from: data)
             {
-//                print(namesData)
                 self.delegate?.nameDataReceived(data: namesData)
             } else {
-                print("error")
-                print(response)
+                print(response.error ?? "error")
+                self.delegate?.nameDataNotReceived(error: response.error)
             }
         })
         
@@ -37,8 +36,7 @@ class JSONBuilder {
         let gender = userData.userData(name: "Gender") as! String
         let surname = userData.userData(name: "FirstName") as! String
         let given_name = userData.userData(name: "LastName") as! String
-//        let country = userData.userData(name: "Country") as! String
-        let country = "Taiwan"
+        let country = userData.userData(name: "Country") as! String
         let birthday = userData.userData(name: "Birth") as! String
         let traits = userData.userData(name: "Traits") as! [String]
         var traitString = ""
@@ -53,5 +51,5 @@ class JSONBuilder {
 
 protocol JsonDelegate {
     func nameDataReceived(data:NameData)
-    func nameDataNotReceived()
+    func nameDataNotReceived(error:AFError?)
 }

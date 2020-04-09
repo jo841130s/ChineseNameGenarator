@@ -12,6 +12,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var nameArray = ["123","456","789"]
     var timeArray = ["2020/07/09","2020/05/04","2020/01/02"]
+    var selectedRow = 0
     
     @IBOutlet var historyTableView: UITableView!
     
@@ -36,19 +37,17 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let nextViewController = NameInformationViewController(chineseName: "黃貫中")
-        if #available(iOS 13.0, *) {
-            if let nextController = storyboard?.instantiateViewController(identifier: "NameInformationViewController") as? NameInformationViewController {
-                nextController.chineseName = nameArray[indexPath.row]
-                show(nextController, sender: nil)
-            }
-        } else {
-            // Fallback on earlier versions
-        }
+        selectedRow = indexPath.row
+        performSegue(withIdentifier: "goNameInfo", sender: self)
     }
     
     @IBAction func backButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! NameInformationViewController
+        controller.chineseName = nameArray[selectedRow]
     }
     
 }

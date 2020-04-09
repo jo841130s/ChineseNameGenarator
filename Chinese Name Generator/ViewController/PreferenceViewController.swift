@@ -34,8 +34,12 @@ class PreferenceViewController: UIViewController, JsonDelegate {
         performSegue(withIdentifier: "goResult", sender: self)
     }
     
-    func nameDataNotReceived() {
-        print("data not received")
+    func nameDataNotReceived(error:AFError?) {
+        print("data not received, error: \(String(describing: error))")
+    }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

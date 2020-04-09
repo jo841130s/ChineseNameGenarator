@@ -54,6 +54,10 @@ class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return userTraits
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         UserData().setUserData(data: userTraits(), name: "Traits")
     }

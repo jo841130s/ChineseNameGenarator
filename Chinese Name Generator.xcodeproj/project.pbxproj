@@ -11,6 +11,9 @@
 		042704E22428E5C40036ADCE /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042704E12428E5C40036ADCE /* NameViewController.swift */; };
 		042704E52428E7550036ADCE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 042704E42428E7550036ADCE /* IQKeyboardManagerSwift */; };
 		042704E72428E8C00036ADCE /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042704E62428E8C00036ADCE /* CountryViewController.swift */; };
+		043F3B09243C6B8000ED8744 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F3B08243C6B8000ED8744 /* SettingViewController.swift */; };
+		043F3B10243C6C0B00ED8744 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F3B0E243C6C0B00ED8744 /* SettingCell.swift */; };
+		043F3B11243C6C0B00ED8744 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043F3B0F243C6C0B00ED8744 /* SettingCell.xib */; };
 		044F7D802439CC42007B64E4 /* JSONBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F7D7F2439CC42007B64E4 /* JSONBuilder.swift */; };
 		044F7D822439D227007B64E4 /* NamesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F7D812439D227007B64E4 /* NamesData.swift */; };
 		04975DB72413885C00EC257F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DB62413885C00EC257F /* AppDelegate.swift */; };
@@ -41,6 +44,9 @@
 		042704DF2428E1D20036ADCE /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		042704E12428E5C40036ADCE /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		042704E62428E8C00036ADCE /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		043F3B08243C6B8000ED8744 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		043F3B0E243C6C0B00ED8744 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		043F3B0F243C6C0B00ED8744 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		044F7D7F2439CC42007B64E4 /* JSONBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONBuilder.swift; sourceTree = "<group>"; };
 		044F7D812439D227007B64E4 /* NamesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesData.swift; sourceTree = "<group>"; };
 		04975DB32413885C00EC257F /* Chinese Name Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chinese Name Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +90,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043F3B0A243C6BB400ED8744 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04975DCC241392B900EC257F /* HistoryTableViewCell.swift */,
+				04FA03802428F2DC003F1A4F /* TraitsCell.swift */,
+				04FA03812428F2DC003F1A4F /* TraitsCell.xib */,
+				04E74FD22435D99C0001EFCE /* ResultCell.swift */,
+				04E74FD32435D99C0001EFCE /* ResultCell.xib */,
+				04E74FD62435E7990001EFCE /* NameInformationCell.swift */,
+				04E74FD72435E7990001EFCE /* NameInformationCell.xib */,
+				043F3B0E243C6C0B00ED8744 /* SettingCell.swift */,
+				043F3B0F243C6C0B00ED8744 /* SettingCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		043F3B0B243C6BD300ED8744 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				044F7D7F2439CC42007B64E4 /* JSONBuilder.swift */,
+				044F7D812439D227007B64E4 /* NamesData.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		04975DAA2413885C00EC257F = {
 			isa = PBXGroup;
 			children = (
@@ -120,16 +151,9 @@
 		04975DCE241393CC00EC257F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04975DCC241392B900EC257F /* HistoryTableViewCell.swift */,
-				04FA03802428F2DC003F1A4F /* TraitsCell.swift */,
-				04FA03812428F2DC003F1A4F /* TraitsCell.xib */,
+				043F3B0B243C6BD300ED8744 /* JSON */,
+				043F3B0A243C6BB400ED8744 /* Cell */,
 				04E74FCC242F538E0001EFCE /* UserData.swift */,
-				04E74FD22435D99C0001EFCE /* ResultCell.swift */,
-				04E74FD32435D99C0001EFCE /* ResultCell.xib */,
-				04E74FD62435E7990001EFCE /* NameInformationCell.swift */,
-				04E74FD72435E7990001EFCE /* NameInformationCell.xib */,
-				044F7D7F2439CC42007B64E4 /* JSONBuilder.swift */,
-				044F7D812439D227007B64E4 /* NamesData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +172,7 @@
 				04FA037E2428F115003F1A4F /* TraitsViewController.swift */,
 				04E74FCE242F5B080001EFCE /* PreferenceViewController.swift */,
 				04E74FD02435D91B0001EFCE /* ResultViewController.swift */,
+				043F3B08243C6B8000ED8744 /* SettingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -237,6 +262,7 @@
 			files = (
 				04975DC32413886000EC257F /* LaunchScreen.storyboard in Resources */,
 				04975DC02413886000EC257F /* Assets.xcassets in Resources */,
+				043F3B11243C6C0B00ED8744 /* SettingCell.xib in Resources */,
 				04FA03832428F2DC003F1A4F /* TraitsCell.xib in Resources */,
 				04E74FD92435E7990001EFCE /* NameInformationCell.xib in Resources */,
 				04975DBE2413885C00EC257F /* Main.storyboard in Resources */,
@@ -297,7 +323,9 @@
 				04975DB72413885C00EC257F /* AppDelegate.swift in Sources */,
 				042704E02428E1D20036ADCE /* GenderViewController.swift in Sources */,
 				04E74FD12435D91B0001EFCE /* ResultViewController.swift in Sources */,
+				043F3B10243C6C0B00ED8744 /* SettingCell.swift in Sources */,
 				04E74FCD242F538E0001EFCE /* UserData.swift in Sources */,
+				043F3B09243C6B8000ED8744 /* SettingViewController.swift in Sources */,
 				04E74FD42435D99C0001EFCE /* ResultCell.swift in Sources */,
 				04975DB92413885C00EC257F /* SceneDelegate.swift in Sources */,
 				042704E72428E8C00036ADCE /* CountryViewController.swift in Sources */,

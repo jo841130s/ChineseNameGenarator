@@ -103,6 +103,10 @@ class BirthViewController: UIViewController {
         horoscopeImageView.image = UIImage(named: horoscope)
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         UserData().setUserData(data: userBirthDay(), name: "Birth")
     }

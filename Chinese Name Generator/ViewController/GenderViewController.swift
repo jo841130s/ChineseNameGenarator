@@ -27,15 +27,12 @@ class GenderViewController: UIViewController {
             genderImageView.image = UIImage(named: "female")
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
-    */
+    
+    
     override func viewWillDisappear(_ animated: Bool) {
         var gender = "Male"
         if genderSegmentControl.selectedSegmentIndex == 0 {
