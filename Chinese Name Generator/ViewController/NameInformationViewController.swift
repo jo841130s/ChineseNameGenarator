@@ -60,21 +60,6 @@ class NameInformationViewController: UIViewController, UITableViewDelegate, UITa
         cell.strokeLabel.text = data.stroke
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 0:
-//            return "How to Read"
-//        case 1:
-//            return "Meaning"
-//        default:
-//            return nil
-//        }
-//    }
-    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 50
-//    }
 
     @IBAction func backButton(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)

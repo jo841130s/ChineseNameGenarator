@@ -501,7 +501,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="L4F-eK-XCD" kind="show" id="HSR-aQ-ULU"/>
+                                            <action selector="nextButtonPressed:" destination="TGu-LU-Rhp" eventType="touchUpInside" id="EPY-M0-zg4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -560,6 +560,7 @@
                     <connections>
                         <outlet property="firstNameTextField" destination="CEk-67-zMT" id="tfB-vp-v7L"/>
                         <outlet property="lastNameTextField" destination="cCR-EP-DV5" id="Ncp-zy-Wh3"/>
+                        <segue destination="L4F-eK-XCD" kind="show" identifier="goCountry" id="z3p-zo-Vux"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1h9-pK-UE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -927,7 +928,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="eKi-dN-zPg" kind="show" id="dTF-uj-dTl"/>
+                                            <action selector="nextButtonPressed:" destination="JPy-dw-nKb" eventType="touchUpInside" id="RRb-Wk-QID"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -975,6 +976,7 @@
                     <navigationItem key="navigationItem" id="lwX-MV-lwx"/>
                     <connections>
                         <outlet property="tableView" destination="Eeu-Ir-pHr" id="qGh-nT-9HL"/>
+                        <segue destination="eKi-dN-zPg" kind="show" identifier="goPreference" id="dO2-Es-2ov"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whe-NB-51g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

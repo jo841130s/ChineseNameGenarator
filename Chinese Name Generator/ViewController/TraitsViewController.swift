@@ -14,6 +14,7 @@ class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var traits = ["Artful","Beatiful","Handsome","Clever","Calm","Diligent","Elegant","Excellent","Friendly","Happy","Healthy","Lucky","Powerful","Rich","Virtous","Wise"]
     var isSelected = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
+    var userTraits : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,17 +42,17 @@ class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         isSelected[indexPath.row] = !isSelected[indexPath.row]
+        setUserTraits()
         tableView.reloadData()
     }
     
-    func userTraits() -> [String] {
-        var userTraits : [String] = []
+    func setUserTraits() {
+        userTraits = []
         for i in 0...traits.count-1 {
             if isSelected[i] {
                 userTraits.append(traits[i])
             }
         }
-        return userTraits
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -59,7 +60,24 @@ class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        UserData().setUserData(data: userTraits(), name: "Traits")
+        setUserTraits()
+        UserData().setUserData(data: userTraits, name: "Traits")
     }
     
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        if userTraits.count == 0 {
+            showAlert(message: "Not selected yet")
+        } else if userTraits.count > 5 {
+            showAlert(message: "Select over limit")
+        } else {
+            performSegue(withIdentifier: "goPreference", sender: self)
+        }
+    }
+    
+    func showAlert(message:String) {
+        let alert = UIAlertController(title: "Oops!", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
 }

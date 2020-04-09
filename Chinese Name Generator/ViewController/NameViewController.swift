@@ -31,4 +31,20 @@ class NameViewController: UIViewController {
         userData.setUserData(data: lastNameTextField.text ?? "", name: "LastName")
     }
     
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        if firstNameTextField.text == "" || lastNameTextField.text == "" {
+            showAlert()
+        } else {
+            performSegue(withIdentifier: "goCountry", sender: self)
+        }
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Oops!", message: "Fill both field", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
 }
