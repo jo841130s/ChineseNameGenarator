@@ -27,8 +27,10 @@ class NameViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         let userData = UserData()
-        userData.setUserData(data: firstNameTextField.text ?? "", name: "FirstName")
-        userData.setUserData(data: lastNameTextField.text ?? "", name: "LastName")
+        let firstName = (firstNameTextField.text ?? "").trimmingCharacters(in: .whitespaces)
+        let lastName = (lastNameTextField.text ?? "").trimmingCharacters(in: .whitespaces)
+        userData.setUserData(data: firstName, name: "FirstName")
+        userData.setUserData(data: lastName, name: "LastName")
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
