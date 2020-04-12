@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.1.0)
+  - EZProgressHUD (1.5.3)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.1)
+  - EZProgressHUD (~> 1.5.3)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - EZProgressHUD
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  EZProgressHUD: ac65959b7a1f7eb3ccb9e4b176a77e27628e4174
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 1ea5cf2b39e3deb64f72ecd8d323b015d25e1f71
+PODFILE CHECKSUM: 7f0dc230d4033604a98ddd54242dbfa8acfb8ac7
 
 COCOAPODS: 1.9.0

@@ -9,5 +9,6 @@ target 'Chinese Name Generator' do
   
   pod 'Alamofire', '~> 5.1'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'EZProgressHUD', '~> 1.5.3'
 
 end

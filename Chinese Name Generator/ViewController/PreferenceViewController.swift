@@ -12,7 +12,7 @@ import Alamofire
 class PreferenceViewController: UIViewController, JsonDelegate {
 
     @IBOutlet var tableView: UITableView!
-    var cellTitle = ["123","234","456"]
+    var cellTitle = ["Two","Three","Either or"]
     let jsonBuilder = JSONBuilder()
     var nameData : NameData?
     

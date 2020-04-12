@@ -12,7 +12,7 @@ class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet var tableView: UITableView!
     
-    var traits = ["Artful","Beatiful","Handsome","Clever","Calm","Diligent","Elegant","Excellent","Friendly","Happy","Healthy","Lucky","Powerful","Rich","Virtous","Wise"]
+    var traits = ["Artful","Beautiful","Handsome","Clever","Calm","Diligent","Elegant","Excellent","Friendly","Happy","Healthy","Lucky","Powerful","Rich","Virtous","Wise"]
     var isSelected = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
     var userTraits : [String] = []
     

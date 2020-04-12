@@ -23,9 +23,24 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LG4-kZ-Szu">
+                        <rect key="frame" x="261" y="35" width="40" height="40"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="3Lg-Ec-7tQ"/>
+                            <constraint firstAttribute="width" constant="40" id="WoL-yb-bIv"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" image="speaker.2.fill" catalog="system"/>
+                        <connections>
+                            <action selector="speakButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bzs-TR-HpT"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="LG4-kZ-Szu" firstAttribute="leading" secondItem="w8U-hv-A9C" secondAttribute="trailing" constant="5" id="645-be-Wet"/>
                     <constraint firstItem="w8U-hv-A9C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="6Yg-eS-y9x"/>
+                    <constraint firstItem="LG4-kZ-Szu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MdJ-F1-Dmg"/>
                     <constraint firstItem="w8U-hv-A9C" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OBR-Md-6dN"/>
                     <constraint firstItem="w8U-hv-A9C" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="W54-H6-Qed"/>
                 </constraints>
@@ -37,4 +52,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="speaker.2.fill" catalog="system" width="128" height="97"/>
+    </resources>
 </document>
