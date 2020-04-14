@@ -7,18 +7,93 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ResultViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     var namesData : NameData?
     var selectedRow = 0
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ResultCell", bundle: nil), forCellReuseIdentifier: "ResultCell")
+        saveNameDataToHistory()
+    }
+    
+    func saveNameDataToHistory() {
+        let nameHistoryData = NameHistoryData()
+        nameHistoryData.create_time = namesData?.create_time ?? ""
+        nameHistoryData.status = namesData?.status ?? ""
+        nameHistoryData.message = namesData?.message ?? ""
+        do {
+            try realm.write{
+                realm.add(nameHistoryData)
+            }
+        } catch {
+            print("Error Saving Name Data: \(error)")
+        }
+        saveSurnames(currentData: nameHistoryData)
+        saveHistoryNames(currentData: nameHistoryData)
+        saveChars(currentData: nameHistoryData)
+    }
+    
+    func saveSurnames(currentData:NameHistoryData) {
+        let dataCount = (namesData?.surnames.count ?? 1) - 1
+        for i in 0...dataCount {
+            let newData = HistorySurnames()
+            newData.surname = namesData?.surnames[i] ?? ""
+            do {
+                try realm.write{
+                    currentData.surnames.append(newData)
+                }
+            } catch {
+                print("Error Saving Name Data: \(error)")
+            }
+        }
+    }
+    
+    func saveHistoryNames(currentData:NameHistoryData) {
+        let dataCount = (namesData?.names.count ?? 1) - 1
+        for i in 0...dataCount {
+            let newData = HistoryNames()
+            newData.traditional = namesData?.names[i].traditional ?? ""
+            newData.simplified = namesData?.names[i].simplified ?? ""
+            newData.num_stroke = namesData?.names[i].num_stroke ?? ""
+            newData.goodness = namesData?.names[i].goodness ?? ""
+            do {
+                try realm.write{
+                    currentData.names.append(newData)
+                }
+            } catch {
+                print("Error Saving Name Data: \(error)")
+            }
+        }
+    }
+    
+    func saveChars(currentData:NameHistoryData) {
+        let dataCount = (namesData?.chars.count ?? 1) - 1
+        for i in 0...dataCount {
+            let newData = HistoryChars()
+            newData.traditional = namesData?.chars[i].traditional ?? ""
+            newData.simplified = namesData?.chars[i].simplified ?? ""
+            newData.chinese = namesData?.chars[i].chinese ?? ""
+            newData.english = namesData?.chars[i].english ?? ""
+            newData.pinyin = namesData?.chars[i].pinyin ?? ""
+            newData.phonetic = namesData?.chars[i].phonetic ?? ""
+            newData.stroke = namesData?.chars[i].stroke ?? ""
+            newData.radical = namesData?.chars[i].radical ?? ""
+            do {
+                try realm.write{
+                    currentData.chars.append(newData)
+                }
+            } catch {
+                print("Error Saving Name Data: \(error)")
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

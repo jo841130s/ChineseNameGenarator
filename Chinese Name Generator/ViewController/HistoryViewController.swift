@@ -7,23 +7,75 @@
 //
 
 import UIKit
+import RealmSwift
 
-class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HistoryViewController: UIViewController {
     
-    var nameArray = ["123","456","789"]
-    var timeArray = ["2020/07/09","2020/05/04","2020/01/02"]
+    let realm = try! Realm()
+    
+    var nameArray : [String] = []
+    var timeArray : [String] = []
+    var charsData : [Chars] = []
     var selectedRow = 0
     
     @IBOutlet var historyTableView: UITableView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         historyTableView.delegate = self
         historyTableView.dataSource = self
+        loadHistoryNames()
     }
     
+    func loadHistoryNames() {
+        var charArray : [HistoryChars] = []
+        let data = realm.objects(NameHistoryData.self)
+        let dataCount = data.count - 1
+        if dataCount < 0 { return }
+        for i in 0...dataCount {
+            for _ in 0...8 {
+                timeArray.append(data[i].create_time)
+            }
+            for j in 0...data[i].names.count - 1 {
+                nameArray.append(data[i].names[j].traditional)
+            }
+            for k in 0...data[i].chars.count - 1 {
+                charArray.append(data[i].chars[k])
+            }
+        }
+        decodeHistoryChars(data: charArray)
+        historyTableView.reloadData()
+    }
+    
+    func decodeHistoryChars(data:[HistoryChars]) {
+        for i in 0...data.count - 1 {
+            let traditional = data[i].traditional
+            let simplified = data[i].simplified
+            let chinese = data[i].chinese
+            let english = data[i].english
+            let pinyin = data[i].pinyin
+            let phonetic = data[i].phonetic
+            let stroke = data[i].stroke
+            let radical = data[i].radical
+            let newData = Chars(traditional: traditional, simplified: simplified, chinese: chinese, english: english, pinyin: pinyin, phonetic: phonetic, stroke: stroke, radical: radical)
+            charsData.append(newData)
+        }
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! NameInformationViewController
+        controller.chineseName = nameArray[selectedRow]
+        controller.charsData = charsData
+    }
+    
+}
 
+extension HistoryViewController : UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameArray.count
     }
@@ -39,15 +91,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedRow = indexPath.row
         performSegue(withIdentifier: "goNameInfo", sender: self)
-    }
-    
-    @IBAction func backButton(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as! NameInformationViewController
-        controller.chineseName = nameArray[selectedRow]
     }
     
 }

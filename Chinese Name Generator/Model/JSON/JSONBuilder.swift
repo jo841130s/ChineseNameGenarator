@@ -21,9 +21,7 @@ class JSONBuilder {
         AF.request(requestURL()).response(completionHandler: { (response) in
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
-            if let data = response.data, let namesData = try?
-                decoder.decode(NameData.self, from: data)
-            {
+            if let data = response.data, let namesData = try? decoder.decode(NameData.self, from: data) {
                 hud.dismiss(completion: nil)
                 self.delegate?.nameDataReceived(data: namesData)
             } else {
