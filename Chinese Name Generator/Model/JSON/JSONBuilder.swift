@@ -22,12 +22,11 @@ class JSONBuilder {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             if let data = response.data, let namesData = try? decoder.decode(NameData.self, from: data) {
-                hud.dismiss(completion: nil)
                 self.delegate?.nameDataReceived(data: namesData)
             } else {
-                hud.dismiss(completion: nil)
                 self.delegate?.nameDataNotReceived(error: response.error)
             }
+            hud.dismiss(completion: nil)
         })
         
     }

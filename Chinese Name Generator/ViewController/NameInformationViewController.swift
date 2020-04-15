@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
 
-class NameInformationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NameInformationViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var chineseNameLabel: UILabel!
@@ -47,6 +48,21 @@ class NameInformationViewController: UIViewController, UITableViewDelegate, UITa
         return nil
     }
     
+    @IBAction func speakNameButtonPressed(_ sender: Any) {
+        let utterance = AVSpeechUtterance(string: chineseNameLabel.text ?? "")
+        utterance.voice = AVSpeechSynthesisVoice(language: "zh-CN")
+        utterance.rate = 0.1
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+    }
+
+    @IBAction func backButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+extension NameInformationViewController : UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sortedCharsData.count
     }
@@ -60,10 +76,7 @@ class NameInformationViewController: UIViewController, UITableViewDelegate, UITa
         cell.strokeLabel.text = data.stroke
         return cell
     }
-
-    @IBAction func backButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
+    
 }
 
 extension String {

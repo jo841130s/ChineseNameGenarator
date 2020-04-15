@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import AVFoundation
 
 class ResultCell: UITableViewCell {
     
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var detailButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,14 +23,5 @@ class ResultCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    @IBAction func speakButtonPressed(_ sender: Any) {
-        let utterance = AVSpeechUtterance(string: nameLabel.text ?? "")
-        utterance.voice = AVSpeechSynthesisVoice(language: "zh-CN")
-        utterance.rate = 0.1
-        
-        let synthesizer = AVSpeechSynthesizer()
-        synthesizer.speak(utterance)
-    }
-    
+
 }

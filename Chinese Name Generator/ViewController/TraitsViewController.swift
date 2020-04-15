@@ -8,11 +8,11 @@
 
 import UIKit
 
-class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TraitsViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    var traits = ["Artful","Beautiful","Handsome","Clever","Calm","Diligent","Elegant","Excellent","Friendly","Happy","Healthy","Lucky","Powerful","Rich","Virtous","Wise"]
+    var traits = ["Artful","Beautiful","Handsome","Clever","Calm","Diligent","Elegant","Excellent","Friendly","Happy","Healthy","Lucky","Powerful","Rich","Virtuous","Wise"]
     var isSelected = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
     var userTraits : [String] = []
     
@@ -22,28 +22,17 @@ class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TraitsCell", bundle: nil), forCellReuseIdentifier: "TraitsCell")
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return traits.count
+        startTimerForShowScrollIndicator()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TraitsCell", for: indexPath) as! TraitsCell
-        cell.traitLabel.text = traits[indexPath.row]
-        cell.selectionStyle = .none
-        if isSelected[indexPath.row] {
-            cell.brushImageView.image = #imageLiteral(resourceName: "brush")
-        } else {
-            cell.brushImageView.image = .none
+    func startTimerForShowScrollIndicator() {
+        _ = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.showScrollIndicatorsInContacts), userInfo: nil, repeats: true)
+    }
+    
+    @objc func showScrollIndicatorsInContacts() {
+        UIView.animate(withDuration: 0.001) {
+            self.tableView.flashScrollIndicators()
         }
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        isSelected[indexPath.row] = !isSelected[indexPath.row]
-        setUserTraits()
-        tableView.reloadData()
     }
     
     func setUserTraits() {
@@ -80,4 +69,30 @@ class TraitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
+}
+
+extension TraitsViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return traits.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TraitsCell", for: indexPath) as! TraitsCell
+        cell.traitLabel.text = traits[indexPath.row]
+        cell.selectionStyle = .none
+        if isSelected[indexPath.row] {
+            cell.brushImageView.image = #imageLiteral(resourceName: "brush")
+        } else {
+            cell.brushImageView.image = .none
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        isSelected[indexPath.row] = !isSelected[indexPath.row]
+        setUserTraits()
+        tableView.reloadData()
+    }
+    
 }

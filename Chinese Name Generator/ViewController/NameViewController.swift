@@ -14,6 +14,8 @@ class NameViewController: UIViewController {
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
     
+    var banCharacters = "[`~!#$^&*()=|{}':;',\\[\\].<>/?~！#￥……&*（）——|{}【】‘；：”“'。，、？]‘'0123456789"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         IQKeyboardManager.shared.enable = true
@@ -34,15 +36,31 @@ class NameViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        if firstNameTextField.text == "" || lastNameTextField.text == "" {
-            showAlert()
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        if firstName == "" || lastName == "" {
+            showAlert(message: "Fill both fields")
+        } else if !checkName(name: firstName) || !checkName(name: lastName) {
+            showAlert(message: "With special characters or numbers")
         } else {
             performSegue(withIdentifier: "goCountry", sender: self)
         }
     }
     
-    func showAlert() {
-        let alert = UIAlertController(title: "Oops!", message: "Fill both field", preferredStyle: .alert)
+    func checkName(name:String) -> Bool {
+        for i in 0...name.count-1{
+            let char = name[i]
+            for j in 0...banCharacters.count-1 {
+                if char == banCharacters[j] {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    
+    func showAlert(message:String) {
+        let alert = UIAlertController(title: "Oops!", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)

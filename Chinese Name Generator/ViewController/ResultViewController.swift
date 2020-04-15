@@ -96,6 +96,20 @@ class ResultViewController: UIViewController {
         }
     }
     
+    func startTimerForShowScrollIndicator() {
+        _ = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.showScrollIndicatorsInContacts), userInfo: nil, repeats: true)
+    }
+    
+    @objc func showScrollIndicatorsInContacts() {
+        UIView.animate(withDuration: 0.001) {
+            self.tableView.flashScrollIndicators()
+        }
+    }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! NameInformationViewController
         controller.chineseName = namesData?.names[selectedRow].traditional

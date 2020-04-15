@@ -405,9 +405,25 @@
                                             <action selector="backButton:" destination="JML-4n-HWc" eventType="touchUpInside" id="YfM-8F-WVB"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHq-EN-kSU">
+                                        <rect key="frame" x="364" y="36" width="30" height="27.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="P87-Kp-Ds6"/>
+                                            <constraint firstAttribute="height" constant="30" id="RC0-Pt-1ft"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" backgroundImage="speaker.2.fill" catalog="system">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="speakNameButtonPressed:" destination="JML-4n-HWc" eventType="touchUpInside" id="M2d-6k-Cg4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FHq-EN-kSU" secondAttribute="trailing" constant="20" id="3xQ-5R-Y7z"/>
+                                    <constraint firstItem="FHq-EN-kSU" firstAttribute="centerY" secondItem="yEv-aM-84u" secondAttribute="centerY" id="7SS-3U-uAu"/>
                                     <constraint firstItem="Z6P-T8-Xqz" firstAttribute="leading" secondItem="yEv-aM-84u" secondAttribute="leading" constant="30" id="9Md-XM-UKe"/>
                                     <constraint firstItem="mb3-P5-mT4" firstAttribute="centerX" secondItem="yEv-aM-84u" secondAttribute="centerX" id="McS-ZH-gLD"/>
                                     <constraint firstItem="Z6P-T8-Xqz" firstAttribute="centerY" secondItem="yEv-aM-84u" secondAttribute="centerY" id="PDP-9s-uku"/>
@@ -521,12 +537,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="iRg-Qv-VHW">
                                         <rect key="frame" x="30" y="30" width="294" height="118"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEk-67-zMT">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCR-EP-DV5">
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCR-EP-DV5">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEk-67-zMT">
                                                 <rect key="frame" x="0.0" y="84" width="294" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -981,7 +997,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whe-NB-51g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3788" y="1517"/>
+            <point key="canvasLocation" x="3786.9565217391309" y="1516.7410714285713"/>
         </scene>
         <!--Tips View Controller-->
         <scene sceneID="mCM-1b-a2P">
@@ -1332,6 +1348,9 @@
                                         <state key="normal" title="Home">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="x3C-VP-nme" eventType="touchUpInside" id="OK0-FZ-51X"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1458,6 +1477,7 @@
         <image name="Capricorn" width="172.5" height="172.5"/>
         <image name="Monkey" width="179" height="179"/>
         <image name="male" width="254.5" height="393"/>
+        <image name="speaker.2.fill" catalog="system" width="128" height="97"/>
         <image name="八卦" width="160" height="152.5"/>
     </resources>
 </document>

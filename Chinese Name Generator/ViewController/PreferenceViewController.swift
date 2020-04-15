@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class PreferenceViewController: UIViewController, JsonDelegate {
+class PreferenceViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     var cellTitle = ["Two","Three","Either or"]
@@ -29,15 +29,6 @@ class PreferenceViewController: UIViewController, JsonDelegate {
         jsonBuilder.requestNameData()
     }
     
-    func nameDataReceived(data: NameData) {
-        nameData = data
-        performSegue(withIdentifier: "goResult", sender: self)
-    }
-    
-    func nameDataNotReceived(error:AFError?) {
-        print("data not received, error: \(String(describing: error))")
-    }
-    
     @IBAction func backButtonPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -45,6 +36,19 @@ class PreferenceViewController: UIViewController, JsonDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! ResultViewController
         controller.namesData = nameData
+    }
+    
+}
+
+extension PreferenceViewController : JsonDelegate {
+    
+    func nameDataReceived(data: NameData) {
+        nameData = data
+        performSegue(withIdentifier: "goResult", sender: self)
+    }
+    
+    func nameDataNotReceived(error:AFError?) {
+        print("data not received, error: \(String(describing: error))")
     }
     
 }
