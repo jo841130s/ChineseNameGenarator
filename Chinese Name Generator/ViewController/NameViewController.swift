@@ -14,6 +14,9 @@ class NameViewController: UIViewController {
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
     
+    let userData = UserData()
+    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
+    
     var banCharacters = "[`~!#$^&*()=|{}':;',\\[\\].<>/?~！#￥……&*（）——|{}【】‘；：”“'。，、？]‘'0123456789"
     
     override func viewDidLoad() {
@@ -28,16 +31,38 @@ class NameViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        let userData = UserData()
         let firstName = (firstNameTextField.text ?? "").trimmingCharacters(in: .whitespaces)
+        if !isForeigner {
+            userData.setUserData(data: firstName, name: "fixed_surname")
+            return
+        }
         let lastName = (lastNameTextField.text ?? "").trimmingCharacters(in: .whitespaces)
-        userData.setUserData(data: firstName, name: "FirstName")
         userData.setUserData(data: lastName, name: "LastName")
+        userData.setUserData(data: firstName, name: "FirstName")
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
         let firstName = firstNameTextField.text ?? ""
-        let lastName = lastNameTextField.text ?? ""
+        
+        if isForeigner {
+            let lastName = lastNameTextField.text ?? ""
+            checkFieldNotForeigner(firstName: firstName, lastName: lastName)
+        } else {
+            checkFieldIsForeigner(firstName: firstName)
+        }
+    }
+    
+    func checkFieldIsForeigner(firstName:String) {
+        if firstName == "" {
+            showAlert(message: "請填寫姓氏")
+        } else if !checkName(name: firstName) {
+            showAlert(message: "不可填入特殊字元")
+        } else {
+            performSegue(withIdentifier: "goBirthday", sender: self)
+        }
+    }
+    
+    func checkFieldNotForeigner(firstName:String, lastName:String) {
         if firstName == "" || lastName == "" {
             showAlert(message: "Fill both fields")
         } else if !checkName(name: firstName) || !checkName(name: lastName) {

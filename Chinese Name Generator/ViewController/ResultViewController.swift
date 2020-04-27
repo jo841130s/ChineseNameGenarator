@@ -42,10 +42,10 @@ class ResultViewController: UIViewController {
     }
     
     func saveSurnames(currentData:NameHistoryData) {
-        let dataCount = (namesData?.surnames.count ?? 1) - 1
+        let dataCount = (namesData?.surnames?.count ?? 1) - 1
         for i in 0...dataCount {
             let newData = HistorySurnames()
-            newData.surname = namesData?.surnames[i] ?? ""
+            newData.surname = namesData?.surnames?[i] ?? ""
             do {
                 try realm.write{
                     currentData.surnames.append(newData)

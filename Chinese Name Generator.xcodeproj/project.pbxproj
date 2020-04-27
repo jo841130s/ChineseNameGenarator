@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04093286245285B800BC4527 /* ZodiacName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04093285245285B800BC4527 /* ZodiacName.swift */; };
+		0409328824528B5B00BC4527 /* HoroscopeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409328724528B5B00BC4527 /* HoroscopeName.swift */; };
 		042704E02428E1D20036ADCE /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042704DF2428E1D20036ADCE /* GenderViewController.swift */; };
 		042704E22428E5C40036ADCE /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042704E12428E5C40036ADCE /* NameViewController.swift */; };
 		042704E52428E7550036ADCE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 042704E42428E7550036ADCE /* IQKeyboardManagerSwift */; };
@@ -16,7 +18,7 @@
 		043F3B11243C6C0B00ED8744 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043F3B0F243C6C0B00ED8744 /* SettingCell.xib */; };
 		043F3B692444737600ED8744 /* NameHistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F3B682444737600ED8744 /* NameHistoryData.swift */; };
 		044F7D802439CC42007B64E4 /* JSONBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F7D7F2439CC42007B64E4 /* JSONBuilder.swift */; };
-		044F7D822439D227007B64E4 /* NamesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F7D812439D227007B64E4 /* NamesData.swift */; };
+		044F7D822439D227007B64E4 /* NameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F7D812439D227007B64E4 /* NameData.swift */; };
 		04975DB72413885C00EC257F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DB62413885C00EC257F /* AppDelegate.swift */; };
 		04975DB92413885C00EC257F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DB82413885C00EC257F /* SceneDelegate.swift */; };
 		04975DBE2413885C00EC257F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04975DBC2413885C00EC257F /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04093285245285B800BC4527 /* ZodiacName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacName.swift; sourceTree = "<group>"; };
+		0409328724528B5B00BC4527 /* HoroscopeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeName.swift; sourceTree = "<group>"; };
 		042704DF2428E1D20036ADCE /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		042704E12428E5C40036ADCE /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		042704E62428E8C00036ADCE /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +54,7 @@
 		043F3B0F243C6C0B00ED8744 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		043F3B682444737600ED8744 /* NameHistoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHistoryData.swift; sourceTree = "<group>"; };
 		044F7D7F2439CC42007B64E4 /* JSONBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONBuilder.swift; sourceTree = "<group>"; };
-		044F7D812439D227007B64E4 /* NamesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesData.swift; sourceTree = "<group>"; };
+		044F7D812439D227007B64E4 /* NameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameData.swift; sourceTree = "<group>"; };
 		04975DB32413885C00EC257F /* Chinese Name Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chinese Name Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04975DB62413885C00EC257F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04975DB82413885C00EC257F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				044F7D7F2439CC42007B64E4 /* JSONBuilder.swift */,
-				044F7D812439D227007B64E4 /* NamesData.swift */,
+				044F7D812439D227007B64E4 /* NameData.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -165,6 +169,8 @@
 				043F3B0B243C6BD300ED8744 /* JSON */,
 				043F3B0A243C6BB400ED8744 /* Cell */,
 				04E74FCC242F538E0001EFCE /* UserData.swift */,
+				04093285245285B800BC4527 /* ZodiacName.swift */,
+				0409328724528B5B00BC4527 /* HoroscopeName.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 				042704E02428E1D20036ADCE /* GenderViewController.swift in Sources */,
 				04E74FD12435D91B0001EFCE /* ResultViewController.swift in Sources */,
 				043F3B10243C6C0B00ED8744 /* SettingCell.swift in Sources */,
+				0409328824528B5B00BC4527 /* HoroscopeName.swift in Sources */,
 				04E74FCD242F538E0001EFCE /* UserData.swift in Sources */,
 				043F3B09243C6B8000ED8744 /* SettingViewController.swift in Sources */,
 				04E74FD42435D99C0001EFCE /* ResultCell.swift in Sources */,
@@ -344,12 +351,13 @@
 				04975DD324139BAB00EC257F /* TipsViewController.swift in Sources */,
 				04975DCD241392B900EC257F /* HistoryTableViewCell.swift in Sources */,
 				04FA03822428F2DC003F1A4F /* TraitsCell.swift in Sources */,
+				04093286245285B800BC4527 /* ZodiacName.swift in Sources */,
 				042704E22428E5C40036ADCE /* NameViewController.swift in Sources */,
 				044F7D802439CC42007B64E4 /* JSONBuilder.swift in Sources */,
 				04975DD1241393EE00EC257F /* HistoryViewController.swift in Sources */,
 				04975DD5241E446D00EC257F /* NameInformationViewController.swift in Sources */,
 				04FA037D2428EE3C003F1A4F /* BirthViewController.swift in Sources */,
-				044F7D822439D227007B64E4 /* NamesData.swift in Sources */,
+				044F7D822439D227007B64E4 /* NameData.swift in Sources */,
 				04E74FD82435E7990001EFCE /* NameInformationCell.swift in Sources */,
 				04975DCB24138B0D00EC257F /* HomeViewController.swift in Sources */,
 				04FA037F2428F115003F1A4F /* TraitsViewController.swift in Sources */,

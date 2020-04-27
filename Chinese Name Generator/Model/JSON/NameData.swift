@@ -12,7 +12,15 @@ struct NameData : Codable {
     var create_time : String
     var status : String
     var message : String
-    var surnames : [String]
+    var surnames : [String]?
+    var names : [Names]
+    var chars : [Chars]
+}
+
+struct CNNameData : Codable {
+    var create_time : String
+    var status : String
+    var message : String
     var names : [Names]
     var chars : [Chars]
 }

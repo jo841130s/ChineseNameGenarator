@@ -8,16 +8,28 @@
 
 import UIKit
 import Alamofire
+import IQKeyboardManagerSwift
 
 class PreferenceViewController: UIViewController {
+    
+    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
 
     @IBOutlet var tableView: UITableView!
-    var cellTitle = ["Two","Three","Either or"]
+    @IBOutlet var fixedSurname: UITextField!
+    @IBOutlet var fixedFirstChar: UITextField!
+    @IBOutlet var fixedSecondChar: UITextField!
+    
+    var enCellTitle = ["Two","Three"]
+    var cnCellTitle = ["兩個字","三個字"]
     let jsonBuilder = JSONBuilder()
     var nameData : NameData?
+    var numChars = "3"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         jsonBuilder.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
@@ -25,7 +37,14 @@ class PreferenceViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        UserData().setUserData(data: 3, name: "Name")
+        let userData = UserData()
+        userData.setUserData(data: numChars, name: "num_char")
+//        let surname = fixedSurname.text ?? ""
+        let firstChar = fixedFirstChar.text ?? ""
+        let secondChar = fixedSecondChar.text ?? ""
+//        userData.setUserData(data: surname, name: "fixed_surname")
+        userData.setUserData(data: firstChar, name: "fixed_first_char")
+        userData.setUserData(data: secondChar, name: "fixed_second_char")
         jsonBuilder.requestNameData()
     }
     
@@ -56,18 +75,34 @@ extension PreferenceViewController : JsonDelegate {
 extension PreferenceViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = cellTitle[indexPath.row]
+        if isForeigner {
+            cell.textLabel?.text = enCellTitle[indexPath.row]
+        } else {
+            cell.textLabel?.text = cnCellTitle[indexPath.row]
+        }
+        cell.selectionStyle = .default
+        cell.selectedBackgroundView?.backgroundColor = .lightGray
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+        return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        if row == 0 {
+            numChars = "2"
+        } else {
+            numChars = "3"
+        }
+        
     }
     
 }

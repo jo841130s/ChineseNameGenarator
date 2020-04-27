@@ -16,8 +16,17 @@ class BirthViewController: UIViewController {
     @IBOutlet var horoscopeLabel: UILabel!
     @IBOutlet var horoscopeImageView: UIImageView!
     
+    let zodiacName = ZodiacName()
+    let horoscopeName = HoroscopeName()
+    
+    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
+    
+    var userBirthDay = "1990-01-01"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        horoscopeName.isForeigner = isForeigner
+        zodiacName.isForeigner = isForeigner
         datePicker.addTarget(self, action: #selector(BirthViewController.caculateZodiac), for: UIControl.Event.valueChanged)
         datePicker.addTarget(self, action: #selector(BirthViewController.caculateHoroscope), for: UIControl.Event.valueChanged)
         caculateZodiac()
@@ -25,33 +34,38 @@ class BirthViewController: UIViewController {
     }
 
     @objc func caculateZodiac(){
-        let dateLong = "\(datePicker.date)"
-        let date = Int(dateLong.prefix(4))!
-        let zodiac = date % 12
-        if zodiac == 0{
-            updateZodiac(zodiac: "Monkey")
-        }else if zodiac == 1{
-            updateZodiac(zodiac: "Rooster")
-        }else if zodiac == 2{
-            updateZodiac(zodiac: "Dog")
-        }else if zodiac == 3{
-            updateZodiac(zodiac: "Pig")
-        }else if zodiac == 4{
-            updateZodiac(zodiac: "Rat")
-        }else if zodiac == 5{
-            updateZodiac(zodiac: "Ox")
-        }else if zodiac == 6{
-            updateZodiac(zodiac: "Tiger")
-        }else if zodiac == 7{
-            updateZodiac(zodiac: "Rabbit")
-        }else if zodiac == 8{
-            updateZodiac(zodiac: "Dragon")
-        }else if zodiac == 9{
-            updateZodiac(zodiac: "Snake")
-        }else if zodiac == 10{
-            updateZodiac(zodiac: "Horse")
-        }else if zodiac == 11{
-            updateZodiac(zodiac: "Goat")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        userBirthDay = dateFormatter.string(from: datePicker.date)
+        dateFormatter.dateFormat = "yyyy"
+        let year = Int(dateFormatter.string(from: datePicker.date)) ?? 0
+        dateFormatter.dateFormat = "MM"
+        let month = Int(dateFormatter.string(from: datePicker.date)) ?? 0
+        let zodiacNum = year % 12
+        if (zodiacNum == 10 && month > 2) || (zodiacNum == 11 && month <= 2){
+            updateZodiac(zodiac: zodiacName.monkey)
+        }else if (zodiacNum == 11 && month > 2) || (zodiacNum == 0 && month <= 2){
+            updateZodiac(zodiac: zodiacName.rooster)
+        }else if (zodiacNum == 0 && month > 2) || (zodiacNum == 1 && month <= 2){
+            updateZodiac(zodiac: zodiacName.dog)
+        }else if (zodiacNum == 1 && month > 2) || (zodiacNum == 2 && month <= 2){
+            updateZodiac(zodiac: zodiacName.pig)
+        }else if (zodiacNum == 2 && month > 2) || (zodiacNum == 3 && month <= 2){
+            updateZodiac(zodiac: zodiacName.rat)
+        }else if (zodiacNum == 3 && month > 2) || (zodiacNum == 4 && month <= 2){
+            updateZodiac(zodiac: zodiacName.ox)
+        }else if (zodiacNum == 4 && month > 2) || (zodiacNum == 5 && month <= 2){
+            updateZodiac(zodiac: zodiacName.tiger)
+        }else if (zodiacNum == 5 && month > 2) || (zodiacNum == 6 && month <= 2){
+            updateZodiac(zodiac: zodiacName.rabbit)
+        }else if (zodiacNum == 6 && month > 2) || (zodiacNum == 7 && month <= 2){
+            updateZodiac(zodiac: zodiacName.dragon)
+        }else if (zodiacNum == 7 && month > 2) || (zodiacNum == 8 && month <= 2){
+            updateZodiac(zodiac: zodiacName.snake)
+        }else if (zodiacNum == 8 && month > 2) || (zodiacNum == 9 && month <= 2){
+            updateZodiac(zodiac: zodiacName.horse)
+        }else if (zodiacNum == 9 && month > 2) || (zodiacNum == 10 && month <= 2){
+            updateZodiac(zodiac: zodiacName.goat)
         }
     }
     
@@ -59,48 +73,50 @@ class BirthViewController: UIViewController {
         let date = datePicker.date
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "MMdd"
-        let day = Int( dateformatter.string(from: date))
+        let day = Int(dateformatter.string(from: date))
         if 120...218 ~= day!{
-            updateHoroscope(horoscope: "Aquarius")
+            updateHoroscope(horoscope: horoscopeName.aquarius)
         }else if 219...320 ~= day!{
-            updateHoroscope(horoscope: "Pisces")
+            updateHoroscope(horoscope: horoscopeName.pisces)
         }else if 321...420 ~= day!{
-            updateHoroscope(horoscope: "Aries")
+            updateHoroscope(horoscope: horoscopeName.aries)
         }else if 421...520 ~= day!{
-            updateHoroscope(horoscope: "Taurus")
+            updateHoroscope(horoscope: horoscopeName.taurus)
         }else if 521...621 ~= day!{
-            updateHoroscope(horoscope: "Gemini")
+            updateHoroscope(horoscope: horoscopeName.gemini)
         }else if 622...722 ~= day!{
-            updateHoroscope(horoscope: "Cancer")
+            updateHoroscope(horoscope: horoscopeName.cancer)
         }else if 723...822 ~= day!{
-            updateHoroscope(horoscope: "Leo")
+            updateHoroscope(horoscope: horoscopeName.leo)
         }else if 823...922 ~= day!{
-            updateHoroscope(horoscope: "Virgo")
+            updateHoroscope(horoscope: horoscopeName.virgo)
         }else if 923...1023 ~= day!{
-            updateHoroscope(horoscope: "Libra")
+            updateHoroscope(horoscope: horoscopeName.libra)
         }else if 1023...1122 ~= day!{
-            updateHoroscope(horoscope: "Scorpio")
+            updateHoroscope(horoscope: horoscopeName.scorpio)
         }else if 1123...1221 ~= day!{
-            updateHoroscope(horoscope: "Sagittarius")
+            updateHoroscope(horoscope: horoscopeName.sagittarius)
         }else{
-            updateHoroscope(horoscope: "Capricorn")
+            updateHoroscope(horoscope: horoscopeName.capricorn)
         }
     }
     
-    func userBirthDay()->String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter.string(from: datePicker.date)
-    }
-    
     func updateZodiac(zodiac:String){
-        chineseZodiacLabel.text = zodiac
-        chineseZodiacImageView.image = UIImage(named: zodiac)
+        var zodiacLabelText = ""
+        if UserDefaults.standard.bool(forKey: "isForeigner") == false {
+            zodiacLabelText = "生肖: "
+        }
+        chineseZodiacLabel.text = zodiacLabelText + zodiac
+        chineseZodiacImageView.image = UIImage(named: zodiacName.imageName)
     }
     
     func updateHoroscope(horoscope:String){
-        horoscopeLabel.text = horoscope
-        horoscopeImageView.image = UIImage(named: horoscope)
+        var horoscopeLabelText = ""
+        if UserDefaults.standard.bool(forKey: "isForeigner") == false {
+            horoscopeLabelText = "星座: "
+        }
+        horoscopeLabel.text = horoscopeLabelText + horoscope
+        horoscopeImageView.image = UIImage(named: horoscopeName.imageName)
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -108,7 +124,7 @@ class BirthViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        UserData().setUserData(data: userBirthDay(), name: "Birth")
+        UserData().setUserData(data: userBirthDay, name: "Birth")
     }
     
 }

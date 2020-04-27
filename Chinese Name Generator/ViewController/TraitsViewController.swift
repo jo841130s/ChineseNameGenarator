@@ -12,7 +12,12 @@ class TraitsViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    var traits = ["Artful","Beautiful","Handsome","Clever","Calm","Diligent","Elegant","Excellent","Friendly","Happy","Healthy","Lucky","Powerful","Rich","Virtuous","Wise"]
+    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
+    
+    var enTraits = ["Artful","Beautiful","Handsome","Clever","Calm","Diligent","Elegant","Excellent","Friendly","Happy","Healthy","Lucky","Powerful","Rich","Virtuous","Wise"]
+    
+    var cnTraits = ["藝術","美麗","英俊","聰明","平和","勤奮","優雅","完美","友善","快樂","健康","幸運","力量","富有","道德","智慧"]
+    
     var isSelected = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
     var userTraits : [String] = []
     
@@ -37,9 +42,9 @@ class TraitsViewController: UIViewController {
     
     func setUserTraits() {
         userTraits = []
-        for i in 0...traits.count-1 {
+        for i in 0...enTraits.count-1 {
             if isSelected[i] {
-                userTraits.append(traits[i])
+                userTraits.append(enTraits[i])
             }
         }
     }
@@ -51,11 +56,16 @@ class TraitsViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         setUserTraits()
         UserData().setUserData(data: userTraits, name: "Traits")
+        print(userTraits)
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        if userTraits.count == 0 {
+        if userTraits.count == 0 && isForeigner {
             showAlert(message: "Not selected yet")
+        } else if userTraits.count == 0 && !isForeigner {
+            showAlert(message: "請選擇至少一個")
+        } else if userTraits.count > 5 && !isForeigner{
+            showAlert(message: "不得超過五個")
         } else if userTraits.count > 5 {
             showAlert(message: "Select over limit")
         } else {
@@ -74,12 +84,16 @@ class TraitsViewController: UIViewController {
 extension TraitsViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return traits.count
+        return enTraits.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TraitsCell", for: indexPath) as! TraitsCell
-        cell.traitLabel.text = traits[indexPath.row]
+        if isForeigner {
+            cell.traitLabel.text = enTraits[indexPath.row]
+        } else {
+            cell.traitLabel.text = cnTraits[indexPath.row]
+        }
         cell.selectionStyle = .none
         if isSelected[indexPath.row] {
             cell.brushImageView.image = #imageLiteral(resourceName: "brush")

@@ -11,10 +11,12 @@ import RealmSwift
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet var homePageTitle: UILabel!
     @IBOutlet weak var middleImage: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var historyButton: UIButton!
     @IBOutlet weak var tipsButton: UIButton!
+    let userData = UserData()
     var timer = Timer()
     var degree = 0.0
     
@@ -24,7 +26,12 @@ class HomeViewController: UIViewController {
         setButton(button: startButton)
         setButton(button: historyButton)
         setButton(button: tipsButton)
-        UserData().setUserData(data: false, name: "isForeigner")
+        if homePageTitle.text == "寶寶起名" {
+            userData.setUserData(data: false, name: "isForeigner")
+        } else {
+            userData.setUserData(data: true, name: "isForeigner")
+        }
+        
     }
     
     func spinMiddleImage(){

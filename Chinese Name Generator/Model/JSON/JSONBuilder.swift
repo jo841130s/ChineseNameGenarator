@@ -14,11 +14,15 @@ class JSONBuilder {
     
     var delegate: JsonDelegate?
     
+    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
+    
     func requestNameData() {
         let options = progressOption()
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
         AF.request(requestURL()).response(completionHandler: { (response) in
+            print(String(data: response.data!, encoding: .utf8))
+            
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             if let data = response.data, let namesData = try? decoder.decode(NameData.self, from: data) {
@@ -37,16 +41,32 @@ class JSONBuilder {
         let device_id = UUID().uuidString
         let gender = userData.userData(name: "Gender") as! String
         let surname = userData.userData(name: "FirstName") as! String
-        let given_name = userData.userData(name: "LastName") as! String
-        let country = userData.userData(name: "Country") as! String
+        var given_name = ""
+        var country = ""
+        if isForeigner {
+            given_name = userData.userData(name: "LastName") as! String
+            country = userData.userData(name: "Country") as! String
+        }
         let birthday = userData.userData(name: "Birth") as! String
         let traits = userData.userData(name: "Traits") as! [String]
+        let num_char = "3"
+        let fixed_surname = userData.userData(name: "fixed_surname") as! String
+        let fixed_first_char = userData.userData(name: "fixed_first_char") as! String
+        let fixed_second_char = userData.userData(name: "fixed_second_char") as! String
+        
         var traitString = ""
         for trait in traits {
             traitString.append("&trait=\(trait)")
         }
-        let header = "device_id=\(device_id)&platform=iOS&app_version=1.0.1&gender=\(gender)&surname=\(surname)&given_name=\(given_name)&country=\(country)&birthday=\(birthday)&num_char=3&fixed_surname=&fixed_first_char=&fixed_second_char=\(traitString)"
-        return "\(url)\(header)"
+        if isForeigner {
+            let enHeader = "device_id=\(device_id)&platform=iOS&app_version=1.0.1&gender=\(gender)&surname=\(surname)&given_name=\(given_name)&country=\(country)&birthday=\(birthday)&num_char=\(num_char)&fixed_surname=\(fixed_surname)&fixed_first_char=\(fixed_first_char)&fixed_second_char=\(fixed_second_char)\(traitString)"
+            let enUrl = "\(url)\(enHeader)"
+            return enUrl
+        } else {
+            let cnHeader = "device_id=\(device_id)&platform=iOS&app_version=1.0.1&gender=\(gender)&given_name=\(given_name)&country=China&birthday=\(birthday)&num_char=\(num_char)&fixed_surname=\(fixed_surname)&fixed_first_char=\(fixed_first_char)&fixed_second_char=\(fixed_second_char)\(traitString)&output_language=chinese"
+            let cnUrl = "\(url)\(cnHeader)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            return cnUrl
+        }
     }
     
     func progressOption() -> EZProgressOptions {
