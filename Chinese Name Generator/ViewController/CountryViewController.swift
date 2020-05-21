@@ -42,12 +42,22 @@ extension CountryViewController : UIPickerViewDataSource, UIPickerViewDelegate {
         return countriesArray.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return countriesArray[row]
-    }
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedCountry = countriesArray[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if let font = UIFont(name: "Gill Sans", size: 24) {
+            if pickerLabel == nil {
+                pickerLabel = UILabel()
+                pickerLabel?.font = font
+                pickerLabel?.textAlignment = .center
+            }
+            pickerLabel?.text = countriesArray[row]
+            pickerLabel?.textColor = UIColor.black
+        }
+        return pickerLabel!
     }
     
 }

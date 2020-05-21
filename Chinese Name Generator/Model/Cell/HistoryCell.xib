@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ChineseFont.ttf">
+            <string>jf-openhuninn-1.1</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="72" id="KGk-i7-Jjw" customClass="HistoryCell" customModule="Chinese_Name_Generator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9cG-OP-eDr">
+                        <rect key="frame" x="20" y="10" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="9cG-OP-eDr" secondAttribute="height" id="xeZ-mD-LB8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avd-ed-sP8">
+                        <rect key="frame" x="293" y="52.5" width="17" height="9.5"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="8"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="林森森" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pt6-Uw-dfs">
+                        <rect key="frame" x="82" y="10" width="72" height="52"/>
+                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9cG-OP-eDr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4yQ-Hi-YjE"/>
+                    <constraint firstItem="Pt6-Uw-dfs" firstAttribute="leading" secondItem="9cG-OP-eDr" secondAttribute="trailing" constant="10" id="AwR-Nk-YAP"/>
+                    <constraint firstAttribute="bottom" secondItem="Pt6-Uw-dfs" secondAttribute="bottom" constant="10" id="H96-nD-hb4"/>
+                    <constraint firstItem="Pt6-Uw-dfs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="HuL-yl-2f6"/>
+                    <constraint firstAttribute="bottom" secondItem="9cG-OP-eDr" secondAttribute="bottom" constant="10" id="K94-F3-4Ok"/>
+                    <constraint firstAttribute="bottom" secondItem="Avd-ed-sP8" secondAttribute="bottom" constant="10" id="SUF-qP-Kgu"/>
+                    <constraint firstItem="9cG-OP-eDr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="TCZ-oQ-uYS"/>
+                    <constraint firstAttribute="trailing" secondItem="Avd-ed-sP8" secondAttribute="trailing" constant="10" id="gOE-Xr-9Rb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chineseNameLabel" destination="Pt6-Uw-dfs" id="b19-Ze-eyW"/>
+                <outlet property="frontImage" destination="9cG-OP-eDr" id="bGx-Fx-prd"/>
+                <outlet property="timeLabel" destination="Avd-ed-sP8" id="CTR-bL-9SN"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="119.19642857142857"/>
+        </tableViewCell>
+    </objects>
+</document>

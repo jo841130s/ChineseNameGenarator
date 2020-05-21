@@ -12,11 +12,14 @@ class GenderViewController: UIViewController {
 
     @IBOutlet var genderSegmentControl: UISegmentedControl!
     @IBOutlet var genderImageView: UIImageView!
+    @IBOutlet var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        nextButton.addCorner(radious: 5)
+        if let font = UIFont(name: "jf-openhuninn-1.1", size: 12) {
+            genderSegmentControl.setTitleTextAttributes([.font: font ], for: .normal)
+        }
     }
     
 

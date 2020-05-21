@@ -102,20 +102,12 @@ class BirthViewController: UIViewController {
     }
     
     func updateZodiac(zodiac:String){
-        var zodiacLabelText = ""
-        if UserDefaults.standard.bool(forKey: "isForeigner") == false {
-            zodiacLabelText = "生肖: "
-        }
-        chineseZodiacLabel.text = zodiacLabelText + zodiac
+        chineseZodiacLabel.text = zodiac
         chineseZodiacImageView.image = UIImage(named: zodiacName.imageName)
     }
     
     func updateHoroscope(horoscope:String){
-        var horoscopeLabelText = ""
-        if UserDefaults.standard.bool(forKey: "isForeigner") == false {
-            horoscopeLabelText = "星座: "
-        }
-        horoscopeLabel.text = horoscopeLabelText + horoscope
+        horoscopeLabel.text = horoscope
         horoscopeImageView.image = UIImage(named: horoscopeName.imageName)
     }
     

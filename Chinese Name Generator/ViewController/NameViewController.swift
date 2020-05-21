@@ -31,7 +31,7 @@ class NameViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        let firstName = (firstNameTextField.text ?? "").trimmingCharacters(in: .whitespaces)
+        let firstName = (firstNameTextField.text ?? "Gill Sans ").trimmingCharacters(in: .whitespaces)
         if !isForeigner {
             userData.setUserData(data: firstName, name: "fixed_surname")
             return
@@ -46,23 +46,25 @@ class NameViewController: UIViewController {
         
         if isForeigner {
             let lastName = lastNameTextField.text ?? ""
-            checkFieldNotForeigner(firstName: firstName, lastName: lastName)
+            checkFieldIsForeigner(firstName: firstName, lastName: lastName)
         } else {
-            checkFieldIsForeigner(firstName: firstName)
+            checkFieldNotForeigner(firstName: firstName)
         }
     }
     
-    func checkFieldIsForeigner(firstName:String) {
+    func checkFieldNotForeigner(firstName:String) {
         if firstName == "" {
             showAlert(message: "請填寫姓氏")
-        } else if !checkName(name: firstName) {
-            showAlert(message: "不可填入特殊字元")
+        } else if !checkName(name: firstName) || containsLetters(input: firstName) {
+            showAlert(message: "不可填入特殊字元或英文")
+        } else if firstName.count > 1 {
+            showAlert(message: "只能填寫一個字")
         } else {
             performSegue(withIdentifier: "goBirthday", sender: self)
         }
     }
     
-    func checkFieldNotForeigner(firstName:String, lastName:String) {
+    func checkFieldIsForeigner(firstName:String, lastName:String) {
         if firstName == "" || lastName == "" {
             showAlert(message: "Fill both fields")
         } else if !checkName(name: firstName) || !checkName(name: lastName) {
@@ -73,7 +75,7 @@ class NameViewController: UIViewController {
     }
     
     func checkName(name:String) -> Bool {
-        for i in 0...name.count-1{
+        for i in 0..<name.count {
             let char = name[i]
             for j in 0...banCharacters.count-1 {
                 if char == banCharacters[j] {
@@ -84,12 +86,20 @@ class NameViewController: UIViewController {
         return true
     }
     
+    func containsLetters(input: String) -> Bool {
+       for chr in input {
+          if ((chr >= "a" && chr <= "z") || (chr >= "A" && chr <= "Z") ) {
+             return true
+          }
+       }
+       return false
+    }
+    
     func showAlert(message:String) {
         let alert = UIAlertController(title: "Oops!", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
-    
     
 }

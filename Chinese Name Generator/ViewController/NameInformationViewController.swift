@@ -17,6 +17,7 @@ class NameInformationViewController: UIViewController {
     var chineseName : String?
     var charsData : [Chars]?
     var sortedCharsData : [Chars] = []
+    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,8 @@ class NameInformationViewController: UIViewController {
     }
     
     func sortCharsData(data:[Chars]?) {
-        let chineseNameLength = (chineseName?.count ?? 1) - 1
-        for i in 0...chineseNameLength {
+        let chineseNameLength = chineseName?.count ?? 0
+        for i in 0..<chineseNameLength {
             let char = chineseName?[i] ?? ""
             if let charData = findChar(char: char, in: data) {
                 sortedCharsData.append(charData)
@@ -70,10 +71,17 @@ extension NameInformationViewController : UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NameInformationCell", for: indexPath) as! NameInformationCell
         let data = sortedCharsData[indexPath.row]
-        cell.charLabel.text = data.traditional
-        cell.englishSoundLabel.text = data.pinyin
-        cell.meaningLabel.text = data.chinese
-        cell.strokeLabel.text = data.stroke
+        if isForeigner {
+            cell.charLabel.text = data.traditional
+            cell.englishSoundLabel.text = "Romanization: " + data.pinyin
+            cell.strokeLabel.text = "Stokes: " + data.stroke
+            cell.meaningLabel.text = "Meaning: " + data.english
+        } else {
+            cell.charLabel.text = data.traditional
+            cell.englishSoundLabel.text = "發音: " + data.pinyin
+            cell.strokeLabel.text = "筆畫: " + data.stroke
+            cell.meaningLabel.text = "註釋: " + data.chinese
+        }
         return cell
     }
     

@@ -56,7 +56,6 @@ class TraitsViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         setUserTraits()
         UserData().setUserData(data: userTraits, name: "Traits")
-        print(userTraits)
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {

@@ -24,22 +24,22 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
         historyTableView.delegate = self
         historyTableView.dataSource = self
+        historyTableView.register(UINib(nibName: "HistoryCell", bundle: nil), forCellReuseIdentifier: "HistoryCell")
         loadHistoryNames()
     }
     
     func loadHistoryNames() {
         var charArray : [HistoryChars] = []
         let data = realm.objects(NameHistoryData.self)
-        let dataCount = data.count - 1
-        if dataCount < 0 { return }
-        for i in 0...dataCount {
-            for _ in 0...8 {
+        if data.count == 0 { return }
+        for i in 0..<data.count {
+            for _ in 0..<data[i].names.count {
                 timeArray.append(data[i].create_time)
             }
-            for j in 0...data[i].names.count - 1 {
+            for j in 0..<data[i].names.count {
                 nameArray.append(data[i].names[j].traditional)
             }
-            for k in 0...data[i].chars.count - 1 {
+            for k in 0..<data[i].chars.count {
                 charArray.append(data[i].chars[k])
             }
         }
@@ -48,7 +48,7 @@ class HistoryViewController: UIViewController {
     }
     
     func decodeHistoryChars(data:[HistoryChars]) {
-        for i in 0...data.count - 1 {
+        for i in 0..<data.count {
             let traditional = data[i].traditional
             let simplified = data[i].simplified
             let chinese = data[i].chinese
@@ -81,7 +81,7 @@ extension HistoryViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as! HistoryCell
         cell.frontImage.image =  UIImage(named: "八卦")
         cell.chineseNameLabel.text = nameArray[indexPath.row]
         cell.timeLabel.text = timeArray[indexPath.row]
