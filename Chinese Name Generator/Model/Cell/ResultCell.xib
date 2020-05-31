@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ChineseFont.ttf">
-            <string>jf-openhuninn-1.1</string>
+        <array key="Yuanti.ttc">
+            <string>STYuanti-TC-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -22,27 +23,47 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChineseName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8U-hv-A9C">
-                        <rect key="frame" x="30" y="20" width="155" height="30"/>
-                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qhm-42-Igp">
-                        <rect key="frame" x="270" y="20.5" width="30" height="29"/>
-                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ae9-qX-kBV">
+                        <rect key="frame" x="20" y="20" width="201" height="30"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vve-Vo-SGT">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="XBD-Va-t0l"/>
+                                    <constraint firstAttribute="height" constant="30" id="lBp-OR-yFF"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="speaker.3.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="soundButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="luY-Rx-vrz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChineseName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8U-hv-A9C">
+                                <rect key="frame" x="50" y="0.0" width="151" height="30"/>
+                                <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xta-cM-1Pa">
+                        <rect key="frame" x="270" y="20" width="30" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="4Bz-oI-WqA"/>
-                            <constraint firstAttribute="height" constant="30" id="86A-hc-jHf"/>
+                            <constraint firstAttribute="height" constant="30" id="KcU-Q5-Ojr"/>
+                            <constraint firstAttribute="width" constant="30" id="eYR-QD-iok"/>
                         </constraints>
-                    </imageView>
+                        <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" image="info.circle.fill" catalog="system"/>
+                    </button>
                 </subviews>
+                <color key="backgroundColor" name="Background Color"/>
                 <constraints>
-                    <constraint firstItem="qhm-42-Igp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5sK-HP-uG2"/>
-                    <constraint firstItem="w8U-hv-A9C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="6Yg-eS-y9x"/>
-                    <constraint firstAttribute="trailing" secondItem="qhm-42-Igp" secondAttribute="trailing" constant="20" id="6xm-No-MxR"/>
-                    <constraint firstItem="w8U-hv-A9C" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OBR-Md-6dN"/>
-                    <constraint firstItem="w8U-hv-A9C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="ndI-jh-pAv"/>
+                    <constraint firstItem="Ae9-qX-kBV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="BGo-MP-YDH"/>
+                    <constraint firstAttribute="bottom" secondItem="Ae9-qX-kBV" secondAttribute="bottom" constant="20" id="C8R-J4-t6U"/>
+                    <constraint firstAttribute="bottom" secondItem="Xta-cM-1Pa" secondAttribute="bottom" constant="20" id="kAU-fQ-EYk"/>
+                    <constraint firstItem="Xta-cM-1Pa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="nYv-vf-ghD"/>
+                    <constraint firstAttribute="trailing" secondItem="Xta-cM-1Pa" secondAttribute="trailing" constant="20" id="qhe-E4-Off"/>
+                    <constraint firstItem="Ae9-qX-kBV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="yGn-j2-yJ3"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -54,5 +75,9 @@
     </objects>
     <resources>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="speaker.3.fill" catalog="system" width="128" height="90"/>
+        <namedColor name="Background Color">
+            <color red="0.96899998188018799" green="0.9649999737739563" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

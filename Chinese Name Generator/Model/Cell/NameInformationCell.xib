@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ChineseFont.ttf">
-            <string>jf-openhuninn-1.1</string>
+        <array key="Yuanti.ttc">
+            <string>STYuanti-SC-Light</string>
+            <string>STYuanti-TC-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -23,55 +25,56 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtG-YX-gnS">
-                        <rect key="frame" x="20" y="10" width="50" height="50"/>
+                        <rect key="frame" x="30" y="20" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="Q9W-oo-aiS"/>
                             <constraint firstAttribute="height" constant="50" id="T2I-vq-aYH"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="48"/>
+                        <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l69-oL-Bij">
-                        <rect key="frame" x="80" y="10" width="220" height="133"/>
+                        <rect key="frame" x="110" y="20" width="190" height="113"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4v-3A-7th">
-                                <rect key="frame" x="0.0" y="0.0" width="30.5" height="15"/>
+                                <rect key="frame" x="0.0" y="0.0" width="39.5" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="RY5-8I-71P"/>
+                                    <constraint firstAttribute="height" constant="25" id="RY5-8I-71P"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3I-Gc-4gg">
-                                <rect key="frame" x="0.0" y="25" width="30.5" height="15"/>
+                                <rect key="frame" x="0.0" y="35" width="39.5" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="4S9-oe-gyn"/>
+                                    <constraint firstAttribute="height" constant="25" id="4S9-oe-gyn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NI7-mg-hV5">
-                                <rect key="frame" x="0.0" y="50" width="30.5" height="83"/>
+                                <rect key="frame" x="0.0" y="70" width="39.5" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="fcM-Uc-cI4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="fcM-Uc-cI4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" name="Background Color"/>
                 <constraints>
-                    <constraint firstItem="vtG-YX-gnS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="CtP-9f-J1x"/>
-                    <constraint firstItem="l69-oL-Bij" firstAttribute="leading" secondItem="vtG-YX-gnS" secondAttribute="trailing" constant="10" id="E1j-bc-6PI"/>
+                    <constraint firstItem="vtG-YX-gnS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="CtP-9f-J1x"/>
+                    <constraint firstItem="l69-oL-Bij" firstAttribute="leading" secondItem="vtG-YX-gnS" secondAttribute="trailing" constant="30" id="E1j-bc-6PI"/>
                     <constraint firstAttribute="trailing" secondItem="l69-oL-Bij" secondAttribute="trailing" constant="20" id="cIJ-Xf-VVE"/>
-                    <constraint firstItem="vtG-YX-gnS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="gBR-Eb-jcm"/>
-                    <constraint firstAttribute="bottom" secondItem="l69-oL-Bij" secondAttribute="bottom" constant="10" id="nnD-Q9-iGy"/>
-                    <constraint firstItem="l69-oL-Bij" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vbH-rD-4Db"/>
+                    <constraint firstItem="vtG-YX-gnS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="gBR-Eb-jcm"/>
+                    <constraint firstAttribute="bottom" secondItem="l69-oL-Bij" secondAttribute="bottom" constant="20" id="nnD-Q9-iGy"/>
+                    <constraint firstItem="l69-oL-Bij" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="vbH-rD-4Db"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -84,4 +87,9 @@
             <point key="canvasLocation" x="66.666666666666671" y="144.97767857142856"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="Background Color">
+            <color red="0.96899998188018799" green="0.9649999737739563" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

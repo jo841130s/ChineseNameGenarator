@@ -7,14 +7,12 @@
 //
 
 import UIKit
+import CDAlertView
 
 class BirthViewController: UIViewController {
 
     @IBOutlet var datePicker: UIDatePicker!
-    @IBOutlet var chineseZodiacLabel: UILabel!
-    @IBOutlet var chineseZodiacImageView: UIImageView!
-    @IBOutlet var horoscopeLabel: UILabel!
-    @IBOutlet var horoscopeImageView: UIImageView!
+    @IBOutlet var nextButton: UIButton!
     
     let zodiacName = ZodiacName()
     let horoscopeName = HoroscopeName()
@@ -22,9 +20,12 @@ class BirthViewController: UIViewController {
     let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
     
     var userBirthDay = "1990-01-01"
+    var userZodiac = ""
+    var userHoroscope = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.addCorner(radious: 5)
         horoscopeName.isForeigner = isForeigner
         zodiacName.isForeigner = isForeigner
         datePicker.addTarget(self, action: #selector(BirthViewController.caculateZodiac), for: UIControl.Event.valueChanged)
@@ -102,21 +103,108 @@ class BirthViewController: UIViewController {
     }
     
     func updateZodiac(zodiac:String){
-        chineseZodiacLabel.text = zodiac
-        chineseZodiacImageView.image = UIImage(named: zodiacName.imageName)
+        userZodiac = zodiac
     }
     
     func updateHoroscope(horoscope:String){
-        horoscopeLabel.text = horoscope
-        horoscopeImageView.image = UIImage(named: horoscopeName.imageName)
+        userHoroscope = horoscope
+    }
+    
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        switch isForeigner {
+        case true:
+            if let image = UIImage(named: zodiacName.imageName) {
+                let resizeimage = resizeImage(image: image, targetSize: CGSize(width: 30, height: 30))
+                showAlert(title: "Your Chinese Zodiac is \(userZodiac)", message: "Personality Traits: \(zodiacName.info)", image:resizeimage)
+            } else {
+                performSegue(withIdentifier: "goTraits", sender: self)
+            }
+        case false:
+            if let image = UIImage(named: horoscopeName.imageName) {
+                let resizeimage = resizeImage(image: image, targetSize: CGSize(width: 30, height: 30))
+                showAlert(title: "寶寶的星座是 \( userHoroscope)", message: "特質: \(horoscopeName.info)", image:resizeimage)
+            } else {
+                performSegue(withIdentifier: "goTraits", sender: self)
+            }
+        }
+        
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         UserData().setUserData(data: userBirthDay, name: "Birth")
+    }
+    
+    func showAlert(title:String, message:String, image:UIImage) {
+        let alert = CDAlertView(title: title, message: message, type: .custom(image:image))
+        view.addSubview(alert)
+        
+        let okAction = CDAlertViewAction(title: "OK", font: nil, textColor: nil, backgroundColor: nil) { (action) -> Bool in
+            self.performSegue(withIdentifier: "goTraits", sender: self)
+            return true
+        }
+        alert.add(action: okAction)
+        
+        var infoText = ""
+        switch isForeigner {
+        case true:
+            infoText = "More"
+            if let font = UIFont(name: "Gill Sans", size: 18) {
+                alert.titleFont = font
+                alert.messageFont = font.withSize(12)
+            }
+        case false:
+            infoText = "更多"
+            if let font = UIFont(name: "jf-openhuninn-1.1", size: 18) {
+                alert.titleFont = font
+                alert.messageFont = font.withSize(12)
+            }
+        }
+        
+        let infoAction = CDAlertViewAction(title: infoText, font: nil, textColor: nil, backgroundColor: nil) { (action) -> Bool in
+            self.performSegue(withIdentifier: "goStory", sender: self)
+            return true
+        }
+        alert.add(action: infoAction)
+        
+        
+        alert.isTextFieldHidden = true
+        alert.circleFillColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+        
+        alert.hideAnimations = { (center, transform, alpha) in
+            transform = .identity
+            alpha = 0
+        }
+        alert.show()
+    }
+    
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+
+        let widthRatio  = targetSize.width  / size.width
+        let heightRatio = targetSize.height / size.height
+
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+        }
+
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage!
     }
     
 }

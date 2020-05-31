@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HistoryCell: UITableViewCell {
 
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var chineseNameLabel: UILabel!
-    @IBOutlet var frontImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,4 +25,11 @@ class HistoryCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func soundButtonPressed(_ sender: Any) {
+        let utterance = AVSpeechUtterance(string: chineseNameLabel.text ?? "")
+        utterance.voice = AVSpeechSynthesisVoice(language: "zh-CN")
+        utterance.rate = 0.1
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+    }
 }

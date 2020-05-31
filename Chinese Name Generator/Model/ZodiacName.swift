@@ -14,8 +14,11 @@ class ZodiacName {
     
     var imageName = "Rat"
     
+    var info = ""
+    
     var rat : String {
         imageName = "Rat"
+        info = "Quick-witted, resourceful, versatile, kind"
         if isForeigner {
             return "Rat"
         } else {
@@ -25,6 +28,7 @@ class ZodiacName {
     
     var ox : String {
         imageName = "Ox"
+        info = "Diligent, dependable, strong, determined"
         if isForeigner {
             return "Ox"
         } else {
@@ -34,6 +38,7 @@ class ZodiacName {
     
     var tiger : String {
         imageName = "Tiger"
+        info = "Brave, confident, competitive"
         if isForeigner {
             return "Tiger"
         } else {
@@ -43,6 +48,7 @@ class ZodiacName {
     
     var rabbit : String {
         imageName = "Rabbit"
+        info = "Quiet, elegant, kind, responsible"
         if isForeigner {
             return "Rabbit"
         } else {
@@ -52,6 +58,7 @@ class ZodiacName {
     
     var dragon : String {
         imageName = "Dragon"
+        info = "Confident, intelligent, enthusiastic"
         if isForeigner {
             return "Dragon"
         } else {
@@ -61,6 +68,7 @@ class ZodiacName {
     
     var snake : String {
         imageName = "Snake"
+        info = "Enigmatic, intelligent, wise"
         if isForeigner {
             return "Snake"
         } else {
@@ -70,6 +78,7 @@ class ZodiacName {
     
     var horse : String {
         imageName = "Horse"
+        info = "Animated, active, energetic"
         if isForeigner {
             return "Horse"
         } else {
@@ -79,6 +88,7 @@ class ZodiacName {
     
     var goat : String {
         imageName = "Goat"
+        info = "Calm, gentle, sympathetic"
         if isForeigner {
             return "Goat"
         } else {
@@ -88,6 +98,7 @@ class ZodiacName {
     
     var monkey : String {
         imageName = "Monkey"
+        info = "Sharp, smart, curiosity"
         if isForeigner {
             return "Monkey"
         } else {
@@ -97,6 +108,7 @@ class ZodiacName {
     
     var rooster : String {
         imageName = "Rooster"
+        info = "Observant, hardworking, courageous"
         if isForeigner {
             return "Rooster"
         } else {
@@ -106,6 +118,7 @@ class ZodiacName {
     
     var dog : String {
         imageName = "Dog"
+        info = "Lovely, honest, prudent"
         if isForeigner {
             return "Dog"
         } else {
@@ -115,6 +128,7 @@ class ZodiacName {
     
     var pig : String {
         imageName = "Pig"
+        info = "Compassionate, generous, diligent"
         if isForeigner {
             return "Pig"
         } else {

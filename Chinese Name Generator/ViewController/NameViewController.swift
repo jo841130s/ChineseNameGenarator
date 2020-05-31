@@ -11,6 +11,7 @@ import IQKeyboardManagerSwift
 
 class NameViewController: UIViewController {
 
+    @IBOutlet var nextButton: UIButton!
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
     
@@ -21,6 +22,7 @@ class NameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.addCorner(radious: 5)
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
@@ -66,9 +68,9 @@ class NameViewController: UIViewController {
     
     func checkFieldIsForeigner(firstName:String, lastName:String) {
         if firstName == "" || lastName == "" {
-            showAlert(message: "Fill both fields")
+            showAlert(message: "Please fill in both fields")
         } else if !checkName(name: firstName) || !checkName(name: lastName) {
-            showAlert(message: "With special characters or numbers")
+            showAlert(message: "Do not use special characters or numbers")
         } else {
             performSegue(withIdentifier: "goCountry", sender: self)
         }

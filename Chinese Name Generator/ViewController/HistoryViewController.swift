@@ -82,7 +82,6 @@ extension HistoryViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as! HistoryCell
-        cell.frontImage.image =  UIImage(named: "八卦")
         cell.chineseNameLabel.text = nameArray[indexPath.row]
         cell.timeLabel.text = timeArray[indexPath.row]
         return cell

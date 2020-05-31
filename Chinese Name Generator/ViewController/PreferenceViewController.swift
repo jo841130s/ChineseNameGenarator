@@ -14,32 +14,42 @@ import RealmSwift
 class PreferenceViewController: UIViewController {
     
     let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
-
-    @IBOutlet var tableView: UITableView!
+    
+    @IBOutlet var numCharSegmentedControl: UISegmentedControl!
     @IBOutlet var fixedSurname: UITextField!
     @IBOutlet var fixedFirstChar: UITextField!
     @IBOutlet var fixedSecondChar: UITextField!
+    @IBOutlet var nextButton: UIButton!
     
     let userData = UserData()
     let realm = try! Realm()
     
-    var enCellTitle = ["Two","Three"]
-    var cnCellTitle = ["兩個字","三個字"]
     let apiBuilder = APIBuilder()
     var nameData : NameData?
     var numChars = "3"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.addCorner(radious: 5)
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         apiBuilder.delegate = self
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         setFixedSurnameTextField()
     }
+    
+    @IBAction func numCharValueChanged(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            numChars = "3"
+            fixedFirstChar.isHidden = false
+            fixedFirstChar.text = ""
+        } else if sender.selectedSegmentIndex == 1 {
+            numChars = "2"
+            fixedFirstChar.isHidden = true
+            fixedFirstChar.text = ""
+        }
+    }
+    
     
     func setFixedSurnameTextField() {
         if isForeigner {
@@ -47,11 +57,26 @@ class PreferenceViewController: UIViewController {
         }
         if let fixedSurnameText = userData.userData(name: "fixed_surname") as? String {
             fixedSurname.text = fixedSurnameText
-            fixedSurname.isEnabled = false
         }
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
+        let usedTimes = UserDefaults.standard.integer(forKey: "UsedTimes")
+        var alert = UIAlertController(title: "注意!", message: "剩餘次數: \(12-usedTimes)", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.requestName()
+        }
+        var cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        if isForeigner {
+            alert = UIAlertController(title: "Attention!", message: "Available number of times: \(12-usedTimes)", preferredStyle: .alert)
+            cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        }
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func requestName() {
         let surname = fixedSurname.text ?? ""
         let firstChar = fixedFirstChar.text ?? ""
         let secondChar = fixedSecondChar.text ?? ""
@@ -225,45 +250,6 @@ extension PreferenceViewController : APIDelegate {
                 print("Error Saving Name Data: \(error)")
             }
         }
-    }
-    
-}
-
-extension PreferenceViewController : UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        if isForeigner {
-            cell.textLabel?.text = enCellTitle[indexPath.row]
-        } else {
-            cell.textLabel?.text = cnCellTitle[indexPath.row]
-        }
-        cell.selectionStyle = .default
-        cell.selectedBackgroundView?.backgroundColor = .lightGray
-        return cell
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let row = indexPath.row
-        if row == 0 {
-            numChars = "2"
-            fixedFirstChar.isHidden = true
-            fixedFirstChar.text = ""
-        } else {
-            numChars = "3"
-            fixedFirstChar.isHidden = false
-            fixedFirstChar.text = ""
-        }
-        
     }
     
 }

@@ -11,6 +11,7 @@ import UIKit
 class TraitsViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var nextButton: UIButton!
     
     let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
     
@@ -23,6 +24,7 @@ class TraitsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.addCorner(radious: 5)
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
@@ -60,13 +62,13 @@ class TraitsViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: Any) {
         if userTraits.count == 0 && isForeigner {
-            showAlert(message: "Not selected yet")
+            showAlert(message: "No selection yet")
         } else if userTraits.count == 0 && !isForeigner {
             showAlert(message: "請選擇至少一個")
         } else if userTraits.count > 5 && !isForeigner{
             showAlert(message: "不得超過五個")
         } else if userTraits.count > 5 {
-            showAlert(message: "Select over limit")
+            showAlert(message: "Selections over limit")
         } else {
             performSegue(withIdentifier: "goPreference", sender: self)
         }

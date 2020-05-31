@@ -12,10 +12,14 @@ class TraitsCell: UITableViewCell {
 
     @IBOutlet var brushImageView: UIImageView!
     @IBOutlet var traitLabel: UILabel!
+    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        if isForeigner {
+            traitLabel.font = UIFont(name: "Centaur", size: 24)
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

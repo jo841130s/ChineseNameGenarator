@@ -73,14 +73,14 @@ extension NameInformationViewController : UITableViewDelegate, UITableViewDataSo
         let data = sortedCharsData[indexPath.row]
         if isForeigner {
             cell.charLabel.text = data.traditional
-            cell.englishSoundLabel.text = "Romanization: " + data.pinyin
-            cell.strokeLabel.text = "Stokes: " + data.stroke
-            cell.meaningLabel.text = "Meaning: " + data.english
+            cell.englishSoundLabel.text = "Romanization:  " + data.pinyin
+            cell.strokeLabel.text = "Stokes:  " + data.stroke
+            cell.meaningLabel.text = "Meaning:  " + data.english
         } else {
             cell.charLabel.text = data.traditional
-            cell.englishSoundLabel.text = "發音: " + data.pinyin
-            cell.strokeLabel.text = "筆畫: " + data.stroke
-            cell.meaningLabel.text = "註釋: " + data.chinese
+            cell.englishSoundLabel.text = "發音： " + data.pinyin
+            cell.strokeLabel.text = "筆畫： " + data.stroke
+            cell.meaningLabel.text = "註釋： " + data.chinese
         }
         return cell
     }

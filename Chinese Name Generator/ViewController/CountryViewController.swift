@@ -11,6 +11,7 @@ import UIKit
 class CountryViewController: UIViewController {
 
     @IBOutlet var countryPickerView: UIPickerView!
+    @IBOutlet var nextButtonView: UIView!
     var selectedCountry = "Australia"
     let userData = UserData()
     
@@ -18,6 +19,7 @@ class CountryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButtonView.layer.cornerRadius = 5
         countryPickerView.delegate = self
         countryPickerView.dataSource = self
     }
@@ -48,7 +50,7 @@ extension CountryViewController : UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var pickerLabel: UILabel? = (view as? UILabel)
-        if let font = UIFont(name: "Gill Sans", size: 24) {
+        if let font = UIFont(name: "LetterGothicStd-Bold", size: 24) {
             if pickerLabel == nil {
                 pickerLabel = UILabel()
                 pickerLabel?.font = font

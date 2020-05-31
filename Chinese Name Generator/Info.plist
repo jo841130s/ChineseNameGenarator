@@ -4,7 +4,11 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>ChineseFont.tff</string>
+		<string>Yuanti.ttc</string>
+		<string>centaur.ttf</string>
+		<string>LetterGothicStd-Bold.otf</string>
+		<string>LetterGothicStd-Slanted.otf</string>
+		<string>LetterGothicStd.otf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

@@ -13,6 +13,15 @@
 		042704E22428E5C40036ADCE /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042704E12428E5C40036ADCE /* NameViewController.swift */; };
 		042704E52428E7550036ADCE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 042704E42428E7550036ADCE /* IQKeyboardManagerSwift */; };
 		042704E72428E8C00036ADCE /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042704E62428E8C00036ADCE /* CountryViewController.swift */; };
+		0431517624827949009047CB /* Yuanti.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 0431517524827948009047CB /* Yuanti.ttc */; };
+		043151792482879D009047CB /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043151772482879D009047CB /* TipsCell.swift */; };
+		0431517A2482879D009047CB /* TipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043151782482879D009047CB /* TipsCell.xib */; };
+		0431518224829483009047CB /* TraitsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0431518024829483009047CB /* TraitsCell.xib */; };
+		0431518424829E3C009047CB /* centaur.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0431518324829E3C009047CB /* centaur.ttf */; };
+		0431518924829EAE009047CB /* LetterGothicStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0431518524829EAD009047CB /* LetterGothicStd-Bold.otf */; };
+		0431518A24829EAE009047CB /* LetterGothicStd-BoldSlanted.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0431518624829EAD009047CB /* LetterGothicStd-BoldSlanted.otf */; };
+		0431518B24829EAE009047CB /* LetterGothicStd-Slanted.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0431518724829EAD009047CB /* LetterGothicStd-Slanted.otf */; };
+		0431518C24829EAE009047CB /* LetterGothicStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0431518824829EAE009047CB /* LetterGothicStd.otf */; };
 		043F3B09243C6B8000ED8744 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F3B08243C6B8000ED8744 /* SettingViewController.swift */; };
 		043F3B692444737600ED8744 /* NameHistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F3B682444737600ED8744 /* NameHistoryData.swift */; };
 		044F7D802439CC42007B64E4 /* APIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F7D7F2439CC42007B64E4 /* APIBuilder.swift */; };
@@ -20,7 +29,7 @@
 		04587A9024728116002E1227 /* UsedCountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04587A8F24728116002E1227 /* UsedCountData.swift */; };
 		04587A972473DCD1002E1227 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04587A952473DCD1002E1227 /* HistoryCell.swift */; };
 		04587A982473DCD1002E1227 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04587A962473DCD1002E1227 /* HistoryCell.xib */; };
-		04587A9E24766AC7002E1227 /* ChineseFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04587A9D24766AC7002E1227 /* ChineseFont.ttf */; };
+		04587AA02477821D002E1227 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04587A9F2477821D002E1227 /* StoreKit.framework */; };
 		04975DB72413885C00EC257F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DB62413885C00EC257F /* AppDelegate.swift */; };
 		04975DB92413885C00EC257F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DB82413885C00EC257F /* SceneDelegate.swift */; };
 		04975DBE2413885C00EC257F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04975DBC2413885C00EC257F /* Main.storyboard */; };
@@ -30,6 +39,8 @@
 		04975DD1241393EE00EC257F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DD0241393EE00EC257F /* HistoryViewController.swift */; };
 		04975DD324139BAB00EC257F /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DD224139BAB00EC257F /* TipsViewController.swift */; };
 		04975DD5241E446D00EC257F /* NameInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DD4241E446D00EC257F /* NameInformationViewController.swift */; };
+		04C2615B2478DC86003E1024 /* StoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2615A2478DC86003E1024 /* StoryTableViewController.swift */; };
+		04C2615D24791371003E1024 /* HoroscopeStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2615C24791371003E1024 /* HoroscopeStoryViewController.swift */; };
 		04E74FCD242F538E0001EFCE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E74FCC242F538E0001EFCE /* UserData.swift */; };
 		04E74FCF242F5B080001EFCE /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E74FCE242F5B080001EFCE /* PreferenceViewController.swift */; };
 		04E74FD12435D91B0001EFCE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E74FD02435D91B0001EFCE /* ResultViewController.swift */; };
@@ -40,7 +51,6 @@
 		04FA037D2428EE3C003F1A4F /* BirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA037C2428EE3C003F1A4F /* BirthViewController.swift */; };
 		04FA037F2428F115003F1A4F /* TraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA037E2428F115003F1A4F /* TraitsViewController.swift */; };
 		04FA03822428F2DC003F1A4F /* TraitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA03802428F2DC003F1A4F /* TraitsCell.swift */; };
-		04FA03832428F2DC003F1A4F /* TraitsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FA03812428F2DC003F1A4F /* TraitsCell.xib */; };
 		58E7A92C326CB25CFF3E22CE /* Pods_Chinese_Name_Generator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0E1259CDA6FC1913DCC515 /* Pods_Chinese_Name_Generator.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +60,15 @@
 		042704DF2428E1D20036ADCE /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		042704E12428E5C40036ADCE /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		042704E62428E8C00036ADCE /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		0431517524827948009047CB /* Yuanti.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yuanti.ttc; sourceTree = "<group>"; };
+		043151772482879D009047CB /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
+		043151782482879D009047CB /* TipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsCell.xib; sourceTree = "<group>"; };
+		0431518024829483009047CB /* TraitsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TraitsCell.xib; sourceTree = "<group>"; };
+		0431518324829E3C009047CB /* centaur.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = centaur.ttf; sourceTree = "<group>"; };
+		0431518524829EAD009047CB /* LetterGothicStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LetterGothicStd-Bold.otf"; sourceTree = "<group>"; };
+		0431518624829EAD009047CB /* LetterGothicStd-BoldSlanted.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LetterGothicStd-BoldSlanted.otf"; sourceTree = "<group>"; };
+		0431518724829EAD009047CB /* LetterGothicStd-Slanted.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LetterGothicStd-Slanted.otf"; sourceTree = "<group>"; };
+		0431518824829EAE009047CB /* LetterGothicStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LetterGothicStd.otf; sourceTree = "<group>"; };
 		043F3B08243C6B8000ED8744 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		043F3B682444737600ED8744 /* NameHistoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHistoryData.swift; sourceTree = "<group>"; };
 		044F7D7F2439CC42007B64E4 /* APIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBuilder.swift; sourceTree = "<group>"; };
@@ -57,8 +76,8 @@
 		04587A8F24728116002E1227 /* UsedCountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCountData.swift; sourceTree = "<group>"; };
 		04587A952473DCD1002E1227 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		04587A962473DCD1002E1227 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
-		04587A9D24766AC7002E1227 /* ChineseFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ChineseFont.ttf; path = "../../jf-openhuninn-1.1/ChineseFont.ttf"; sourceTree = "<group>"; };
-		04975DB32413885C00EC257F /* Chinese Name Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chinese Name Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04587A9F2477821D002E1227 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		04975DB32413885C00EC257F /* 寶寶起名智能妙算.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "寶寶起名智能妙算.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04975DB62413885C00EC257F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04975DB82413885C00EC257F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04975DBD2413885C00EC257F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +88,8 @@
 		04975DD0241393EE00EC257F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		04975DD224139BAB00EC257F /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		04975DD4241E446D00EC257F /* NameInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInformationViewController.swift; sourceTree = "<group>"; };
+		04C2615A2478DC86003E1024 /* StoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewController.swift; sourceTree = "<group>"; };
+		04C2615C24791371003E1024 /* HoroscopeStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeStoryViewController.swift; sourceTree = "<group>"; };
 		04E74FCC242F538E0001EFCE /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		04E74FCE242F5B080001EFCE /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		04E74FD02435D91B0001EFCE /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +100,6 @@
 		04FA037C2428EE3C003F1A4F /* BirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewController.swift; sourceTree = "<group>"; };
 		04FA037E2428F115003F1A4F /* TraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsViewController.swift; sourceTree = "<group>"; };
 		04FA03802428F2DC003F1A4F /* TraitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsCell.swift; sourceTree = "<group>"; };
-		04FA03812428F2DC003F1A4F /* TraitsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TraitsCell.xib; sourceTree = "<group>"; };
 		86FCBE58501262DACCE22DF4 /* Pods-Chinese Name Generator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinese Name Generator.debug.xcconfig"; path = "Target Support Files/Pods-Chinese Name Generator/Pods-Chinese Name Generator.debug.xcconfig"; sourceTree = "<group>"; };
 		CF39B51973AA804844D0E05C /* Pods-Chinese Name Generator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinese Name Generator.release.xcconfig"; path = "Target Support Files/Pods-Chinese Name Generator/Pods-Chinese Name Generator.release.xcconfig"; sourceTree = "<group>"; };
 		FE0E1259CDA6FC1913DCC515 /* Pods_Chinese_Name_Generator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chinese_Name_Generator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04587AA02477821D002E1227 /* StoreKit.framework in Frameworks */,
 				58E7A92C326CB25CFF3E22CE /* Pods_Chinese_Name_Generator.framework in Frameworks */,
 				042704E52428E7550036ADCE /* IQKeyboardManagerSwift in Frameworks */,
 			);
@@ -102,13 +123,15 @@
 			isa = PBXGroup;
 			children = (
 				04FA03802428F2DC003F1A4F /* TraitsCell.swift */,
-				04FA03812428F2DC003F1A4F /* TraitsCell.xib */,
+				0431518024829483009047CB /* TraitsCell.xib */,
 				04E74FD22435D99C0001EFCE /* ResultCell.swift */,
 				04E74FD32435D99C0001EFCE /* ResultCell.xib */,
 				04E74FD62435E7990001EFCE /* NameInformationCell.swift */,
 				04E74FD72435E7990001EFCE /* NameInformationCell.xib */,
 				04587A952473DCD1002E1227 /* HistoryCell.swift */,
 				04587A962473DCD1002E1227 /* HistoryCell.xib */,
+				043151772482879D009047CB /* TipsCell.swift */,
+				043151782482879D009047CB /* TipsCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -144,7 +167,7 @@
 		04975DB42413885C00EC257F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04975DB32413885C00EC257F /* Chinese Name Generator.app */,
+				04975DB32413885C00EC257F /* 寶寶起名智能妙算.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,7 +183,12 @@
 				04975DBF2413886000EC257F /* Assets.xcassets */,
 				04975DC12413886000EC257F /* LaunchScreen.storyboard */,
 				04975DC42413886000EC257F /* Info.plist */,
-				04587A9D24766AC7002E1227 /* ChineseFont.ttf */,
+				0431517524827948009047CB /* Yuanti.ttc */,
+				0431518324829E3C009047CB /* centaur.ttf */,
+				0431518524829EAD009047CB /* LetterGothicStd-Bold.otf */,
+				0431518624829EAD009047CB /* LetterGothicStd-BoldSlanted.otf */,
+				0431518724829EAD009047CB /* LetterGothicStd-Slanted.otf */,
+				0431518824829EAE009047CB /* LetterGothicStd.otf */,
 			);
 			path = "Chinese Name Generator";
 			sourceTree = "<group>";
@@ -193,6 +221,8 @@
 				04E74FCE242F5B080001EFCE /* PreferenceViewController.swift */,
 				04E74FD02435D91B0001EFCE /* ResultViewController.swift */,
 				043F3B08243C6B8000ED8744 /* SettingViewController.swift */,
+				04C2615A2478DC86003E1024 /* StoryTableViewController.swift */,
+				04C2615C24791371003E1024 /* HoroscopeStoryViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -200,6 +230,7 @@
 		17FED6CCB2C48EEE7B6FC590 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04587A9F2477821D002E1227 /* StoreKit.framework */,
 				FE0E1259CDA6FC1913DCC515 /* Pods_Chinese_Name_Generator.framework */,
 			);
 			name = Frameworks;
@@ -236,7 +267,7 @@
 				042704E42428E7550036ADCE /* IQKeyboardManagerSwift */,
 			);
 			productName = "Chinese Name Generator";
-			productReference = 04975DB32413885C00EC257F /* Chinese Name Generator.app */;
+			productReference = 04975DB32413885C00EC257F /* 寶寶起名智能妙算.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -280,14 +311,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0431518224829483009047CB /* TraitsCell.xib in Resources */,
+				0431518424829E3C009047CB /* centaur.ttf in Resources */,
+				0431517624827949009047CB /* Yuanti.ttc in Resources */,
 				04975DC32413886000EC257F /* LaunchScreen.storyboard in Resources */,
-				04587A9E24766AC7002E1227 /* ChineseFont.ttf in Resources */,
 				04587A982473DCD1002E1227 /* HistoryCell.xib in Resources */,
+				0431517A2482879D009047CB /* TipsCell.xib in Resources */,
 				04975DC02413886000EC257F /* Assets.xcassets in Resources */,
-				04FA03832428F2DC003F1A4F /* TraitsCell.xib in Resources */,
 				04E74FD92435E7990001EFCE /* NameInformationCell.xib in Resources */,
 				04975DBE2413885C00EC257F /* Main.storyboard in Resources */,
+				0431518C24829EAE009047CB /* LetterGothicStd.otf in Resources */,
+				0431518924829EAE009047CB /* LetterGothicStd-Bold.otf in Resources */,
+				0431518A24829EAE009047CB /* LetterGothicStd-BoldSlanted.otf in Resources */,
 				04E74FD52435D99C0001EFCE /* ResultCell.xib in Resources */,
+				0431518B24829EAE009047CB /* LetterGothicStd-Slanted.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,11 +378,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04587A9024728116002E1227 /* UsedCountData.swift in Sources */,
+				04C2615D24791371003E1024 /* HoroscopeStoryViewController.swift in Sources */,
 				043F3B692444737600ED8744 /* NameHistoryData.swift in Sources */,
 				04E74FCF242F5B080001EFCE /* PreferenceViewController.swift in Sources */,
 				04975DB72413885C00EC257F /* AppDelegate.swift in Sources */,
 				042704E02428E1D20036ADCE /* GenderViewController.swift in Sources */,
 				04E74FD12435D91B0001EFCE /* ResultViewController.swift in Sources */,
+				043151792482879D009047CB /* TipsCell.swift in Sources */,
 				0409328824528B5B00BC4527 /* HoroscopeName.swift in Sources */,
 				04E74FCD242F538E0001EFCE /* UserData.swift in Sources */,
 				043F3B09243C6B8000ED8744 /* SettingViewController.swift in Sources */,
@@ -359,6 +398,7 @@
 				042704E22428E5C40036ADCE /* NameViewController.swift in Sources */,
 				044F7D802439CC42007B64E4 /* APIBuilder.swift in Sources */,
 				04975DD1241393EE00EC257F /* HistoryViewController.swift in Sources */,
+				04C2615B2478DC86003E1024 /* StoryTableViewController.swift in Sources */,
 				04975DD5241E446D00EC257F /* NameInformationViewController.swift in Sources */,
 				04FA037D2428EE3C003F1A4F /* BirthViewController.swift in Sources */,
 				044F7D822439D227007B64E4 /* NameData.swift in Sources */,
@@ -518,7 +558,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "GuangXin.Chinese-Name-Generator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "寶寶起名智能妙算";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -538,7 +578,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "GuangXin.Chinese-Name-Generator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "寶寶起名智能妙算";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

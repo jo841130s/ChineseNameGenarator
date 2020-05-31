@@ -12,12 +12,14 @@ import RealmSwift
 class ResultViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var homeButton: UIButton!
     var namesData : NameData?
     var selectedRow = 0
     let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        homeButton.addCorner(radious: 5)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ResultCell", bundle: nil), forCellReuseIdentifier: "ResultCell")
@@ -49,6 +51,7 @@ extension ResultViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedRow = indexPath.row
+        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "goNameInformation", sender: self)
     }
     

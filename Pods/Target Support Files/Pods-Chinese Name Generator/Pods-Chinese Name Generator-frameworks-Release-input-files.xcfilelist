@@ -1,6 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-Chinese Name Generator/Pods-Chinese Name Generator-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
-${BUILT_PRODUCTS_DIR}/EZProgressHUD/EZProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/CDAlertView/CDAlertView.framework
+${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework
 ${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
 ${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

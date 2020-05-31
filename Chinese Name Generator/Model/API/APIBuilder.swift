@@ -8,18 +8,43 @@
 
 import Foundation
 import Alamofire
-import EZProgressHUD
+import NVActivityIndicatorView
 
 class APIBuilder {
     
     var delegate: APIDelegate?
     
     let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
+    let activityIndicator : NVActivityIndicatorView
+    var blackView = UIView()
+    
+    init() {
+        let screenWidth = UIScreen.main.bounds.size.width
+        let screenHeight = UIScreen.main.bounds.size.height
+        let frame = CGRect(x: (screenWidth-60)/2, y: (screenHeight-60)/2, width: 60, height: 60)
+        let types : [NVActivityIndicatorType] = [.audioEqualizer, .ballBeat, .ballClipRotate, .ballClipRotateMultiple, .ballClipRotatePulse, .ballDoubleBounce, .ballGridBeat ,.ballGridPulse, .ballPulse, .ballPulseRise, .ballPulseSync, .ballRotate, .ballRotateChase, .ballScale, .ballScaleMultiple, .ballScaleRipple, .ballScaleRippleMultiple, .ballSpinFadeLoader, .ballTrianglePath, .ballZigZag, .ballZigZagDeflect, .circleStrokeSpin, .cubeTransition, .lineScale, .lineScaleParty, .lineScalePulseOut, .lineScalePulseOutRapid, .lineSpinFadeLoader, .orbit, .pacman, .semiCircleSpin, .squareSpin, .triangleSkewSpin]
+        let randomNum = Int.random(in: 0..<types.count)
+        let type = types[randomNum]
+        activityIndicator = NVActivityIndicatorView(frame: frame, type: type, color: .white, padding: 10)
+        
+        blackView.frame = UIScreen.main.bounds
+        blackView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        blackView.addSubview(activityIndicator)
+    }
+    
+    func startLoading() {
+        UIApplication.shared.keyWindow?.addSubview(blackView)
+        activityIndicator.startAnimating()
+    }
+    
+    func endLoading() {
+        activityIndicator.stopAnimating()
+        blackView.removeFromSuperview()
+    }
+
     
     func requestNameData() {
-        let options = progressOption()
-        let hud = EZProgressHUD.setProgress(with: options)
-        hud.show()
+        startLoading()
         AF.request(requestURL()).response(completionHandler: { (response) in
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
@@ -28,20 +53,21 @@ class APIBuilder {
             } else {
                 self.delegate?.nameDataNotReceived(error: response.error)
             }
-            hud.dismiss(completion: nil)
+            self.endLoading()
         })
     }
     
     func requestUsedCount() {
+        startLoading()
         AF.request("https://sinoname.appspot.com/used_count?device_id=\(UIDevice.current.identifierForVendor?.uuidString ?? "")").response(completionHandler: { (response) in
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
-//            print(String(data: response.data!, encoding: .utf8))
             if let data = response.data, let usedCountData = try? decoder.decode(UsedCountData.self, from: data) {
                 self.delegate?.usedCountReceived(count: Int(usedCountData.used_count) ?? 0)
             } else {
                 self.delegate?.usedCountNotReceived(error: response.error)
             }
+            self.endLoading()
         })
     }
     
@@ -79,19 +105,6 @@ class APIBuilder {
             print(cnUrl)
             return cnUrl
         }
-    }
-    
-    func progressOption() -> EZProgressOptions {
-        let options = EZProgressOptions { (option) in
-            option.radius = 117
-            option.secondLayerStrokeColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-            option.strokeWidth = 12
-            option.thirdLayerStrokeColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-            option.firstLayerStrokeColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-            option.title = "Loading..."
-            option.animationOption = EZAnimationOptions.lordOfTheRings
-        }
-        return options
     }
     
 }
