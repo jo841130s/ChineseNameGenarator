@@ -30,6 +30,7 @@
 		04587A972473DCD1002E1227 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04587A952473DCD1002E1227 /* HistoryCell.swift */; };
 		04587A982473DCD1002E1227 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04587A962473DCD1002E1227 /* HistoryCell.xib */; };
 		04587AA02477821D002E1227 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04587A9F2477821D002E1227 /* StoreKit.framework */; };
+		046E3DDC2484F4F8006796EB /* CanCopyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E3DDB2484F4F8006796EB /* CanCopyLabel.swift */; };
 		04975DB72413885C00EC257F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DB62413885C00EC257F /* AppDelegate.swift */; };
 		04975DB92413885C00EC257F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04975DB82413885C00EC257F /* SceneDelegate.swift */; };
 		04975DBE2413885C00EC257F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04975DBC2413885C00EC257F /* Main.storyboard */; };
@@ -77,7 +78,8 @@
 		04587A952473DCD1002E1227 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		04587A962473DCD1002E1227 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		04587A9F2477821D002E1227 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		04975DB32413885C00EC257F /* 寶寶起名智能妙算.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "寶寶起名智能妙算.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		046E3DDB2484F4F8006796EB /* CanCopyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanCopyLabel.swift; sourceTree = "<group>"; };
+		04975DB32413885C00EC257F /* Chinese Name For You.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chinese Name For You.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04975DB62413885C00EC257F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04975DB82413885C00EC257F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04975DBD2413885C00EC257F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -167,7 +169,7 @@
 		04975DB42413885C00EC257F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04975DB32413885C00EC257F /* 寶寶起名智能妙算.app */,
+				04975DB32413885C00EC257F /* Chinese Name For You.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,6 +204,7 @@
 				04E74FCC242F538E0001EFCE /* UserData.swift */,
 				04093285245285B800BC4527 /* ZodiacName.swift */,
 				0409328724528B5B00BC4527 /* HoroscopeName.swift */,
+				046E3DDB2484F4F8006796EB /* CanCopyLabel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,7 +270,7 @@
 				042704E42428E7550036ADCE /* IQKeyboardManagerSwift */,
 			);
 			productName = "Chinese Name Generator";
-			productReference = 04975DB32413885C00EC257F /* 寶寶起名智能妙算.app */;
+			productReference = 04975DB32413885C00EC257F /* Chinese Name For You.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -405,6 +408,7 @@
 				04E74FD82435E7990001EFCE /* NameInformationCell.swift in Sources */,
 				04975DCB24138B0D00EC257F /* HomeViewController.swift in Sources */,
 				04FA037F2428F115003F1A4F /* TraitsViewController.swift in Sources */,
+				046E3DDC2484F4F8006796EB /* CanCopyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A537622CYX;
 				INFOPLIST_FILE = "Chinese Name Generator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -557,8 +562,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "GuangXin.Chinese-Name-Generator";
-				PRODUCT_NAME = "寶寶起名智能妙算";
+				PRODUCT_BUNDLE_IDENTIFIER = GuangXin.ChineseNameGeneratorEnglish;
+				PRODUCT_NAME = "Chinese Name For You";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -570,6 +575,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A537622CYX;
 				INFOPLIST_FILE = "Chinese Name Generator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -577,8 +583,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "GuangXin.Chinese-Name-Generator";
-				PRODUCT_NAME = "寶寶起名智能妙算";
+				PRODUCT_BUNDLE_IDENTIFIER = GuangXin.ChineseNameGeneratorEnglish;
+				PRODUCT_NAME = "Chinese Name For You";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

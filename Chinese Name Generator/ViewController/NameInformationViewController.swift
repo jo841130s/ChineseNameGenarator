@@ -12,7 +12,7 @@ import AVFoundation
 class NameInformationViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var chineseNameLabel: UILabel!
+    @IBOutlet var chineseNameLabel: CanCopyLabel!
     
     var chineseName : String?
     var charsData : [Chars]?

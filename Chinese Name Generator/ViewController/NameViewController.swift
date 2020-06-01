@@ -71,6 +71,8 @@ class NameViewController: UIViewController {
             showAlert(message: "Please fill in both fields")
         } else if !checkName(name: firstName) || !checkName(name: lastName) {
             showAlert(message: "Do not use special characters or numbers")
+        } else if containNotLetters(input: firstName) || containNotLetters(input: lastName) {
+            showAlert(message: "Must fill in alphabetical English character (no space)")
         } else {
             performSegue(withIdentifier: "goCountry", sender: self)
         }
@@ -95,6 +97,15 @@ class NameViewController: UIViewController {
           }
        }
        return false
+    }
+    
+    func containNotLetters(input: String) -> Bool {
+        for chr in input {
+           if (!(chr >= "a" && chr <= "z") && !(chr >= "A" && chr <= "Z") ) {
+              return true
+           }
+        }
+        return false
     }
     
     func showAlert(message:String) {
