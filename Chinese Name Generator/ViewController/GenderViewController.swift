@@ -17,7 +17,7 @@ class GenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.addCorner(radious: 5)
-        if let font = UIFont(name: "jf-openhuninn-1.1", size: 18) {
+        if let font = UIFont(name: "圓體-簡 細體", size: 18) {
             genderSegmentControl.setTitleTextAttributes([.font: font ], for: .normal)
         }
     }

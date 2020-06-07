@@ -148,28 +148,23 @@ class BirthViewController: UIViewController {
         }
         alert.add(action: okAction)
         
-        var infoText = ""
         switch isForeigner {
         case true:
-            infoText = "More"
             if let font = UIFont(name: "Gill Sans", size: 18) {
                 alert.titleFont = font
                 alert.messageFont = font.withSize(12)
             }
+            let infoAction = CDAlertViewAction(title: "更多", font: nil, textColor: nil, backgroundColor: nil) { (action) -> Bool in
+                self.performSegue(withIdentifier: "goStory", sender: self)
+                return true
+            }
+            alert.add(action: infoAction)
         case false:
-            infoText = "更多"
-            if let font = UIFont(name: "jf-openhuninn-1.1", size: 18) {
+            if let font = UIFont(name: "圓體-簡 細體", size: 18) {
                 alert.titleFont = font
                 alert.messageFont = font.withSize(12)
             }
         }
-        
-        let infoAction = CDAlertViewAction(title: infoText, font: nil, textColor: nil, backgroundColor: nil) { (action) -> Bool in
-            self.performSegue(withIdentifier: "goStory", sender: self)
-            return true
-        }
-        alert.add(action: infoAction)
-        
         
         alert.isTextFieldHidden = true
         alert.circleFillColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
