@@ -77,7 +77,7 @@
 		04587A952473DCD1002E1227 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		04587A962473DCD1002E1227 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		04587A9F2477821D002E1227 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		04975DB32413885C00EC257F /* 寶寶起名智能妙算.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "寶寶起名智能妙算.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04975DB32413885C00EC257F /* CNaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CNaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04975DB62413885C00EC257F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04975DB82413885C00EC257F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04975DBD2413885C00EC257F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		04975DB42413885C00EC257F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04975DB32413885C00EC257F /* 寶寶起名智能妙算.app */,
+				04975DB32413885C00EC257F /* CNaming.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 				042704E42428E7550036ADCE /* IQKeyboardManagerSwift */,
 			);
 			productName = "Chinese Name Generator";
-			productReference = 04975DB32413885C00EC257F /* 寶寶起名智能妙算.app */;
+			productReference = 04975DB32413885C00EC257F /* CNaming.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -558,7 +558,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "GuangXin.Chinese-Name-Generator";
-				PRODUCT_NAME = "寶寶起名智能妙算";
+				PRODUCT_NAME = CNaming;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -578,7 +578,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "GuangXin.Chinese-Name-Generator";
-				PRODUCT_NAME = "寶寶起名智能妙算";
+				PRODUCT_NAME = CNaming;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

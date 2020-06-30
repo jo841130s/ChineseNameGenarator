@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import IQKeyboardManagerSwift
 import RealmSwift
+import GoogleMobileAds
 
 class PreferenceViewController: UIViewController {
     
@@ -20,6 +21,10 @@ class PreferenceViewController: UIViewController {
     @IBOutlet var fixedFirstChar: UITextField!
     @IBOutlet var fixedSecondChar: UITextField!
     @IBOutlet var nextButton: UIButton!
+    @IBOutlet var nextButtonView: UIView!
+    @IBOutlet var vidoeImageView: UIImageView!
+    
+    let usedTimes = UserDefaults.standard.integer(forKey: "UsedTimes")
     
     let userData = UserData()
     let realm = try! Realm()
@@ -28,14 +33,27 @@ class PreferenceViewController: UIViewController {
     var nameData : NameData?
     var numChars = "3"
     
+    var rewardedAd : GADRewardedAd?
+    var rewardedADDone = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextButton.addCorner(radious: 5)
+        if usedTimes == 0 {
+            vidoeImageView.isHidden = true
+        }
+        rewardedAd = createAndLoadRewardedAd()
+        nextButtonView.layer.cornerRadius = 5
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         apiBuilder.delegate = self
         setFixedSurnameTextField()
+    }
+    
+    func showRewardedAd() {
+        if rewardedAd?.isReady == true {
+           rewardedAd?.present(fromRootViewController: self, delegate:self)
+        }
     }
     
     @IBAction func numCharValueChanged(_ sender: UISegmentedControl) {
@@ -61,19 +79,12 @@ class PreferenceViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        let usedTimes = UserDefaults.standard.integer(forKey: "UsedTimes")
-        var alert = UIAlertController(title: "注意!", message: "剩餘次數: \(12-usedTimes)", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-            self.requestName()
+        if usedTimes == 0 {
+            requestName()
+        } else {
+            showRewardedAd()
         }
-        var cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        if isForeigner {
-            alert = UIAlertController(title: "Attention!", message: "Available number of times: \(12-usedTimes)", preferredStyle: .alert)
-            cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        }
-        alert.addAction(okAction)
-        alert.addAction(cancelAction)
-        present(alert, animated: true, completion: nil)
+        UserDefaults.standard.set(usedTimes+1, forKey: "UsedTimes")
     }
     
     func requestName() {
@@ -252,4 +263,45 @@ extension PreferenceViewController : APIDelegate {
         }
     }
     
+}
+
+extension PreferenceViewController : GADRewardedAdDelegate {
+    
+    func createAndLoadRewardedAd() -> GADRewardedAd? {
+        rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
+        rewardedAd?.load(GADRequest()) { error in
+            if let error = error {
+                print("Loading failed: \(error)")
+            } else {
+                print("Loading Succeeded")
+            }
+        }
+        return rewardedAd
+    }
+    
+    /// Tells the delegate that the user earned a reward.
+    func rewardedAd(_ rewardedAd: GADRewardedAd, userDidEarn reward: GADAdReward) {
+        print("Reward received with currency: \(reward.type), amount \(reward.amount).")
+        rewardedADDone = true
+    }
+    
+    /// Tells the delegate that the rewarded ad was presented.
+    func rewardedAdDidPresent(_ rewardedAd: GADRewardedAd) {
+        print("Rewarded ad presented.")
+    }
+    
+    /// Tells the delegate that the rewarded ad was dismissed.
+    func rewardedAdDidDismiss(_ rewardedAd: GADRewardedAd) {
+        if rewardedADDone == true {
+            rewardedADDone = false
+            requestName()
+        } else {
+            self.rewardedAd = createAndLoadRewardedAd()
+        }
+    }
+    
+    /// Tells the delegate that the rewarded ad failed to present.
+    func rewardedAd(_ rewardedAd: GADRewardedAd, didFailToPresentWithError error: Error) {
+        print("Rewarded ad failed to present.")
+    }
 }

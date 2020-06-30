@@ -11,5 +11,6 @@ target 'Chinese Name Generator' do
   pod 'RealmSwift'
   pod "CDAlertView"
   pod 'NVActivityIndicatorView'
+  pod 'Google-Mobile-Ads-SDK'
 
 end
