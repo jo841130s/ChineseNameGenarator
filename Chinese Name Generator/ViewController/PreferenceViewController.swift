@@ -268,7 +268,7 @@ extension PreferenceViewController : APIDelegate {
 extension PreferenceViewController : GADRewardedAdDelegate {
     
     func createAndLoadRewardedAd() -> GADRewardedAd? {
-        rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
+        rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-4893868639954563/1581391087")
         rewardedAd?.load(GADRequest()) { error in
             if let error = error {
                 print("Loading failed: \(error)")

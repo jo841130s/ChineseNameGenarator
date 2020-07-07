@@ -25,7 +25,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,7 +149,7 @@
         <!--Gender View Controller-->
         <scene sceneID="q4o-G6-zPV">
             <objects>
-                <viewController id="zVI-h9-YuM" customClass="GenderViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zVI-h9-YuM" customClass="GenderViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N8v-Yd-JIB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -280,7 +280,7 @@
         <!--History View Controller-->
         <scene sceneID="L3X-sW-uk4">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="mwn-XV-YYK" customClass="HistoryViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="mwn-XV-YYK" customClass="HistoryViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XGu-ja-MIM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -365,7 +365,7 @@
         <!--Name Information View Controller-->
         <scene sceneID="thy-t7-M3d">
             <objects>
-                <viewController storyboardIdentifier="NameInformationViewController" id="JML-4n-HWc" customClass="NameInformationViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NameInformationViewController" id="JML-4n-HWc" customClass="NameInformationViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y61-2s-N8J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -446,7 +446,7 @@
         <!--Name View Controller-->
         <scene sceneID="pg6-lY-Fqq">
             <objects>
-                <viewController id="TGu-LU-Rhp" customClass="NameViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TGu-LU-Rhp" customClass="NameViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yne-VD-837">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -575,7 +575,7 @@
         <!--Country View Controller-->
         <scene sceneID="N3I-bO-SEc">
             <objects>
-                <viewController id="L4F-eK-XCD" customClass="CountryViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="L4F-eK-XCD" customClass="CountryViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7y3-sA-293">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -690,7 +690,7 @@
         <!--Birth View Controller-->
         <scene sceneID="acM-Fa-ACH">
             <objects>
-                <viewController id="Bt7-hd-33d" customClass="BirthViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bt7-hd-33d" customClass="BirthViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a56-7q-ST7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -810,7 +810,7 @@
         <!--Traits View Controller-->
         <scene sceneID="oT0-nj-RyS">
             <objects>
-                <viewController id="JPy-dw-nKb" customClass="TraitsViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JPy-dw-nKb" customClass="TraitsViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0oT-ls-phE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -819,10 +819,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dwm-T8-MvX">
-                                        <rect key="frame" x="82" y="25" width="250.5" height="81.5"/>
+                                        <rect key="frame" x="56" y="25" width="302.5" height="82.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oh8-mG-a6A">
-                                                <rect key="frame" x="0.0" y="0.0" width="250.5" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="302.5" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -830,7 +830,7 @@
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the traits you like(one to five)." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob6-sO-RBc">
-                                                <rect key="frame" x="0.0" y="60.5" width="250.5" height="21"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="302.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -929,7 +929,7 @@
         <!--Tips View Controller-->
         <scene sceneID="mCM-1b-a2P">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="IbS-az-QKS" customClass="TipsViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="IbS-az-QKS" customClass="TipsViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xrD-Bw-TSE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1049,7 +1049,7 @@
         <!--Preference View Controller-->
         <scene sceneID="w4d-LX-UfJ">
             <objects>
-                <viewController id="eKi-dN-zPg" customClass="PreferenceViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eKi-dN-zPg" customClass="PreferenceViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q2z-D0-hh5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1283,7 +1283,7 @@
         <!--Result View Controller-->
         <scene sceneID="xiH-16-KIM">
             <objects>
-                <viewController storyboardIdentifier="ResultViewController" id="x3C-VP-nme" customClass="ResultViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" id="x3C-VP-nme" customClass="ResultViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uqh-sc-Z7j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1388,7 +1388,7 @@
         <!--Home View Controller-->
         <scene sceneID="i3L-LZ-dtz">
             <objects>
-                <viewController id="naf-BR-GVC" customClass="HomeViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="naf-BR-GVC" customClass="HomeViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uFy-uA-bvb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1530,7 +1530,7 @@
         <!--History View Controller-->
         <scene sceneID="ny6-cx-vgb">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="wPe-s1-NyQ" customClass="HistoryViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="wPe-s1-NyQ" customClass="HistoryViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJi-xf-VZ8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1620,7 +1620,7 @@
         <!--Tips View Controller-->
         <scene sceneID="lKQ-R6-rhm">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yx3-a5-cvg" customClass="TipsViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yx3-a5-cvg" customClass="TipsViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l1C-Rh-kAE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1720,7 +1720,7 @@
         <!--Gender View Controller-->
         <scene sceneID="yYg-iO-XZP">
             <objects>
-                <viewController id="bsV-gy-joW" customClass="GenderViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bsV-gy-joW" customClass="GenderViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3w-Ya-KPD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1853,7 +1853,7 @@
         <!--Name View Controller-->
         <scene sceneID="0Fa-mw-Rts">
             <objects>
-                <viewController id="syj-5L-4Xr" customClass="NameViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="syj-5L-4Xr" customClass="NameViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tvv-aI-8Uo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1974,7 +1974,7 @@
         <!--Birth View Controller-->
         <scene sceneID="f5s-Nn-nXv">
             <objects>
-                <viewController id="D0i-4q-a6i" customClass="BirthViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D0i-4q-a6i" customClass="BirthViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oPa-r3-pQY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2092,7 +2092,7 @@
         <!--Traits View Controller-->
         <scene sceneID="soR-Rq-1bW">
             <objects>
-                <viewController id="8rK-5e-h9T" customClass="TraitsViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rK-5e-h9T" customClass="TraitsViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sa4-qg-avh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2209,7 +2209,7 @@
         <!--Preference View Controller-->
         <scene sceneID="XEN-DQ-J9t">
             <objects>
-                <viewController id="X3D-bq-qlQ" customClass="PreferenceViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="X3D-bq-qlQ" customClass="PreferenceViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mfr-ws-dCM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2441,7 +2441,7 @@
         <!--Result View Controller-->
         <scene sceneID="0ic-P5-991">
             <objects>
-                <viewController id="2Ma-Q3-gJb" customClass="ResultViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Ma-Q3-gJb" customClass="ResultViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7aZ-so-R8u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2546,7 +2546,7 @@
         <!--Name Information View Controller-->
         <scene sceneID="CIO-b6-1WS">
             <objects>
-                <viewController id="NVE-3K-0Ff" customClass="NameInformationViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NVE-3K-0Ff" customClass="NameInformationViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gS5-wH-pMM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2628,7 +2628,7 @@
         <!--Story Table View Controller-->
         <scene sceneID="tZ7-y8-dFi">
             <objects>
-                <viewController id="uQZ-N1-s0W" customClass="StoryTableViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uQZ-N1-s0W" customClass="StoryTableViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c7J-Y0-pbL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2757,7 +2757,7 @@
         <!--Story Table View Controller-->
         <scene sceneID="Czb-Tz-ibv">
             <objects>
-                <viewController id="gMM-kd-uTx" customClass="StoryTableViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gMM-kd-uTx" customClass="StoryTableViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sbn-oK-Scx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2885,7 +2885,7 @@
         <!--Horoscope Story View Controller-->
         <scene sceneID="Ah1-3W-hij">
             <objects>
-                <viewController id="S7c-xQ-rhG" customClass="HoroscopeStoryViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S7c-xQ-rhG" customClass="HoroscopeStoryViewController" customModule="CNaming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="INZ-jl-ch5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2980,7 +2980,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fTe-hr-Wj5"/>
+        <segue reference="A1p-kB-Vpf"/>
         <segue reference="15E-w4-p5T"/>
         <segue reference="BIG-My-qs1"/>
         <segue reference="CmL-qK-1Jz"/>

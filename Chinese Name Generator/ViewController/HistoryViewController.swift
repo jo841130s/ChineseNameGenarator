@@ -44,7 +44,7 @@ class HistoryViewController: UIViewController {
         bannerView = GADBannerView(adSize: adSize)
         bannerView.delegate = self
         adView.addSubview(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-4893868639954563/1722961505"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
