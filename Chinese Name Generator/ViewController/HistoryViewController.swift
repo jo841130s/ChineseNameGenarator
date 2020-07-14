@@ -64,6 +64,9 @@ class HistoryViewController: UIViewController {
                 charArray.append(data[i].chars[k])
             }
         }
+        timeArray = timeArray.reversed()
+        nameArray = nameArray.reversed()
+        charArray = charArray.reversed()
         decodeHistoryChars(data: charArray)
         historyTableView.reloadData()
     }

@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class TipsViewController: UIViewController {
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var adView: UIView!
+    
+    var bannerView : GADBannerView!
     
     let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
     
@@ -19,15 +23,28 @@ class TipsViewController: UIViewController {
     
     let foreignerTipsText = ["This app allows you to ask for Chinese name suggestions for 12 times.  The app provides 9 names each time for your consideration.","More than 90% of Chinese names consist of two or three Chinese characters - the first character represents surname (last name), typically same with the father side; the second and third characters represent names carrying family expectation towards the kid. Sometimes, all children belonging to a family tree are pre-assigned in part of their names to show their seniority relationship.","Our app attempts to help you on this by employing state-of-the-art information technologies and Chinese fortune telling statistics. The app provides a list of Chinese name suggestions, with two or three Chinese characters, based on your app inputs including your name, gender, birth date and country, and your expectation. We will store the name suggestions in the historical record for your later retrieval and consideration.","In the app, your Chinese name would be shown in traditional Chinese characters along with an explanation and sound player for each Chinese character to help you choose and even interact with Chinese friends for your final choice."]
     
+    override func viewWillAppear(_ animated: Bool) {
+        setupBannerAD()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-//        if isForeigner {
-//            tableView.register(UINib(nibName: "TipCell", bundle: nil), forCellReuseIdentifier: "TipCell")
-//        } else {
-            tableView.register(UINib(nibName: "TipsCell", bundle: nil), forCellReuseIdentifier: "TipsCell")
-//        }
+        tableView.register(UINib(nibName: "TipsCell", bundle: nil), forCellReuseIdentifier: "TipsCell")
+    }
+    
+    func setupBannerAD() {
+        if bannerView != nil {
+            bannerView.removeFromSuperview()
+        }
+        let adSize = GADAdSizeFromCGSize(CGSize(width: UIScreen.main.bounds.size.width, height: adView.frame.height))
+        bannerView = GADBannerView(adSize: adSize)
+        bannerView.delegate = self
+        adView.addSubview(bannerView)
+        bannerView.adUnitID = "ca-app-pub-4893868639954563/1722961505"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -60,5 +77,40 @@ extension TipsViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-      
+}
+
+extension TipsViewController : GADBannerViewDelegate {
+    /// Tells the delegate an ad request loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("adViewDidReceiveAd")
+    }
+
+    /// Tells the delegate an ad request failed.
+    func adView(_ bannerView: GADBannerView,
+        didFailToReceiveAdWithError error: GADRequestError) {
+        print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+        adView.isHidden = true
+    }
+
+    /// Tells the delegate that a full-screen view will be presented in response
+    /// to the user clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print("adViewWillPresentScreen")
+    }
+
+    /// Tells the delegate that the full-screen view will be dismissed.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewWillDismissScreen")
+    }
+
+    /// Tells the delegate that the full-screen view has been dismissed.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewDidDismissScreen")
+    }
+
+    /// Tells the delegate that a user click will open another app (such as
+    /// the App Store), backgrounding the current app.
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+        print("adViewWillLeaveApplication")
+    }
 }
