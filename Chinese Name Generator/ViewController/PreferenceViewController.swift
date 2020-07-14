@@ -52,7 +52,9 @@ class PreferenceViewController: UIViewController {
     
     func showRewardedAd() {
         if rewardedAd?.isReady == true {
-           rewardedAd?.present(fromRootViewController: self, delegate:self)
+            rewardedAd?.present(fromRootViewController: self, delegate:self)
+        } else {
+            return
         }
     }
     
@@ -79,21 +81,23 @@ class PreferenceViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        if usedTimes == 0 {
-            requestName()
-        } else {
-            showRewardedAd()
-        }
-        UserDefaults.standard.set(usedTimes+1, forKey: "UsedTimes")
-    }
-    
-    func requestName() {
         let surname = fixedSurname.text ?? ""
         let firstChar = fixedFirstChar.text ?? ""
         let secondChar = fixedSecondChar.text ?? ""
         if !checkTextField(surname: surname, firstChar: firstChar, secondChar: secondChar) {
             return
         }
+        if usedTimes == 0 {
+            requestName()
+        } else {
+            showRewardedAd()
+        }
+    }
+    
+    func requestName() {
+        let surname = fixedSurname.text ?? ""
+        let firstChar = fixedFirstChar.text ?? ""
+        let secondChar = fixedSecondChar.text ?? ""
         userData.setUserData(data: numChars, name: "num_char")
         userData.setUserData(data: surname, name: "fixed_surname")
         userData.setUserData(data: firstChar, name: "fixed_first_char")
@@ -155,12 +159,14 @@ class PreferenceViewController: UIViewController {
     }
     
     func containsLetters(input: String) -> Bool {
-       for chr in input {
-          if ((chr >= "a" && chr <= "z") || (chr >= "A" && chr <= "Z")) {
-             return true
-          }
-       }
-       return false
+        for chr in input {
+            if ((chr >= "a" && chr <= "z") || (chr >= "A" && chr <= "Z")) {
+                return true
+            } else if (chr >= "0" && chr <= "9") {
+                return true
+            }
+        }
+        return false
     }
     
 }
@@ -175,11 +181,11 @@ extension PreferenceViewController : APIDelegate {
         print("")
     }
     
-    
     func nameDataReceived(data: NameData) {
+        UserDefaults.standard.set(usedTimes+1, forKey: "UsedTimes")
         nameData = data
-        performSegue(withIdentifier: "goResult", sender: self)
         saveNameDataToHistory(nameData:data)
+        performSegue(withIdentifier: "goResult", sender: self)
     }
     
     func nameDataNotReceived(error:AFError?) {
@@ -268,6 +274,7 @@ extension PreferenceViewController : APIDelegate {
 extension PreferenceViewController : GADRewardedAdDelegate {
     
     func createAndLoadRewardedAd() -> GADRewardedAd? {
+        
         rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-4893868639954563/1581391087")
         rewardedAd?.load(GADRequest()) { error in
             if let error = error {
