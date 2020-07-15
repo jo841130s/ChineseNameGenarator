@@ -36,6 +36,8 @@ class PreferenceViewController: UIViewController {
     var rewardedAd : GADRewardedAd?
     var rewardedADDone = false
     
+    var requestNameTimes = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if usedTimes == 0 {
@@ -103,6 +105,9 @@ class PreferenceViewController: UIViewController {
         let secondChar = fixedSecondChar.text ?? ""
         if !checkTextField(surname: surname, firstChar: firstChar, secondChar: secondChar) {
             return
+        }
+        if rewardedADDone {
+            requestName()
         }
         if usedTimes == 0 {
             requestName()
@@ -206,11 +211,24 @@ extension PreferenceViewController : APIDelegate {
     }
     
     func nameDataNotReceived(error:AFError?) {
-        switch isForeigner {
-        case true:
-            showAlert(message: "Change the characters you filled in fields")
-        case false:
-            showAlert(message: "請更改您填寫在空格中的字元，因為您填寫的字元不適用於命名，或是我們尚未將該字元納入命名用字元")
+        requestNameTimes += 1
+        if requestNameTimes >= 3 {
+            switch isForeigner {
+            case true:
+                if fixedSurname.text == "" && fixedFirstChar.text == "" && fixedSecondChar.text == "" {
+                    showAlert(message: "Server error. Please try again.")
+                } else {
+                    showAlert(message: "Server error. Please change the charaters in fields and try again.")
+                }
+            case false:
+                if fixedSurname.text == "" && fixedFirstChar.text == "" && fixedSecondChar.text == "" {
+                    showAlert(message: "伺服器錯誤，請再試一次")
+                } else {
+                    showAlert(message: "伺服器錯誤，請嘗試更換您填寫的字元，並再試一次")
+                }
+            }
+        } else {
+            requestName()
         }
     }
     
