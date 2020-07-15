@@ -54,8 +54,25 @@ class PreferenceViewController: UIViewController {
         if rewardedAd?.isReady == true {
             rewardedAd?.present(fromRootViewController: self, delegate:self)
         } else {
-            return
+            showNetworkError()
         }
+    }
+    
+    func showNetworkError() {
+        var title = ""
+        var message = ""
+        switch isForeigner {
+        case true:
+            title = "Error"
+            message = "Network error. Please try again."
+        case false:
+            title = "錯誤"
+            message = "網路連線問題，請再試一次"
+        }
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func numCharValueChanged(_ sender: UISegmentedControl) {
@@ -274,11 +291,11 @@ extension PreferenceViewController : APIDelegate {
 extension PreferenceViewController : GADRewardedAdDelegate {
     
     func createAndLoadRewardedAd() -> GADRewardedAd? {
-        
         rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-4893868639954563/1581391087")
         rewardedAd?.load(GADRequest()) { error in
             if let error = error {
                 print("Loading failed: \(error)")
+                self.showNetworkError()
             } else {
                 print("Loading Succeeded")
             }
@@ -310,5 +327,6 @@ extension PreferenceViewController : GADRewardedAdDelegate {
     /// Tells the delegate that the rewarded ad failed to present.
     func rewardedAd(_ rewardedAd: GADRewardedAd, didFailToPresentWithError error: Error) {
         print("Rewarded ad failed to present.")
+        showNetworkError()
     }
 }

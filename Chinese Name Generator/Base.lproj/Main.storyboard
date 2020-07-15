@@ -25,7 +25,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,7 +149,7 @@
         <!--Gender View Controller-->
         <scene sceneID="q4o-G6-zPV">
             <objects>
-                <viewController id="zVI-h9-YuM" customClass="GenderViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zVI-h9-YuM" customClass="GenderViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N8v-Yd-JIB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,10 +158,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nov-HR-f9A">
-                                        <rect key="frame" x="122.5" y="25" width="169.5" height="81.5"/>
+                                        <rect key="frame" x="97.5" y="25" width="219.5" height="82.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNQ-00-ALg">
-                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="219.5" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -169,7 +169,7 @@
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose your gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2b-ZW-Ofn">
-                                                <rect key="frame" x="0.0" y="60.5" width="169.5" height="21"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="219.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -280,7 +280,7 @@
         <!--History View Controller-->
         <scene sceneID="L3X-sW-uk4">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="mwn-XV-YYK" customClass="HistoryViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="mwn-XV-YYK" customClass="HistoryViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XGu-ja-MIM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -300,10 +300,10 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tjb-pH-r3l">
-                                        <rect key="frame" x="138.5" y="22.5" width="137" height="55.5"/>
+                                        <rect key="frame" x="131" y="22" width="152.5" height="56.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0e-rT-0vy">
-                                                <rect key="frame" x="0.0" y="0.0" width="137" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -365,7 +365,7 @@
         <!--Name Information View Controller-->
         <scene sceneID="thy-t7-M3d">
             <objects>
-                <viewController storyboardIdentifier="NameInformationViewController" id="JML-4n-HWc" customClass="NameInformationViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NameInformationViewController" id="JML-4n-HWc" customClass="NameInformationViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y61-2s-N8J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -374,7 +374,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中文名字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb3-P5-mT4">
-                                        <rect key="frame" x="123" y="20.5" width="168" height="59"/>
+                                        <rect key="frame" x="123" y="25.5" width="168" height="49"/>
                                         <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -416,37 +416,50 @@
                                     <constraint firstItem="mb3-P5-mT4" firstAttribute="centerY" secondItem="yEv-aM-84u" secondAttribute="centerY" id="uWr-HP-fI0"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yOc-G3-yUf">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qdb-Zz-90t">
                                 <rect key="frame" x="0.0" y="152" width="414" height="710"/>
-                                <color key="backgroundColor" name="Background Color"/>
-                            </tableView>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yOc-G3-yUf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="645.5"/>
+                                        <color key="backgroundColor" name="Background Color"/>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvG-du-eRK">
+                                        <rect key="frame" x="0.0" y="645.5" width="414" height="64.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wvG-du-eRK" secondAttribute="height" multiplier="320:50" id="3Q6-yQ-ypn"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="Background Color"/>
                         <constraints>
-                            <constraint firstItem="yOc-G3-yUf" firstAttribute="leading" secondItem="OGF-fh-hbh" secondAttribute="leading" id="E4u-Wj-49J"/>
+                            <constraint firstItem="Qdb-Zz-90t" firstAttribute="bottom" secondItem="OGF-fh-hbh" secondAttribute="bottom" id="CDn-pq-L5G"/>
                             <constraint firstItem="yEv-aM-84u" firstAttribute="leading" secondItem="OGF-fh-hbh" secondAttribute="leading" id="U6C-mr-akj"/>
+                            <constraint firstItem="Qdb-Zz-90t" firstAttribute="top" secondItem="yEv-aM-84u" secondAttribute="bottom" constant="8" id="YNc-bT-Khv"/>
                             <constraint firstItem="OGF-fh-hbh" firstAttribute="trailing" secondItem="yEv-aM-84u" secondAttribute="trailing" id="fZk-Uf-t7e"/>
-                            <constraint firstItem="OGF-fh-hbh" firstAttribute="bottom" secondItem="yOc-G3-yUf" secondAttribute="bottom" id="p6Z-mB-JjF"/>
+                            <constraint firstItem="Qdb-Zz-90t" firstAttribute="trailing" secondItem="OGF-fh-hbh" secondAttribute="trailing" id="lOe-EA-WZm"/>
                             <constraint firstItem="yEv-aM-84u" firstAttribute="top" secondItem="OGF-fh-hbh" secondAttribute="top" id="sVP-Vb-PYZ"/>
-                            <constraint firstItem="yOc-G3-yUf" firstAttribute="top" secondItem="yEv-aM-84u" secondAttribute="bottom" constant="8" symbolic="YES" id="uWR-1q-NbF"/>
-                            <constraint firstItem="OGF-fh-hbh" firstAttribute="trailing" secondItem="yOc-G3-yUf" secondAttribute="trailing" id="vbx-Ao-D5o"/>
+                            <constraint firstItem="Qdb-Zz-90t" firstAttribute="leading" secondItem="OGF-fh-hbh" secondAttribute="leading" id="yJt-41-s2A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OGF-fh-hbh"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ow3-BF-Vg7"/>
                     <connections>
+                        <outlet property="adView" destination="wvG-du-eRK" id="Oh5-sF-sZW"/>
                         <outlet property="chineseNameLabel" destination="mb3-P5-mT4" id="8aI-Y0-CGl"/>
                         <outlet property="tableView" destination="yOc-G3-yUf" id="OJt-id-KBK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0l-XJ-MOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="1517"/>
+            <point key="canvasLocation" x="1611.5942028985507" y="1516.7410714285713"/>
         </scene>
         <!--Name View Controller-->
         <scene sceneID="pg6-lY-Fqq">
             <objects>
-                <viewController id="TGu-LU-Rhp" customClass="NameViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TGu-LU-Rhp" customClass="NameViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yne-VD-837">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -455,10 +468,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WwL-Rq-Zp9">
-                                        <rect key="frame" x="132.5" y="25" width="149" height="81.5"/>
+                                        <rect key="frame" x="112" y="25" width="190" height="82.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTF-RA-gTy">
-                                                <rect key="frame" x="0.0" y="0.0" width="149" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -466,7 +479,7 @@
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-59-UtL">
-                                                <rect key="frame" x="0.0" y="60.5" width="149" height="21"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="190" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -575,7 +588,7 @@
         <!--Country View Controller-->
         <scene sceneID="N3I-bO-SEc">
             <objects>
-                <viewController id="L4F-eK-XCD" customClass="CountryViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="L4F-eK-XCD" customClass="CountryViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7y3-sA-293">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -584,10 +597,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pve-YF-sV7">
-                                        <rect key="frame" x="118.5" y="25" width="177" height="81.5"/>
+                                        <rect key="frame" x="95" y="25" width="224" height="82.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhT-vt-ZRA">
-                                                <rect key="frame" x="0.0" y="0.0" width="177" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="224" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -595,7 +608,7 @@
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose your country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXO-YU-vQp">
-                                                <rect key="frame" x="0.0" y="60.5" width="177" height="21"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="224" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -690,7 +703,7 @@
         <!--Birth View Controller-->
         <scene sceneID="acM-Fa-ACH">
             <objects>
-                <viewController id="Bt7-hd-33d" customClass="BirthViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bt7-hd-33d" customClass="BirthViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a56-7q-ST7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -699,10 +712,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mbv-KU-L1i">
-                                        <rect key="frame" x="116.5" y="25" width="181.5" height="81.5"/>
+                                        <rect key="frame" x="92.5" y="25" width="229" height="82.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-rc-cjJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="181.5" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="229" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -710,7 +723,7 @@
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose your birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvf-66-wFS">
-                                                <rect key="frame" x="0.0" y="60.5" width="181.5" height="21"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="229" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -810,7 +823,7 @@
         <!--Traits View Controller-->
         <scene sceneID="oT0-nj-RyS">
             <objects>
-                <viewController id="JPy-dw-nKb" customClass="TraitsViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JPy-dw-nKb" customClass="TraitsViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0oT-ls-phE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -819,10 +832,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dwm-T8-MvX">
-                                        <rect key="frame" x="82" y="25" width="250.5" height="81.5"/>
+                                        <rect key="frame" x="56" y="25" width="302.5" height="82.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oh8-mG-a6A">
-                                                <rect key="frame" x="0.0" y="0.0" width="250.5" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="302.5" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -830,7 +843,7 @@
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the traits you like(one to five)." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob6-sO-RBc">
-                                                <rect key="frame" x="0.0" y="60.5" width="250.5" height="21"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="302.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -929,7 +942,7 @@
         <!--Tips View Controller-->
         <scene sceneID="mCM-1b-a2P">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="IbS-az-QKS" customClass="TipsViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="IbS-az-QKS" customClass="TipsViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xrD-Bw-TSE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -938,10 +951,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="R8J-9k-6uh">
-                                        <rect key="frame" x="100.5" y="25" width="213.5" height="81.5"/>
+                                        <rect key="frame" x="85" y="25" width="244.5" height="82.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWw-o9-yNa">
-                                                <rect key="frame" x="0.0" y="0.0" width="213.5" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="244.5" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -949,7 +962,7 @@
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The information of this app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKU-JP-8vp">
-                                                <rect key="frame" x="0.0" y="60.5" width="213.5" height="21"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="244.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1062,7 +1075,7 @@
         <!--Preference View Controller-->
         <scene sceneID="w4d-LX-UfJ">
             <objects>
-                <viewController id="eKi-dN-zPg" customClass="PreferenceViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eKi-dN-zPg" customClass="PreferenceViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q2z-D0-hh5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1071,10 +1084,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jpL-OD-eer">
-                                        <rect key="frame" x="109" y="25" width="196" height="81.5"/>
+                                        <rect key="frame" x="80" y="25" width="254" height="82.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preference" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHS-6J-RfV">
-                                                <rect key="frame" x="0.0" y="0.0" width="196" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="254" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1082,7 +1095,7 @@
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose your preference." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6a-rS-zg8">
-                                                <rect key="frame" x="0.0" y="60.5" width="196" height="21"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="254" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1114,7 +1127,7 @@
                                 <rect key="frame" x="40" y="752" width="334" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WGy-3K-hbf">
-                                        <rect key="frame" x="90.5" y="10" width="153" height="30"/>
+                                        <rect key="frame" x="102" y="10" width="130" height="30"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="wh3-xP-2lS">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1123,7 +1136,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaG-pE-NtY">
-                                                <rect key="frame" x="45" y="0.0" width="108" height="30"/>
+                                                <rect key="frame" x="45" y="0.0" width="85" height="30"/>
                                                 <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1158,10 +1171,10 @@
                                 <rect key="frame" x="0.0" y="182" width="414" height="540"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Wor-GE-bTe">
-                                        <rect key="frame" x="40" y="30" width="334" height="336"/>
+                                        <rect key="frame" x="40" y="30" width="334" height="358.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UK6-67-6hV">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="42"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qKu-8k-9kM">
                                                         <rect key="frame" x="0.0" y="0.5" width="10" height="29"/>
@@ -1172,7 +1185,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you prefer two or three Chinese characters in your name?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noi-01-kfs">
-                                                        <rect key="frame" x="40" y="0.0" width="294" height="41.5"/>
+                                                        <rect key="frame" x="40" y="0.0" width="294" height="42"/>
                                                         <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1180,7 +1193,7 @@
                                                 </subviews>
                                             </stackView>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="whq-ed-M5B">
-                                                <rect key="frame" x="0.0" y="71.5" width="334" height="32"/>
+                                                <rect key="frame" x="0.0" y="72" width="334" height="32"/>
                                                 <segments>
                                                     <segment title="Three"/>
                                                     <segment title="Two"/>
@@ -1190,7 +1203,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UpR-4U-Zlb">
-                                                <rect key="frame" x="0.0" y="132.5" width="334" height="62"/>
+                                                <rect key="frame" x="0.0" y="133" width="334" height="84"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ETs-dU-RQQ">
                                                         <rect key="frame" x="0.0" y="0.5" width="10" height="29"/>
@@ -1201,7 +1214,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have already decided to name any Chinese characters in your name, please type in the respective space." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aj-yH-7gI">
-                                                        <rect key="frame" x="40" y="0.0" width="294" height="62"/>
+                                                        <rect key="frame" x="40" y="0.0" width="294" height="84"/>
                                                         <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1209,7 +1222,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qE-WJ-nxN">
-                                                <rect key="frame" x="0.0" y="224.5" width="334" height="111.5"/>
+                                                <rect key="frame" x="0.0" y="247" width="334" height="111.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyB-FL-fxD">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="111.5"/>
@@ -1296,7 +1309,7 @@
         <!--Result View Controller-->
         <scene sceneID="xiH-16-KIM">
             <objects>
-                <viewController storyboardIdentifier="ResultViewController" id="x3C-VP-nme" customClass="ResultViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" id="x3C-VP-nme" customClass="ResultViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uqh-sc-Z7j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1305,10 +1318,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jqg-Hs-bVF">
-                                        <rect key="frame" x="30" y="25" width="354" height="81.5"/>
+                                        <rect key="frame" x="30" y="25" width="354" height="82.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3z-YR-AFC">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1316,7 +1329,7 @@
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have saved these names in History" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAj-0M-avY">
-                                                <rect key="frame" x="0.0" y="60.5" width="354" height="21"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="354" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1401,7 +1414,7 @@
         <!--Home View Controller-->
         <scene sceneID="i3L-LZ-dtz">
             <objects>
-                <viewController id="naf-BR-GVC" customClass="HomeViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="naf-BR-GVC" customClass="HomeViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uFy-uA-bvb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1543,7 +1556,7 @@
         <!--History View Controller-->
         <scene sceneID="ny6-cx-vgb">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="wPe-s1-NyQ" customClass="HistoryViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="wPe-s1-NyQ" customClass="HistoryViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJi-xf-VZ8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1563,16 +1576,16 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uwy-oh-x0Z">
-                                        <rect key="frame" x="123" y="23.5" width="168" height="91.5"/>
+                                        <rect key="frame" x="123" y="30" width="168" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歷史紀錄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4O-YN-Adp">
-                                                <rect key="frame" x="0.0" y="0.0" width="168" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="168" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我們曾經為您取的名字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejZ-Dj-98t">
-                                                <rect key="frame" x="0.0" y="69" width="168" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="59" width="168" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1633,7 +1646,7 @@
         <!--Tips View Controller-->
         <scene sceneID="lKQ-R6-rhm">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yx3-a5-cvg" customClass="TipsViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yx3-a5-cvg" customClass="TipsViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l1C-Rh-kAE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1642,16 +1655,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NQI-4R-lmg">
-                                        <rect key="frame" x="135" y="23.5" width="144" height="91.5"/>
+                                        <rect key="frame" x="135" y="30" width="144" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="說明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufY-JF-WeU">
-                                                <rect key="frame" x="0.0" y="0.0" width="144" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有關應用程式的說明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kX9-XS-SS9">
-                                                <rect key="frame" x="0.0" y="69" width="144" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="59" width="144" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1745,7 +1758,7 @@
         <!--Gender View Controller-->
         <scene sceneID="yYg-iO-XZP">
             <objects>
-                <viewController id="bsV-gy-joW" customClass="GenderViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bsV-gy-joW" customClass="GenderViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3w-Ya-KPD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1754,16 +1767,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j1m-Zh-vHv">
-                                        <rect key="frame" x="143" y="23.5" width="128" height="91.5"/>
+                                        <rect key="frame" x="143" y="30" width="128" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性 別" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVR-cH-sAP">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請選擇寶寶的性別" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enr-UC-l4y">
-                                                <rect key="frame" x="0.0" y="69" width="128" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="59" width="128" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Light" family="Yuanti TC" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1878,7 +1891,7 @@
         <!--Name View Controller-->
         <scene sceneID="0Fa-mw-Rts">
             <objects>
-                <viewController id="syj-5L-4Xr" customClass="NameViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="syj-5L-4Xr" customClass="NameViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tvv-aI-8Uo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1887,16 +1900,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hKp-li-q1g">
-                                        <rect key="frame" x="143" y="23.5" width="128" height="91.5"/>
+                                        <rect key="frame" x="143" y="30" width="128" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓 氏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPu-5f-PU0">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請填寫寶寶的姓氏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDR-75-Gky">
-                                                <rect key="frame" x="0.0" y="69" width="128" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="59" width="128" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1999,7 +2012,7 @@
         <!--Birth View Controller-->
         <scene sceneID="f5s-Nn-nXv">
             <objects>
-                <viewController id="D0i-4q-a6i" customClass="BirthViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D0i-4q-a6i" customClass="BirthViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oPa-r3-pQY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2008,16 +2021,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pqg-Yy-w0a">
-                                        <rect key="frame" x="143" y="23.5" width="128" height="91.5"/>
+                                        <rect key="frame" x="143" y="30" width="128" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Og-i5-rwV">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請填寫寶寶的生日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSV-Ai-Tst">
-                                                <rect key="frame" x="0.0" y="69" width="128" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="59" width="128" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2117,7 +2130,7 @@
         <!--Traits View Controller-->
         <scene sceneID="soR-Rq-1bW">
             <objects>
-                <viewController id="8rK-5e-h9T" customClass="TraitsViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rK-5e-h9T" customClass="TraitsViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sa4-qg-avh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2126,16 +2139,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="14w-Aa-IsK">
-                                        <rect key="frame" x="97.5" y="23.5" width="219.5" height="91.5"/>
+                                        <rect key="frame" x="99" y="30" width="216.5" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期望" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOk-7W-Uwo">
-                                                <rect key="frame" x="0.0" y="0.0" width="219.5" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="216.5" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請選取對寶寶的期望(一至五個)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veY-rF-iW3">
-                                                <rect key="frame" x="0.0" y="69" width="219.5" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="59" width="216.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2234,7 +2247,7 @@
         <!--Preference View Controller-->
         <scene sceneID="XEN-DQ-J9t">
             <objects>
-                <viewController id="X3D-bq-qlQ" customClass="PreferenceViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="X3D-bq-qlQ" customClass="PreferenceViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mfr-ws-dCM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2243,16 +2256,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EDn-Jp-JOR">
-                                        <rect key="frame" x="151" y="23.5" width="112" height="91.5"/>
+                                        <rect key="frame" x="151" y="30" width="112" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="其他" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrQ-S7-f9N">
-                                                <rect key="frame" x="0.0" y="0.0" width="112" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請回答以下問題" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5H-d9-1sY">
-                                                <rect key="frame" x="0.0" y="69" width="112" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="59" width="112" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2284,7 +2297,7 @@
                                 <rect key="frame" x="40" y="752" width="334" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="544-M7-Biu">
-                                        <rect key="frame" x="108.5" y="10" width="117.5" height="30"/>
+                                        <rect key="frame" x="108.5" y="10" width="117" height="30"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-o2-loj">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -2293,7 +2306,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="馬上取名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR7-mQ-Bs1">
-                                                <rect key="frame" x="45" y="0.0" width="72.5" height="30"/>
+                                                <rect key="frame" x="45" y="0.0" width="72" height="30"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -2328,7 +2341,7 @@
                                 <rect key="frame" x="0.0" y="182" width="414" height="540"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="YCS-58-NzT">
-                                        <rect key="frame" x="40" y="0.0" width="334" height="337.5"/>
+                                        <rect key="frame" x="40" y="0.0" width="334" height="330"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eUc-Dp-CEM">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
@@ -2360,7 +2373,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cvg-8F-VMR">
-                                                <rect key="frame" x="0.0" y="141" width="334" height="45"/>
+                                                <rect key="frame" x="0.0" y="141" width="334" height="37.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FwN-vI-OEp">
                                                         <rect key="frame" x="0.0" y="0.5" width="10" height="29"/>
@@ -2371,7 +2384,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如有已經確定位置並決定好放入名字的字，請填入以下空格，可不填" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2n8-sP-FF3">
-                                                        <rect key="frame" x="30" y="0.0" width="304" height="45"/>
+                                                        <rect key="frame" x="30" y="0.0" width="304" height="37.5"/>
                                                         <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2379,7 +2392,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4P-pS-4mn">
-                                                <rect key="frame" x="0.0" y="226" width="334" height="111.5"/>
+                                                <rect key="frame" x="0.0" y="218.5" width="334" height="111.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkR-X6-NFB">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="111.5"/>
@@ -2466,7 +2479,7 @@
         <!--Result View Controller-->
         <scene sceneID="0ic-P5-991">
             <objects>
-                <viewController id="2Ma-Q3-gJb" customClass="ResultViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Ma-Q3-gJb" customClass="ResultViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7aZ-so-R8u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2475,16 +2488,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vsu-3J-krZ">
-                                        <rect key="frame" x="20" y="23.5" width="374" height="91.5"/>
+                                        <rect key="frame" x="20" y="30" width="374" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVA-dE-HN7">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以下結果都存在歷史紀錄，可隨時查看" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPi-Np-iVV">
-                                                <rect key="frame" x="0.0" y="69" width="374" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="59" width="374" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2571,7 +2584,7 @@
         <!--Name Information View Controller-->
         <scene sceneID="CIO-b6-1WS">
             <objects>
-                <viewController id="NVE-3K-0Ff" customClass="NameInformationViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NVE-3K-0Ff" customClass="NameInformationViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gS5-wH-pMM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2580,7 +2593,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中文名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7n-gV-r3z">
-                                        <rect key="frame" x="144" y="20.5" width="126" height="59"/>
+                                        <rect key="frame" x="144" y="25.5" width="126" height="49"/>
                                         <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2622,38 +2635,51 @@
                                     <constraint firstItem="0cL-jM-ea6" firstAttribute="centerY" secondItem="fZt-1I-eqE" secondAttribute="centerY" id="kZe-rc-6Oc"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F5K-OJ-U7M">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lsj-yL-NAI">
                                 <rect key="frame" x="0.0" y="152" width="414" height="710"/>
-                                <color key="backgroundColor" name="Background Color"/>
-                                <color key="sectionIndexBackgroundColor" name="Background Color"/>
-                            </tableView>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F5K-OJ-U7M">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="645.5"/>
+                                        <color key="backgroundColor" name="Background Color"/>
+                                        <color key="sectionIndexBackgroundColor" name="Background Color"/>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnB-bZ-iLA">
+                                        <rect key="frame" x="0.0" y="645.5" width="414" height="64.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jnB-bZ-iLA" secondAttribute="height" multiplier="320:50" id="aFc-0h-SUL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="Background Color"/>
                         <constraints>
-                            <constraint firstItem="hzj-ga-RtV" firstAttribute="trailing" secondItem="F5K-OJ-U7M" secondAttribute="trailing" id="4wY-A1-FMv"/>
-                            <constraint firstItem="hzj-ga-RtV" firstAttribute="bottom" secondItem="F5K-OJ-U7M" secondAttribute="bottom" id="M4k-0a-MzM"/>
+                            <constraint firstItem="Lsj-yL-NAI" firstAttribute="top" secondItem="fZt-1I-eqE" secondAttribute="bottom" constant="8" id="3kU-fC-SuK"/>
+                            <constraint firstItem="Lsj-yL-NAI" firstAttribute="trailing" secondItem="hzj-ga-RtV" secondAttribute="trailing" id="EMx-Ke-Emg"/>
+                            <constraint firstItem="hzj-ga-RtV" firstAttribute="bottom" secondItem="Lsj-yL-NAI" secondAttribute="bottom" id="JKI-MP-ay0"/>
+                            <constraint firstItem="Lsj-yL-NAI" firstAttribute="leading" secondItem="hzj-ga-RtV" secondAttribute="leading" id="OCD-DB-cFV"/>
                             <constraint firstItem="fZt-1I-eqE" firstAttribute="top" secondItem="hzj-ga-RtV" secondAttribute="top" id="Vwp-Wg-YGe"/>
                             <constraint firstItem="fZt-1I-eqE" firstAttribute="leading" secondItem="hzj-ga-RtV" secondAttribute="leading" id="Zqw-F8-HjY"/>
-                            <constraint firstItem="F5K-OJ-U7M" firstAttribute="top" secondItem="fZt-1I-eqE" secondAttribute="bottom" constant="8" symbolic="YES" id="itL-XA-s1M"/>
                             <constraint firstItem="hzj-ga-RtV" firstAttribute="trailing" secondItem="fZt-1I-eqE" secondAttribute="trailing" id="qF6-bm-VoQ"/>
-                            <constraint firstItem="F5K-OJ-U7M" firstAttribute="leading" secondItem="hzj-ga-RtV" secondAttribute="leading" id="vOP-sq-HoV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hzj-ga-RtV"/>
                     </view>
                     <navigationItem key="navigationItem" id="cId-oj-v9H"/>
                     <connections>
+                        <outlet property="adView" destination="jnB-bZ-iLA" id="hjq-vQ-YkG"/>
                         <outlet property="chineseNameLabel" destination="w7n-gV-r3z" id="hWt-9T-Mxa"/>
                         <outlet property="tableView" destination="F5K-OJ-U7M" id="ijp-Se-vCi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEh-vh-VaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4897" y="1517"/>
+            <point key="canvasLocation" x="-4897.1014492753629" y="1516.7410714285713"/>
         </scene>
         <!--Story Table View Controller-->
         <scene sceneID="tZ7-y8-dFi">
             <objects>
-                <viewController id="uQZ-N1-s0W" customClass="StoryTableViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uQZ-N1-s0W" customClass="StoryTableViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c7J-Y0-pbL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2662,10 +2688,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Obp-mm-Qpx">
-                                        <rect key="frame" x="93.5" y="25" width="227" height="72.5"/>
+                                        <rect key="frame" x="67" y="25" width="280" height="73.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese Zodiac" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxR-O5-W5f">
-                                                <rect key="frame" x="0.0" y="0.0" width="227" height="46.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="47.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2673,7 +2699,7 @@
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The story of chinese zodiac" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGJ-wM-fib">
-                                                <rect key="frame" x="0.0" y="51.5" width="227" height="21"/>
+                                                <rect key="frame" x="0.0" y="52.5" width="280" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2782,7 +2808,7 @@
         <!--Story Table View Controller-->
         <scene sceneID="Czb-Tz-ibv">
             <objects>
-                <viewController id="gMM-kd-uTx" customClass="StoryTableViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gMM-kd-uTx" customClass="StoryTableViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sbn-oK-Scx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2791,16 +2817,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eSJ-xz-bvB">
-                                        <rect key="frame" x="119" y="23.5" width="176" height="91.5"/>
+                                        <rect key="frame" x="119" y="30" width="176" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="星座" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkc-lH-x6k">
-                                                <rect key="frame" x="0.0" y="0.0" width="176" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="176" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="點擊可以觀看星座的故事" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbl-13-B96">
-                                                <rect key="frame" x="0.0" y="69" width="176" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="59" width="176" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2910,7 +2936,7 @@
         <!--Horoscope Story View Controller-->
         <scene sceneID="Ah1-3W-hij">
             <objects>
-                <viewController id="S7c-xQ-rhG" customClass="HoroscopeStoryViewController" customModule="寶寶起名" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S7c-xQ-rhG" customClass="HoroscopeStoryViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="INZ-jl-ch5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2919,10 +2945,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="138"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GGb-tt-mEg">
-                                        <rect key="frame" x="144" y="39.5" width="126" height="59"/>
+                                        <rect key="frame" x="144" y="44.5" width="126" height="49"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="星座名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvm-fJ-Ile">
-                                                <rect key="frame" x="0.0" y="0.0" width="126" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -3008,7 +3034,7 @@
         <segue reference="fTe-hr-Wj5"/>
         <segue reference="15E-w4-p5T"/>
         <segue reference="BIG-My-qs1"/>
-        <segue reference="CmL-qK-1Jz"/>
+        <segue reference="bVf-qJ-UAH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BackButton" width="256" height="256"/>
