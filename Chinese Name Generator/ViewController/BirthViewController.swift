@@ -17,8 +17,6 @@ class BirthViewController: UIViewController {
     let zodiacName = ZodiacName()
     let horoscopeName = HoroscopeName()
     
-    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
-    
     var userBirthDay = "1990-01-01"
     var userZodiac = ""
     var userHoroscope = ""
@@ -26,8 +24,8 @@ class BirthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.addCorner(radious: 5)
-        horoscopeName.isForeigner = isForeigner
-        zodiacName.isForeigner = isForeigner
+        horoscopeName.isForeigner = UserData.isForeigner
+        zodiacName.isForeigner = UserData.isForeigner
         datePicker.addTarget(self, action: #selector(BirthViewController.caculateZodiac), for: UIControl.Event.valueChanged)
         datePicker.addTarget(self, action: #selector(BirthViewController.caculateHoroscope), for: UIControl.Event.valueChanged)
         caculateZodiac()
@@ -111,7 +109,7 @@ class BirthViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        switch isForeigner {
+        switch UserData.isForeigner {
         case true:
             if let image = UIImage(named: zodiacName.imageName) {
                 let resizeimage = resizeImage(image: image, targetSize: CGSize(width: 30, height: 30))
@@ -135,7 +133,7 @@ class BirthViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        UserData().setUserData(data: userBirthDay, name: "Birth")
+        UserData.setUserData(data: userBirthDay, name: "Birth")
     }
     
     func showAlert(title:String, message:String, image:UIImage) {
@@ -149,7 +147,7 @@ class BirthViewController: UIViewController {
         alert.add(action: okAction)
         
         var infoText = ""
-        switch isForeigner {
+        switch UserData.isForeigner {
         case true:
             infoText = "More"
             if let font = UIFont(name: "Gill Sans", size: 18) {

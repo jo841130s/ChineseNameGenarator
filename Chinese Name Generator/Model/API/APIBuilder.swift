@@ -58,7 +58,6 @@ class APIBuilder {
     }
     
     func requestUsedCount() {
-        startLoading()
         AF.request("https://sinoname.appspot.com/used_count?device_id=\(UIDevice.current.identifierForVendor?.uuidString ?? "")").response(completionHandler: { (response) in
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
@@ -67,29 +66,27 @@ class APIBuilder {
             } else {
                 self.delegate?.usedCountNotReceived(error: response.error)
             }
-            self.endLoading()
         })
     }
     
     func requestURL() -> String {
         let url = "https://sinoname.appspot.com/create_name?"
-        let userData = UserData()
         let device_id = UIDevice.current.identifierForVendor?.uuidString ?? ""
-        let gender = userData.userData(name: "Gender") as! String
+        let gender = UserData.userData(name: "Gender") as! String
         var given_name = ""
         var country = ""
         var surname = ""
         if isForeigner {
-            surname = userData.userData(name: "FirstName") as! String
-            given_name = userData.userData(name: "LastName") as! String
-            country = userData.userData(name: "Country") as! String
+            surname = UserData.userData(name: "FirstName") as! String
+            given_name = UserData.userData(name: "LastName") as! String
+            country = UserData.userData(name: "Country") as! String
         }
-        let birthday = userData.userData(name: "Birth") as! String
-        let traits = userData.userData(name: "Traits") as! [String]
-        let num_char = userData.userData(name: "num_char") as! String
-        let fixed_surname = userData.userData(name: "fixed_surname") as! String
-        let fixed_first_char = userData.userData(name: "fixed_first_char") as! String
-        let fixed_second_char = userData.userData(name: "fixed_second_char") as! String
+        let birthday = UserData.userData(name: "Birth") as! String
+        let traits = UserData.userData(name: "Traits") as! [String]
+        let num_char = UserData.userData(name: "num_char") as! String
+        let fixed_surname = UserData.userData(name: "fixed_surname") as! String
+        let fixed_first_char = UserData.userData(name: "fixed_first_char") as! String
+        let fixed_second_char = UserData.userData(name: "fixed_second_char") as! String
         
         var traitString = ""
         for trait in traits {

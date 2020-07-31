@@ -13,7 +13,6 @@ class CountryViewController: UIViewController {
     @IBOutlet var countryPickerView: UIPickerView!
     @IBOutlet var nextButtonView: UIView!
     var selectedCountry = "Australia"
-    let userData = UserData()
     
     let countriesArray = ["Australia", "Belgium", "Bulgaria", "Canada", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "India", "Indonesia", "Latvia", "Lithuania", "Luxembourg", "Malaysia", "Myanmar", "Malta", "Netherlands", "New Zealand", "Peru", "Philippines", "Poland", "Portugal", "Romania", "Singapore", "Slovakia", "Slovenia", "Spain", "Sweden", "Taiwan", "Thailand", "United Kingdom", "USA", "Vietnam", "Others"]
     
@@ -29,7 +28,7 @@ class CountryViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        userData.setUserData(data: selectedCountry, name: "Country")
+        UserData.setUserData(data: selectedCountry, name: "Country")
     }
 
 }

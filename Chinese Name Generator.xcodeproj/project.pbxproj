@@ -24,6 +24,8 @@
 		0431518C24829EAE009047CB /* LetterGothicStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0431518824829EAE009047CB /* LetterGothicStd.otf */; };
 		043F3B09243C6B8000ED8744 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F3B08243C6B8000ED8744 /* SettingViewController.swift */; };
 		043F3B692444737600ED8744 /* NameHistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F3B682444737600ED8744 /* NameHistoryData.swift */; };
+		04470E9D24D26B4300F6AC24 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04470E9C24D26B4300F6AC24 /* IAPManager.swift */; };
+		04470E9F24D3FE8A00F6AC24 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04470E9E24D3FE8A00F6AC24 /* BuyViewController.swift */; };
 		044F7D802439CC42007B64E4 /* APIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F7D7F2439CC42007B64E4 /* APIBuilder.swift */; };
 		044F7D822439D227007B64E4 /* NameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F7D812439D227007B64E4 /* NameData.swift */; };
 		04587A9024728116002E1227 /* UsedCountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04587A8F24728116002E1227 /* UsedCountData.swift */; };
@@ -71,6 +73,8 @@
 		0431518824829EAE009047CB /* LetterGothicStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LetterGothicStd.otf; sourceTree = "<group>"; };
 		043F3B08243C6B8000ED8744 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		043F3B682444737600ED8744 /* NameHistoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHistoryData.swift; sourceTree = "<group>"; };
+		04470E9C24D26B4300F6AC24 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		04470E9E24D3FE8A00F6AC24 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		044F7D7F2439CC42007B64E4 /* APIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBuilder.swift; sourceTree = "<group>"; };
 		044F7D812439D227007B64E4 /* NameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameData.swift; sourceTree = "<group>"; };
 		04587A8F24728116002E1227 /* UsedCountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCountData.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 				04E74FCC242F538E0001EFCE /* UserData.swift */,
 				04093285245285B800BC4527 /* ZodiacName.swift */,
 				0409328724528B5B00BC4527 /* HoroscopeName.swift */,
+				04470E9C24D26B4300F6AC24 /* IAPManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				043F3B08243C6B8000ED8744 /* SettingViewController.swift */,
 				04C2615A2478DC86003E1024 /* StoryTableViewController.swift */,
 				04C2615C24791371003E1024 /* HoroscopeStoryViewController.swift */,
+				04470E9E24D3FE8A00F6AC24 /* BuyViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 			files = (
 				04587A9024728116002E1227 /* UsedCountData.swift in Sources */,
 				04C2615D24791371003E1024 /* HoroscopeStoryViewController.swift in Sources */,
+				04470E9D24D26B4300F6AC24 /* IAPManager.swift in Sources */,
 				043F3B692444737600ED8744 /* NameHistoryData.swift in Sources */,
 				04E74FCF242F5B080001EFCE /* PreferenceViewController.swift in Sources */,
 				04975DB72413885C00EC257F /* AppDelegate.swift in Sources */,
@@ -387,6 +394,7 @@
 				043151792482879D009047CB /* TipsCell.swift in Sources */,
 				0409328824528B5B00BC4527 /* HoroscopeName.swift in Sources */,
 				04E74FCD242F538E0001EFCE /* UserData.swift in Sources */,
+				04470E9F24D3FE8A00F6AC24 /* BuyViewController.swift in Sources */,
 				043F3B09243C6B8000ED8744 /* SettingViewController.swift in Sources */,
 				04E74FD42435D99C0001EFCE /* ResultCell.swift in Sources */,
 				04975DB92413885C00EC257F /* SceneDelegate.swift in Sources */,
@@ -550,7 +558,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = A537622CYX;
 				INFOPLIST_FILE = "Chinese Name Generator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -558,7 +565,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = GuangXin.ChineseNameGeneratorEnglish;
 				PRODUCT_NAME = ChineseName;
 				SWIFT_VERSION = 5.0;
@@ -572,7 +579,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = A537622CYX;
 				INFOPLIST_FILE = "Chinese Name Generator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -580,7 +586,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = GuangXin.ChineseNameGeneratorEnglish;
 				PRODUCT_NAME = ChineseName;
 				SWIFT_VERSION = 5.0;

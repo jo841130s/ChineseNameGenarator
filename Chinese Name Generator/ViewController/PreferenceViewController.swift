@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import IQKeyboardManagerSwift
 import RealmSwift
-import GoogleMobileAds
 
 class PreferenceViewController: UIViewController {
     
@@ -21,60 +20,21 @@ class PreferenceViewController: UIViewController {
     @IBOutlet var fixedFirstChar: UITextField!
     @IBOutlet var fixedSecondChar: UITextField!
     @IBOutlet var nextButton: UIButton!
-    @IBOutlet var nextButtonView: UIView!
-    @IBOutlet var vidoeImageView: UIImageView!
     
-    let usedTimes = UserDefaults.standard.integer(forKey: "UsedTimes")
-    
-    let userData = UserData()
     let realm = try! Realm()
     
     let apiBuilder = APIBuilder()
     var nameData : NameData?
     var numChars = "3"
     
-    var rewardedAd : GADRewardedAd?
-    var rewardedADDone = false
-    
-    var requestNameTimes = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if usedTimes == 0 {
-            vidoeImageView.isHidden = true
-        }
-        rewardedAd = createAndLoadRewardedAd()
-        nextButtonView.layer.cornerRadius = 5
+        nextButton.addCorner(radious: 5)
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         apiBuilder.delegate = self
         setFixedSurnameTextField()
-    }
-    
-    func showRewardedAd() {
-        if rewardedAd?.isReady == true {
-            rewardedAd?.present(fromRootViewController: self, delegate:self)
-        } else {
-            showNetworkError()
-        }
-    }
-    
-    func showNetworkError() {
-        var title = ""
-        var message = ""
-        switch isForeigner {
-        case true:
-            title = "Error"
-            message = "Network error. Please try again."
-        case false:
-            title = "錯誤"
-            message = "網路連線問題，請再試一次"
-        }
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func numCharValueChanged(_ sender: UISegmentedControl) {
@@ -94,36 +54,26 @@ class PreferenceViewController: UIViewController {
         if isForeigner {
             return
         }
-        if let fixedSurnameText = userData.userData(name: "fixed_surname") as? String {
+        if let fixedSurnameText = UserData.userData(name: "fixed_surname") as? String {
             fixedSurname.text = fixedSurnameText
         }
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        let surname = fixedSurname.text ?? ""
-        let firstChar = fixedFirstChar.text ?? ""
-        let secondChar = fixedSecondChar.text ?? ""
-        if !checkTextField(surname: surname, firstChar: firstChar, secondChar: secondChar) {
-            return
-        }
-        if rewardedADDone {
-            requestName()
-        }
-        if usedTimes == 0 {
-            requestName()
-        } else {
-            showRewardedAd()
-        }
+        requestName()
     }
     
     func requestName() {
         let surname = fixedSurname.text ?? ""
         let firstChar = fixedFirstChar.text ?? ""
         let secondChar = fixedSecondChar.text ?? ""
-        userData.setUserData(data: numChars, name: "num_char")
-        userData.setUserData(data: surname, name: "fixed_surname")
-        userData.setUserData(data: firstChar, name: "fixed_first_char")
-        userData.setUserData(data: secondChar, name: "fixed_second_char")
+        if !checkTextField(surname: surname, firstChar: firstChar, secondChar: secondChar) {
+            return
+        }
+        UserData.setUserData(data: numChars, name: "num_char")
+        UserData.setUserData(data: surname, name: "fixed_surname")
+        UserData.setUserData(data: firstChar, name: "fixed_first_char")
+        UserData.setUserData(data: secondChar, name: "fixed_second_char")
         apiBuilder.requestNameData()
     }
     
@@ -140,55 +90,53 @@ class PreferenceViewController: UIViewController {
         if surname.count > 1 || firstChar.count > 1 || secondChar.count > 1 {
             switch isForeigner {
             case true:
-                showAlert(message: "Each field can only filled with one character")
+                showAlert(title: "Error", message: "Each field can only filled with one character")
             case false:
-                showAlert(message: "每個空格只能填寫一個字")
+                showAlert(title: "Error", message: "每個空格只能填寫一個字")
             }
             return false
         } else if containsLetters(input: surname) || containsLetters(input: firstChar) || containsLetters(input: secondChar) {
             switch isForeigner {
             case true:
-                showAlert(message: "Each field can only filled with chinese")
+                showAlert(title: "Error", message: "Each field can only filled with chinese")
             case false:
-                showAlert(message: "每個空格只能填寫中文")
+                showAlert(title: "Error", message: "每個空格只能填寫中文")
             }
             return false
         } else if firstChar != "" && secondChar != "" {
             switch isForeigner {
             case true:
-                showAlert(message: "Can't fill all fields")
+                showAlert(title: "Error", message: "Can't fill all fields")
             case false:
-                showAlert(message: "不能填寫所有空格")
+                showAlert(title: "Error", message: "不能填寫所有空格")
             }
             return false
         } else if numChars == "2" && secondChar != "" && fixedSurname.text != "" {
             switch isForeigner {
             case true:
-                showAlert(message: "Can't fill all fields")
+                showAlert(title: "Error", message: "Can't fill all fields")
             case false:
-                showAlert(message: "不能填寫所有空格")
+                showAlert(title: "Error", message: "不能填寫所有空格")
             }
             return false
         }
         return true
     }
     
-    func showAlert(message:String) {
-        let alert = UIAlertController(title: "Oops!", message: message, preferredStyle: .alert)
+    func showAlert(title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
     
     func containsLetters(input: String) -> Bool {
-        for chr in input {
-            if ((chr >= "a" && chr <= "z") || (chr >= "A" && chr <= "Z")) {
-                return true
-            } else if (chr >= "0" && chr <= "9") {
-                return true
-            }
-        }
-        return false
+       for chr in input {
+          if ((chr >= "a" && chr <= "z") || (chr >= "A" && chr <= "Z")) {
+             return true
+          }
+       }
+       return false
     }
     
 }
@@ -203,32 +151,19 @@ extension PreferenceViewController : APIDelegate {
         print("")
     }
     
+    
     func nameDataReceived(data: NameData) {
-        UserDefaults.standard.set(usedTimes+1, forKey: "UsedTimes")
         nameData = data
-        saveNameDataToHistory(nameData:data)
         performSegue(withIdentifier: "goResult", sender: self)
+        saveNameDataToHistory(nameData:data)
     }
     
     func nameDataNotReceived(error:AFError?) {
-        requestNameTimes += 1
-        if requestNameTimes >= 3 {
-            switch isForeigner {
-            case true:
-                if fixedSurname.text == "" && fixedFirstChar.text == "" && fixedSecondChar.text == "" {
-                    showAlert(message: "Server error. Please try again.")
-                } else {
-                    showAlert(message: "Server error. Please change the charaters in fields and try again.")
-                }
-            case false:
-                if fixedSurname.text == "" && fixedFirstChar.text == "" && fixedSecondChar.text == "" {
-                    showAlert(message: "伺服器錯誤，請再試一次")
-                } else {
-                    showAlert(message: "伺服器錯誤，請嘗試更換您填寫的字元，並再試一次")
-                }
-            }
-        } else {
-            requestName()
+        switch isForeigner {
+        case true:
+            showAlert(title: "Service Error", message: "Try to change the characters you filled in fields")
+        case false:
+            showAlert(title: "Service Error", message: "請嘗試更改您填寫在空格中的字元，可能因為您填寫的字元不適用於命名，或是我們尚未將該字元納入命名用字元")
         }
     }
     
@@ -304,47 +239,4 @@ extension PreferenceViewController : APIDelegate {
         }
     }
     
-}
-
-extension PreferenceViewController : GADRewardedAdDelegate {
-    
-    func createAndLoadRewardedAd() -> GADRewardedAd? {
-        rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-4893868639954563/1581391087")
-        rewardedAd?.load(GADRequest()) { error in
-            if let error = error {
-                print("Loading failed: \(error)")
-                self.showNetworkError()
-            } else {
-                print("Loading Succeeded")
-            }
-        }
-        return rewardedAd
-    }
-    
-    /// Tells the delegate that the user earned a reward.
-    func rewardedAd(_ rewardedAd: GADRewardedAd, userDidEarn reward: GADAdReward) {
-        print("Reward received with currency: \(reward.type), amount \(reward.amount).")
-        rewardedADDone = true
-    }
-    
-    /// Tells the delegate that the rewarded ad was presented.
-    func rewardedAdDidPresent(_ rewardedAd: GADRewardedAd) {
-        print("Rewarded ad presented.")
-    }
-    
-    /// Tells the delegate that the rewarded ad was dismissed.
-    func rewardedAdDidDismiss(_ rewardedAd: GADRewardedAd) {
-        if rewardedADDone == true {
-            rewardedADDone = false
-            requestName()
-        } else {
-            self.rewardedAd = createAndLoadRewardedAd()
-        }
-    }
-    
-    /// Tells the delegate that the rewarded ad failed to present.
-    func rewardedAd(_ rewardedAd: GADRewardedAd, didFailToPresentWithError error: Error) {
-        print("Rewarded ad failed to present.")
-        showNetworkError()
-    }
 }

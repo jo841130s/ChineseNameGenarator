@@ -13,8 +13,6 @@ class TraitsViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var nextButton: UIButton!
     
-    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
-    
     var enTraits = ["Artful","Beautiful","Handsome","Clever","Calm","Diligent","Elegant","Excellent","Friendly","Happy","Healthy","Lucky","Powerful","Rich","Virtuous","Wise"]
     
     var cnTraits = ["藝術","美麗","英俊","聰明","平和","勤奮","優雅","完美","友善","快樂","健康","幸運","力量","富有","道德","智慧"]
@@ -57,15 +55,15 @@ class TraitsViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         setUserTraits()
-        UserData().setUserData(data: userTraits, name: "Traits")
+        UserData.setUserData(data: userTraits, name: "Traits")
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        if userTraits.count == 0 && isForeigner {
+        if userTraits.count == 0 && UserData.isForeigner {
             showAlert(message: "No selection yet")
-        } else if userTraits.count == 0 && !isForeigner {
+        } else if userTraits.count == 0 && !UserData.isForeigner {
             showAlert(message: "請選擇至少一個")
-        } else if userTraits.count > 5 && !isForeigner{
+        } else if userTraits.count > 5 && !UserData.isForeigner{
             showAlert(message: "不得超過五個")
         } else if userTraits.count > 5 {
             showAlert(message: "Selections over limit")
@@ -90,7 +88,7 @@ extension TraitsViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TraitsCell", for: indexPath) as! TraitsCell
-        if isForeigner {
+        if UserData.isForeigner {
             cell.traitLabel.text = enTraits[indexPath.row]
         } else {
             cell.traitLabel.text = cnTraits[indexPath.row]

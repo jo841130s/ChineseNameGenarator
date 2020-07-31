@@ -15,9 +15,6 @@ class NameViewController: UIViewController {
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
     
-    let userData = UserData()
-    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
-    
     var banCharacters = "[`~!#$^&*()=|{}':;',\\[\\].<>/?~！#￥……&*（）——|{}【】‘；：”“'。，、？]‘'0123456789"
     
     override func viewDidLoad() {
@@ -34,19 +31,19 @@ class NameViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         let firstName = (firstNameTextField.text ?? "Gill Sans ").trimmingCharacters(in: .whitespaces)
-        if !isForeigner {
-            userData.setUserData(data: firstName, name: "fixed_surname")
+        if !UserData.isForeigner {
+            UserData.setUserData(data: firstName, name: "fixed_surname")
             return
         }
         let lastName = (lastNameTextField.text ?? "").trimmingCharacters(in: .whitespaces)
-        userData.setUserData(data: lastName, name: "LastName")
-        userData.setUserData(data: firstName, name: "FirstName")
+        UserData.setUserData(data: lastName, name: "LastName")
+        UserData.setUserData(data: firstName, name: "FirstName")
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
         let firstName = firstNameTextField.text ?? ""
         
-        if isForeigner {
+        if UserData.isForeigner {
             let lastName = lastNameTextField.text ?? ""
             checkFieldIsForeigner(firstName: firstName, lastName: lastName)
         } else {

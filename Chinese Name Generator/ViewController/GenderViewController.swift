@@ -43,7 +43,7 @@ class GenderViewController: UIViewController {
         } else if genderSegmentControl.selectedSegmentIndex == 1 {
             gender = "Female"
         }
-        UserData().setUserData(data: gender, name: "Gender")
+        UserData.setUserData(data: gender, name: "Gender")
     }
 
 }

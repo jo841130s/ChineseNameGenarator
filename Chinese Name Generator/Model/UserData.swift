@@ -10,19 +10,14 @@ import Foundation
 
 class UserData {
     
-    let userDefaults = UserDefaults.standard
-    var isForeigner : Bool?
+    static var isForeigner : Bool = false
     
-    init() {
-        isForeigner = userDefaults.bool(forKey: "isForeigner")
+    static func setUserData(data:Any,name:String) {
+        UserDefaults.standard.set(data, forKey: name)
     }
     
-    func setUserData(data:Any,name:String) {
-        userDefaults.set(data, forKey: name)
-    }
-    
-    func userData(name:String) -> Any?{
-        return userDefaults.object(forKey: name)
+    static func userData(name:String) -> Any?{
+        return UserDefaults.standard.object(forKey: name)
     }
     
 }
