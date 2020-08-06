@@ -67,7 +67,7 @@ class StoryTableViewController: UIViewController, UITableViewDelegate, UITableVi
             cell.textLabel?.font = UIFont(name: "圓體-簡 細體", size: 24)
             cell.accessoryType = .disclosureIndicator
         }
-        
+        cell.textLabel?.textColor = .black
         cell.textLabel?.numberOfLines = 0
         return cell
     }

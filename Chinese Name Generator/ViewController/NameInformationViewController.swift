@@ -73,7 +73,7 @@ extension NameInformationViewController : UITableViewDelegate, UITableViewDataSo
         if UserData.isForeigner {
             cell.charLabel.text = data.traditional
             cell.englishSoundLabel.text = "Romanization:  " + data.pinyin
-            cell.strokeLabel.text = "Stokes:  " + data.stroke
+            cell.strokeLabel.text = "Strokes:  " + data.stroke
             cell.meaningLabel.text = "Meaning:  " + data.english
         } else {
             cell.charLabel.text = data.traditional

@@ -8,8 +8,7 @@
 
 import StoreKit
 class IAPManager: NSObject {
-    
-    static let canUsedTimes = 100
+    static let canUsedTimes = 10
     static func buyTimes() -> Int {
         return UserDefaults.standard.integer(forKey: "BuyTimes")
     }
@@ -17,13 +16,19 @@ class IAPManager: NSObject {
         return UserDefaults.standard.integer(forKey: "UsedTimes")
     }
     static let shared = IAPManager()
-    var products = [SKProduct]()
+    static var products = [SKProduct]()
     fileprivate var productRequest: SKProductsRequest!
     var apiBuilder = APIBuilder()
     var delegate : IAPManagerDelegate?
+    var type = ""
     
     func getProductIDs() -> [String] {
-        ["GuangXin.ChineseNameGeneratorEnglish.One", "GuangXin.ChineseNameGeneratorEnglish.Two", "GuangXin.ChineseNameGeneratorEnglish.Three"]
+        if UserData.isForeigner {
+            type = "English"
+        } else {
+            type = "Chinese"
+        }
+        return ["GuangXin.ChineseNameGenerator\(type).One", "GuangXin.ChineseNameGenerator\(type).Two", "GuangXin.ChineseNameGenerator\(type).Three"]
     }
     
     func getProducts() {
@@ -34,8 +39,9 @@ class IAPManager: NSObject {
         productRequest.start()
     }
     
-    func buy(product: SKProduct) {
+    static func buy(product: SKProduct) {
         if SKPaymentQueue.canMakePayments() {
+            print(product.productIdentifier)
             let payment = SKPayment(product: product)
             SKPaymentQueue.default().add(payment)
         } else {
@@ -47,13 +53,14 @@ class IAPManager: NSObject {
 extension IAPManager: SKProductsRequestDelegate {
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        print(response.products)
         response.products.forEach {
             print($0.localizedTitle, $0.price, $0.localizedDescription)
             delegate?.getPaymentInfo(info: ["title":$0.localizedTitle, "price":"\($0.price)"])
         }
-        self.products = response.products
+        IAPManager.products = response.products
         DispatchQueue.main.async {
-            self.products = response.products
+            IAPManager.products = response.products
         }
     }
     
@@ -63,12 +70,21 @@ extension IAPManager: SKPaymentTransactionObserver {
     
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         transactions.forEach {
+            let identifier = $0.payment.productIdentifier
             print($0.payment.productIdentifier, $0.transactionState.rawValue)
             switch $0.transactionState {
             case .purchased:
                 apiBuilder.endLoading()
                 let buyTimes = UserDefaults.standard.integer(forKey: "BuyTimes")
-                UserDefaults.standard.set(buyTimes+5, forKey: "BuyTimes")
+                var addTimes : Int = 0
+                if identifier == "GuangXin.ChineseNameGenerator\(type).One" {
+                    addTimes = 5
+                } else if identifier == "GuangXin.ChineseNameGenerator\(type).Two" {
+                    addTimes = 12
+                } else {
+                    addTimes = 20
+                }
+                UserDefaults.standard.set(buyTimes+addTimes, forKey: "BuyTimes")
                 self.delegate?.finishPurchase()
                 SKPaymentQueue.default().finishTransaction($0)
             case .failed:

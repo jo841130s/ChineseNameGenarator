@@ -13,8 +13,6 @@ import RealmSwift
 
 class PreferenceViewController: UIViewController {
     
-    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
-    
     @IBOutlet var numCharSegmentedControl: UISegmentedControl!
     @IBOutlet var fixedSurname: UITextField!
     @IBOutlet var fixedFirstChar: UITextField!
@@ -29,6 +27,12 @@ class PreferenceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fixedSurname.delegate = self
+        fixedFirstChar.delegate = self
+        fixedSecondChar.delegate = self
+        fixedSurname.backgroundColor = .white
+        fixedFirstChar.backgroundColor = .white
+        fixedSecondChar.backgroundColor = .white
         nextButton.addCorner(radious: 5)
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
@@ -51,7 +55,7 @@ class PreferenceViewController: UIViewController {
     
     
     func setFixedSurnameTextField() {
-        if isForeigner {
+        if UserData.isForeigner {
             return
         }
         if let fixedSurnameText = UserData.userData(name: "fixed_surname") as? String {
@@ -88,7 +92,7 @@ class PreferenceViewController: UIViewController {
     
     func checkTextField(surname:String, firstChar:String, secondChar:String) -> Bool {
         if surname.count > 1 || firstChar.count > 1 || secondChar.count > 1 {
-            switch isForeigner {
+            switch UserData.isForeigner {
             case true:
                 showAlert(title: "Error", message: "Each field can only filled with one character")
             case false:
@@ -96,7 +100,7 @@ class PreferenceViewController: UIViewController {
             }
             return false
         } else if containsLetters(input: surname) || containsLetters(input: firstChar) || containsLetters(input: secondChar) {
-            switch isForeigner {
+            switch UserData.isForeigner {
             case true:
                 showAlert(title: "Error", message: "Each field can only filled with chinese")
             case false:
@@ -104,7 +108,7 @@ class PreferenceViewController: UIViewController {
             }
             return false
         } else if firstChar != "" && secondChar != "" {
-            switch isForeigner {
+            switch UserData.isForeigner {
             case true:
                 showAlert(title: "Error", message: "Can't fill all fields")
             case false:
@@ -112,7 +116,7 @@ class PreferenceViewController: UIViewController {
             }
             return false
         } else if numChars == "2" && secondChar != "" && fixedSurname.text != "" {
-            switch isForeigner {
+            switch UserData.isForeigner {
             case true:
                 showAlert(title: "Error", message: "Can't fill all fields")
             case false:
@@ -153,13 +157,24 @@ extension PreferenceViewController : APIDelegate {
     
     
     func nameDataReceived(data: NameData) {
-        nameData = data
+        if IAPManager.buyTimes() > 0 {
+            nameData = data
+        } else {
+            var unremovedData = data
+            unremovedData.names.remove(at: 7)
+            unremovedData.names.remove(at: 6)
+            unremovedData.names.remove(at: 4)
+            unremovedData.names.remove(at: 3)
+            unremovedData.names.remove(at: 1)
+            unremovedData.names.remove(at: 0)
+            nameData = unremovedData
+        }
+        saveNameDataToHistory(nameData:nameData)
         performSegue(withIdentifier: "goResult", sender: self)
-        saveNameDataToHistory(nameData:data)
     }
     
     func nameDataNotReceived(error:AFError?) {
-        switch isForeigner {
+        switch UserData.isForeigner {
         case true:
             showAlert(title: "Service Error", message: "Try to change the characters you filled in fields")
         case false:
@@ -239,4 +254,10 @@ extension PreferenceViewController : APIDelegate {
         }
     }
     
+}
+
+extension PreferenceViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+    }
 }

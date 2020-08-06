@@ -26,7 +26,10 @@ class ResultViewController: UIViewController {
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        if let rootVC = navigationController?.viewControllers[0] as? HomeViewController {
+            rootVC.apiBuilder.requestUsedCount()
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

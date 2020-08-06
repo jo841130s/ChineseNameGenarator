@@ -12,6 +12,9 @@
         <array key="LetterGothicStd-Bold.otf">
             <string>LetterGothicStd-Bold</string>
         </array>
+        <array key="LetterGothicStd.otf">
+            <string>LetterGothicStd</string>
+        </array>
         <array key="Yuanti.ttc">
             <string>STYuanti-SC-Light</string>
             <string>STYuanti-TC-Bold</string>
@@ -25,7 +28,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,19 +43,19 @@
                                                 <rect key="frame" x="80" y="89.5" width="254" height="247.5"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXP-tI-jfa">
-                                                <rect key="frame" x="310.5" y="5" width="93.5" height="35"/>
+                                                <rect key="frame" x="280.5" y="5" width="133.5" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="lkS-oP-9v6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="35"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purchase" translatesAutoresizingMaskIntoConstraints="NO" id="E7h-zP-HUY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="50"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VL-xL-EX8">
-                                                        <rect key="frame" x="52" y="17.5" width="0.0" height="0.0"/>
-                                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VL-xL-EX8">
+                                                        <rect key="frame" x="48.5" y="19" width="36.5" height="12"/>
+                                                        <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf3-3f-Nzg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="50"/>
                                                         <connections>
                                                             <action selector="buyTimesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hFm-zc-Tj2"/>
                                                         </connections>
@@ -60,18 +63,18 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="Uf3-3f-Nzg" firstAttribute="top" secondItem="KXP-tI-jfa" secondAttribute="top" id="2eP-u8-5mr"/>
-                                                    <constraint firstAttribute="bottom" secondItem="lkS-oP-9v6" secondAttribute="bottom" id="6f0-L4-0bO"/>
-                                                    <constraint firstAttribute="trailing" secondItem="lkS-oP-9v6" secondAttribute="trailing" id="8cL-lW-B2D"/>
-                                                    <constraint firstItem="6VL-xL-EX8" firstAttribute="centerY" secondItem="KXP-tI-jfa" secondAttribute="centerY" id="IUq-xS-ham"/>
-                                                    <constraint firstItem="lkS-oP-9v6" firstAttribute="top" secondItem="KXP-tI-jfa" secondAttribute="top" id="P6P-nx-SlD"/>
-                                                    <constraint firstItem="Uf3-3f-Nzg" firstAttribute="leading" secondItem="KXP-tI-jfa" secondAttribute="leading" id="YLs-kZ-DsI"/>
-                                                    <constraint firstAttribute="height" constant="35" id="Yyu-Na-xkU"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Uf3-3f-Nzg" secondAttribute="bottom" id="df0-Vs-LVE"/>
-                                                    <constraint firstItem="6VL-xL-EX8" firstAttribute="centerX" secondItem="KXP-tI-jfa" secondAttribute="centerX" constant="5" id="go6-GR-RB9"/>
+                                                    <constraint firstItem="E7h-zP-HUY" firstAttribute="leading" secondItem="KXP-tI-jfa" secondAttribute="leading" id="5Sg-Dw-TUx"/>
+                                                    <constraint firstItem="E7h-zP-HUY" firstAttribute="top" secondItem="KXP-tI-jfa" secondAttribute="top" id="679-N6-FCm"/>
+                                                    <constraint firstItem="Uf3-3f-Nzg" firstAttribute="leading" secondItem="KXP-tI-jfa" secondAttribute="leading" id="Xiz-3a-gXy"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Yyu-Na-xkU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="E7h-zP-HUY" secondAttribute="bottom" id="Zbg-HJ-8cY"/>
+                                                    <constraint firstItem="6VL-xL-EX8" firstAttribute="centerX" secondItem="KXP-tI-jfa" secondAttribute="centerX" id="Zv6-Pd-jaX"/>
                                                     <constraint firstAttribute="width" secondItem="KXP-tI-jfa" secondAttribute="height" multiplier="40:15" id="hDu-fB-5oi"/>
-                                                    <constraint firstItem="lkS-oP-9v6" firstAttribute="leading" secondItem="KXP-tI-jfa" secondAttribute="leading" id="nOt-Ie-snc"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Uf3-3f-Nzg" secondAttribute="trailing" id="rSj-Oa-wjf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Uf3-3f-Nzg" secondAttribute="trailing" id="hXi-c4-mvv"/>
+                                                    <constraint firstItem="Uf3-3f-Nzg" firstAttribute="top" secondItem="KXP-tI-jfa" secondAttribute="top" id="vdr-ff-RLX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="E7h-zP-HUY" secondAttribute="trailing" id="wFw-fj-n0g"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Uf3-3f-Nzg" secondAttribute="bottom" id="zdV-ct-e8G"/>
+                                                    <constraint firstItem="6VL-xL-EX8" firstAttribute="centerY" secondItem="KXP-tI-jfa" secondAttribute="centerY" id="zrb-LC-aZf"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -79,7 +82,7 @@
                                         <constraints>
                                             <constraint firstItem="joh-bA-HM0" firstAttribute="centerX" secondItem="IhR-BE-bIl" secondAttribute="centerX" id="3LS-ZN-YZr"/>
                                             <constraint firstItem="KXP-tI-jfa" firstAttribute="top" secondItem="IhR-BE-bIl" secondAttribute="top" constant="5" id="HWe-J0-1A8"/>
-                                            <constraint firstAttribute="trailing" secondItem="KXP-tI-jfa" secondAttribute="trailing" constant="10" id="TOQ-L9-7TU"/>
+                                            <constraint firstAttribute="trailing" secondItem="KXP-tI-jfa" secondAttribute="trailing" id="TOQ-L9-7TU"/>
                                             <constraint firstItem="joh-bA-HM0" firstAttribute="leading" secondItem="IhR-BE-bIl" secondAttribute="leading" constant="80" id="c0c-rq-EHe"/>
                                             <constraint firstItem="joh-bA-HM0" firstAttribute="centerY" secondItem="IhR-BE-bIl" secondAttribute="centerY" id="vaN-f5-1CH"/>
                                         </constraints>
@@ -98,7 +101,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="18"/>
                                                         <state key="normal" title="Start">
-                                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8r6-fa-7hW"/>
@@ -112,10 +115,10 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="18"/>
                                                         <state key="normal" title="History">
-                                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="mwn-XV-YYK" kind="show" id="gbt-vp-Jop"/>
+                                                            <action selector="historyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="22j-aI-gDy"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDg-Uf-gUO">
@@ -126,7 +129,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="18"/>
                                                         <state key="normal" title="Information">
-                                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <segue destination="IbS-az-QKS" kind="show" id="aoW-xr-nNW"/>
@@ -140,7 +143,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="18"/>
                                                         <state key="normal" title="Contact Us">
-                                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="contactUsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5h6-f5-zzc"/>
@@ -159,7 +162,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="Background Color"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96470588235294119" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="gSe-GR-ytb" secondAttribute="bottom" id="6L0-DB-caM"/>
                             <constraint firstAttribute="trailing" secondItem="gSe-GR-ytb" secondAttribute="trailing" id="gpX-kI-apU"/>
@@ -178,6 +181,7 @@
                         <outlet property="startButton" destination="x4T-Kv-2uJ" id="Mse-XL-VZM"/>
                         <outlet property="tipsButton" destination="CDg-Uf-gUO" id="50z-oc-zZL"/>
                         <segue destination="zVI-h9-YuM" kind="show" identifier="startNaming" id="TzO-95-odW"/>
+                        <segue destination="mwn-XV-YYK" kind="show" identifier="goHistory" id="Hmf-GG-o9n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -193,161 +197,207 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2B-MT-cwV">
-                                <rect key="frame" x="60" y="194" width="294" height="518"/>
+                                <rect key="frame" x="57" y="180.5" width="300" height="535"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lB6-dI-xkp">
-                                        <rect key="frame" x="20" y="20" width="254" height="478"/>
+                                        <rect key="frame" x="20" y="20" width="260" height="495"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PPx-dC-oXj">
-                                                <rect key="frame" x="30" y="60" width="194" height="398"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select One Package To Purchase." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pz2-hN-VKw">
+                                                <rect key="frame" x="30" y="20" width="200" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="4J9-2G-XHY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="22M-Id-qpA">
+                                                <rect key="frame" x="20" y="75" width="220" height="400"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tee-qD-7hu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="194" height="132.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0d-eY-OWt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="220" height="113.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFL-Kb-VaQ">
-                                                                <rect key="frame" x="24" y="48.5" width="65" height="36"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yg-3W-6eT">
-                                                                <rect key="frame" x="8" y="51" width="11" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chinese-coin" translatesAutoresizingMaskIntoConstraints="NO" id="9mW-Vq-aAl">
-                                                                <rect key="frame" x="156" y="51.5" width="30" height="30"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLx-G0-glz">
+                                                                <rect key="frame" x="20" y="73.5" width="180" height="40"/>
+                                                                <color key="backgroundColor" name="Button Color"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="EeG-dr-0rp"/>
-                                                                    <constraint firstAttribute="width" constant="30" id="VA3-P1-nrq"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="0bo-tk-cHU"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="17"/>
+                                                                <state key="normal" title="Price">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="purchaseButtonPressed:" destination="oss-T9-zB2" eventType="touchUpInside" id="rMb-2b-HFT"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farmer" translatesAutoresizingMaskIntoConstraints="NO" id="k37-k4-bKw">
+                                                                <rect key="frame" x="20" y="10" width="58.5" height="58.5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="k37-k4-bKw" secondAttribute="height" id="1y5-OE-uzK"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xoc-xH-xVH">
-                                                                <rect key="frame" x="140.5" y="56" width="10.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fPm-vC-6DC">
+                                                                <rect key="frame" x="83.5" y="20" width="116.5" height="48.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-92-mac">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="36"/>
+                                                                        <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="35"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPX-qO-LfG">
+                                                                        <rect key="frame" x="0.0" y="36" width="116.5" height="12.5"/>
+                                                                        <fontDescription key="fontDescription" name="LetterGothicStd" family="Letter Gothic Std" pointSize="12"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="9mW-Vq-aAl" firstAttribute="leading" secondItem="Xoc-xH-xVH" secondAttribute="trailing" constant="5" id="2oU-nu-16v"/>
-                                                            <constraint firstAttribute="trailing" secondItem="9mW-Vq-aAl" secondAttribute="trailing" constant="8" id="4bh-Xi-Egb"/>
-                                                            <constraint firstItem="5Yg-3W-6eT" firstAttribute="leading" secondItem="tee-qD-7hu" secondAttribute="leading" constant="8" id="Osv-30-Ym0"/>
-                                                            <constraint firstItem="Xoc-xH-xVH" firstAttribute="centerY" secondItem="tee-qD-7hu" secondAttribute="centerY" id="Qnc-TX-l9p"/>
-                                                            <constraint firstItem="lFL-Kb-VaQ" firstAttribute="centerY" secondItem="tee-qD-7hu" secondAttribute="centerY" id="Rzh-CD-Khe"/>
-                                                            <constraint firstItem="lFL-Kb-VaQ" firstAttribute="leading" secondItem="5Yg-3W-6eT" secondAttribute="trailing" constant="5" id="TwW-YQ-nHc"/>
-                                                            <constraint firstItem="5Yg-3W-6eT" firstAttribute="centerY" secondItem="tee-qD-7hu" secondAttribute="centerY" constant="-5" id="heJ-DY-Cib"/>
-                                                            <constraint firstItem="9mW-Vq-aAl" firstAttribute="centerY" secondItem="tee-qD-7hu" secondAttribute="centerY" id="zp3-zv-mYG"/>
+                                                            <constraint firstItem="fPm-vC-6DC" firstAttribute="leading" secondItem="k37-k4-bKw" secondAttribute="trailing" constant="5" id="1bV-zh-vW4"/>
+                                                            <constraint firstItem="LLx-G0-glz" firstAttribute="top" secondItem="k37-k4-bKw" secondAttribute="bottom" constant="5" id="AES-yo-OIe"/>
+                                                            <constraint firstItem="k37-k4-bKw" firstAttribute="top" secondItem="n0d-eY-OWt" secondAttribute="top" constant="10" id="BK7-0D-eR4"/>
+                                                            <constraint firstAttribute="trailing" secondItem="fPm-vC-6DC" secondAttribute="trailing" constant="20" id="CEN-Zo-GuV"/>
+                                                            <constraint firstItem="LLx-G0-glz" firstAttribute="leading" secondItem="n0d-eY-OWt" secondAttribute="leading" constant="20" id="JVM-Pl-wuo"/>
+                                                            <constraint firstAttribute="bottom" secondItem="LLx-G0-glz" secondAttribute="bottom" id="dwY-CQ-9U6"/>
+                                                            <constraint firstItem="fPm-vC-6DC" firstAttribute="top" secondItem="n0d-eY-OWt" secondAttribute="top" constant="20" id="ijg-oc-kpZ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="LLx-G0-glz" secondAttribute="trailing" constant="20" id="sZ5-Dx-afh"/>
+                                                            <constraint firstItem="k37-k4-bKw" firstAttribute="leading" secondItem="n0d-eY-OWt" secondAttribute="leading" constant="20" id="u2S-Lu-hPE"/>
+                                                            <constraint firstItem="LLx-G0-glz" firstAttribute="top" secondItem="fPm-vC-6DC" secondAttribute="bottom" constant="5" id="x4v-tJ-LXq"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KE8-gK-o7B">
-                                                        <rect key="frame" x="0.0" y="132.5" width="194" height="133"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpG-Iz-Qb5">
+                                                        <rect key="frame" x="0.0" y="143.5" width="220" height="113"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqt-i0-yo5">
-                                                                <rect key="frame" x="24" y="48.5" width="65" height="36"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB1-Wz-TEW">
-                                                                <rect key="frame" x="8" y="51.5" width="11" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chinese-coin" translatesAutoresizingMaskIntoConstraints="NO" id="myn-Zo-utM">
-                                                                <rect key="frame" x="156" y="51.5" width="30" height="30"/>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjP-vs-3qL">
+                                                                <rect key="frame" x="20" y="73" width="180" height="40"/>
+                                                                <color key="backgroundColor" name="Button Color"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="UcQ-CZ-frx"/>
-                                                                    <constraint firstAttribute="width" constant="30" id="puS-7s-up5"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="bRf-bo-UOA"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="17"/>
+                                                                <state key="normal" title="Price">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="purchaseButtonPressed:" destination="oss-T9-zB2" eventType="touchUpInside" id="bPJ-9Y-lJT"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="officer" translatesAutoresizingMaskIntoConstraints="NO" id="RdC-Vv-Mbx">
+                                                                <rect key="frame" x="20" y="10" width="58.5" height="58"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="RdC-Vv-Mbx" secondAttribute="height" id="auL-sA-wau"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdh-AA-m5H">
-                                                                <rect key="frame" x="140.5" y="56.5" width="10.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xXQ-Vb-PJ3">
+                                                                <rect key="frame" x="83.5" y="20" width="116.5" height="48"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6A-6I-3WC">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="36"/>
+                                                                        <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="35"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnY-Fc-HkC">
+                                                                        <rect key="frame" x="0.0" y="36" width="116.5" height="12"/>
+                                                                        <fontDescription key="fontDescription" name="LetterGothicStd" family="Letter Gothic Std" pointSize="12"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="tB1-Wz-TEW" firstAttribute="leading" secondItem="KE8-gK-o7B" secondAttribute="leading" constant="8" id="4DJ-Ne-BqK"/>
-                                                            <constraint firstItem="kqt-i0-yo5" firstAttribute="leading" secondItem="tB1-Wz-TEW" secondAttribute="trailing" constant="5" id="AgW-5f-m7y"/>
-                                                            <constraint firstItem="myn-Zo-utM" firstAttribute="centerY" secondItem="KE8-gK-o7B" secondAttribute="centerY" id="HtS-W5-YLQ"/>
-                                                            <constraint firstItem="kqt-i0-yo5" firstAttribute="centerY" secondItem="KE8-gK-o7B" secondAttribute="centerY" id="OJs-cT-50K"/>
-                                                            <constraint firstAttribute="trailing" secondItem="myn-Zo-utM" secondAttribute="trailing" constant="8" id="QAm-Cg-G8e"/>
-                                                            <constraint firstItem="tB1-Wz-TEW" firstAttribute="centerY" secondItem="KE8-gK-o7B" secondAttribute="centerY" constant="-5" id="VVc-Lw-2Wl"/>
-                                                            <constraint firstItem="bdh-AA-m5H" firstAttribute="centerY" secondItem="KE8-gK-o7B" secondAttribute="centerY" id="h1Y-4l-Cso"/>
-                                                            <constraint firstItem="myn-Zo-utM" firstAttribute="leading" secondItem="bdh-AA-m5H" secondAttribute="trailing" constant="5" id="lym-Sf-zN9"/>
+                                                            <constraint firstAttribute="bottom" secondItem="kjP-vs-3qL" secondAttribute="bottom" id="4gl-Zw-m2n"/>
+                                                            <constraint firstItem="xXQ-Vb-PJ3" firstAttribute="top" secondItem="vpG-Iz-Qb5" secondAttribute="top" constant="20" id="9Lq-eD-SCj"/>
+                                                            <constraint firstItem="RdC-Vv-Mbx" firstAttribute="leading" secondItem="vpG-Iz-Qb5" secondAttribute="leading" constant="20" id="Meq-Aq-okL"/>
+                                                            <constraint firstAttribute="trailing" secondItem="kjP-vs-3qL" secondAttribute="trailing" constant="20" id="RUC-5x-bCe"/>
+                                                            <constraint firstItem="RdC-Vv-Mbx" firstAttribute="top" secondItem="vpG-Iz-Qb5" secondAttribute="top" constant="10" id="Zbo-28-lvc"/>
+                                                            <constraint firstItem="kjP-vs-3qL" firstAttribute="top" secondItem="RdC-Vv-Mbx" secondAttribute="bottom" constant="5" id="cKx-rO-aWf"/>
+                                                            <constraint firstItem="kjP-vs-3qL" firstAttribute="top" secondItem="xXQ-Vb-PJ3" secondAttribute="bottom" constant="5" id="iVl-kT-Xjq"/>
+                                                            <constraint firstItem="kjP-vs-3qL" firstAttribute="leading" secondItem="vpG-Iz-Qb5" secondAttribute="leading" constant="20" id="iWR-hr-dtd"/>
+                                                            <constraint firstItem="xXQ-Vb-PJ3" firstAttribute="leading" secondItem="RdC-Vv-Mbx" secondAttribute="trailing" constant="5" id="tOM-bs-6on"/>
+                                                            <constraint firstAttribute="trailing" secondItem="xXQ-Vb-PJ3" secondAttribute="trailing" constant="20" id="ylY-RO-AeB"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sL-x1-pqu">
-                                                        <rect key="frame" x="0.0" y="265.5" width="194" height="132.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlp-xQ-CQ8">
+                                                        <rect key="frame" x="0.0" y="286.5" width="220" height="113.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wun-h2-EpP">
-                                                                <rect key="frame" x="24" y="48" width="65" height="36"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APe-WM-ciu">
-                                                                <rect key="frame" x="8" y="51" width="11" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chinese-coin" translatesAutoresizingMaskIntoConstraints="NO" id="RAu-4A-djI">
-                                                                <rect key="frame" x="156" y="51" width="30" height="30"/>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7U-pz-FTe">
+                                                                <rect key="frame" x="20" y="73.5" width="180" height="40"/>
+                                                                <color key="backgroundColor" name="Button Color"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="b8f-Bo-dE8"/>
-                                                                    <constraint firstAttribute="width" constant="30" id="z0u-VL-36f"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="PaN-2B-UJ6"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="17"/>
+                                                                <state key="normal" title="Price">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="purchaseButtonPressed:" destination="oss-T9-zB2" eventType="touchUpInside" id="VXd-Po-pTo"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emperor" translatesAutoresizingMaskIntoConstraints="NO" id="HQj-mY-otw">
+                                                                <rect key="frame" x="20" y="10" width="58.5" height="58.5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="HQj-mY-otw" secondAttribute="height" id="6fX-nb-yUh"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSc-cv-8dy">
-                                                                <rect key="frame" x="140.5" y="56" width="10.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Umz-7D-J78">
+                                                                <rect key="frame" x="83.5" y="20" width="116.5" height="48.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEj-iQ-MyW">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="36"/>
+                                                                        <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="35"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgY-WS-1aG">
+                                                                        <rect key="frame" x="0.0" y="36" width="116.5" height="12.5"/>
+                                                                        <fontDescription key="fontDescription" name="LetterGothicStd" family="Letter Gothic Std" pointSize="12"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="RAu-4A-djI" firstAttribute="centerY" secondItem="0sL-x1-pqu" secondAttribute="centerY" id="2bt-6E-2Iw"/>
-                                                            <constraint firstItem="KSc-cv-8dy" firstAttribute="centerY" secondItem="0sL-x1-pqu" secondAttribute="centerY" id="3mn-C5-Fab"/>
-                                                            <constraint firstItem="APe-WM-ciu" firstAttribute="centerY" secondItem="0sL-x1-pqu" secondAttribute="centerY" constant="-5" id="A8n-GI-x1Z"/>
-                                                            <constraint firstItem="APe-WM-ciu" firstAttribute="leading" secondItem="0sL-x1-pqu" secondAttribute="leading" constant="8" id="Hya-uT-jbG"/>
-                                                            <constraint firstItem="Wun-h2-EpP" firstAttribute="leading" secondItem="APe-WM-ciu" secondAttribute="trailing" constant="5" id="Kat-dN-8nr"/>
-                                                            <constraint firstAttribute="trailing" secondItem="RAu-4A-djI" secondAttribute="trailing" constant="8" id="U9e-tZ-4W4"/>
-                                                            <constraint firstItem="Wun-h2-EpP" firstAttribute="centerY" secondItem="0sL-x1-pqu" secondAttribute="centerY" id="k8X-GF-7tU"/>
-                                                            <constraint firstItem="RAu-4A-djI" firstAttribute="leading" secondItem="KSc-cv-8dy" secondAttribute="trailing" constant="5" id="qew-ze-0qH"/>
+                                                            <constraint firstItem="W7U-pz-FTe" firstAttribute="top" secondItem="Umz-7D-J78" secondAttribute="bottom" constant="5" id="2YV-a8-KAx"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Umz-7D-J78" secondAttribute="trailing" constant="20" id="D2E-VD-7b1"/>
+                                                            <constraint firstItem="Umz-7D-J78" firstAttribute="leading" secondItem="HQj-mY-otw" secondAttribute="trailing" constant="5" id="Eho-N5-cYj"/>
+                                                            <constraint firstAttribute="trailing" secondItem="W7U-pz-FTe" secondAttribute="trailing" constant="20" id="H5y-vD-ufm"/>
+                                                            <constraint firstItem="W7U-pz-FTe" firstAttribute="top" secondItem="HQj-mY-otw" secondAttribute="bottom" constant="5" id="Iy2-NY-eEm"/>
+                                                            <constraint firstItem="HQj-mY-otw" firstAttribute="top" secondItem="wlp-xQ-CQ8" secondAttribute="top" constant="10" id="JTn-eZ-Ktj"/>
+                                                            <constraint firstItem="Umz-7D-J78" firstAttribute="top" secondItem="wlp-xQ-CQ8" secondAttribute="top" constant="20" id="g5E-8X-eBZ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="W7U-pz-FTe" secondAttribute="bottom" id="la3-c9-oUG"/>
+                                                            <constraint firstItem="HQj-mY-otw" firstAttribute="leading" secondItem="wlp-xQ-CQ8" secondAttribute="leading" constant="20" id="mJk-Le-xzw"/>
+                                                            <constraint firstItem="W7U-pz-FTe" firstAttribute="leading" secondItem="wlp-xQ-CQ8" secondAttribute="leading" constant="20" id="tMo-p9-c41"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select One To Buy." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pz2-hN-VKw">
-                                                <rect key="frame" x="74" y="20" width="106.5" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="4J9-2G-XHY"/>
+                                                    <constraint firstAttribute="height" constant="400" id="m0H-fD-vYj"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Pz2-hN-VKw" firstAttribute="centerX" secondItem="lB6-dI-xkp" secondAttribute="centerX" id="33Z-Hu-frD"/>
                                             <constraint firstItem="Pz2-hN-VKw" firstAttribute="top" secondItem="lB6-dI-xkp" secondAttribute="top" constant="20" id="7lv-hE-QVF"/>
-                                            <constraint firstItem="PPx-dC-oXj" firstAttribute="top" secondItem="Pz2-hN-VKw" secondAttribute="bottom" constant="20" id="JQq-Oj-Uzg"/>
-                                            <constraint firstAttribute="bottom" secondItem="PPx-dC-oXj" secondAttribute="bottom" constant="20" id="LJ6-GM-11R"/>
-                                            <constraint firstAttribute="trailing" secondItem="PPx-dC-oXj" secondAttribute="trailing" constant="30" id="bkL-I7-esm"/>
-                                            <constraint firstItem="PPx-dC-oXj" firstAttribute="leading" secondItem="lB6-dI-xkp" secondAttribute="leading" constant="30" id="hBi-K2-I0p"/>
+                                            <constraint firstAttribute="trailing" secondItem="22M-Id-qpA" secondAttribute="trailing" constant="20" id="HuZ-5I-Gxd"/>
+                                            <constraint firstItem="22M-Id-qpA" firstAttribute="top" secondItem="Pz2-hN-VKw" secondAttribute="bottom" constant="15" id="ZaK-mY-Xpl"/>
+                                            <constraint firstAttribute="bottom" secondItem="22M-Id-qpA" secondAttribute="bottom" constant="20" id="bgP-xX-yfT"/>
+                                            <constraint firstItem="22M-Id-qpA" firstAttribute="leading" secondItem="lB6-dI-xkp" secondAttribute="leading" constant="20" id="vMq-ea-HSb"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pz2-hN-VKw" secondAttribute="trailing" constant="30" id="vof-Af-8x4"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2G-Wu-FfO">
-                                        <rect key="frame" x="254" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="260" y="0.0" width="40" height="40"/>
                                         <color key="backgroundColor" red="0.61176470589999998" green="0.015686274510000001" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="gdZ-bh-W5O"/>
@@ -362,6 +412,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2vg-1u-TAB"/>
                                     <constraint firstAttribute="trailing" secondItem="L2G-Wu-FfO" secondAttribute="trailing" id="94H-ij-TVT"/>
                                     <constraint firstAttribute="bottom" secondItem="lB6-dI-xkp" secondAttribute="bottom" constant="20" id="NUL-DE-6e4"/>
                                     <constraint firstItem="lB6-dI-xkp" firstAttribute="leading" secondItem="r2B-MT-cwV" secondAttribute="leading" constant="20" id="TBx-Ep-Uoj"/>
@@ -373,33 +424,35 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.69681078767123283" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="4Fg-8Z-P6z" firstAttribute="bottom" secondItem="r2B-MT-cwV" secondAttribute="bottom" constant="150" id="9Jy-2h-vzL"/>
-                            <constraint firstItem="r2B-MT-cwV" firstAttribute="top" secondItem="4Fg-8Z-P6z" secondAttribute="top" constant="150" id="Ywz-TJ-mQw"/>
-                            <constraint firstItem="r2B-MT-cwV" firstAttribute="leading" secondItem="4Fg-8Z-P6z" secondAttribute="leading" constant="60" id="fyT-HJ-1TH"/>
-                            <constraint firstItem="4Fg-8Z-P6z" firstAttribute="trailing" secondItem="r2B-MT-cwV" secondAttribute="trailing" constant="60" id="oBK-l3-C5r"/>
+                            <constraint firstItem="r2B-MT-cwV" firstAttribute="centerX" secondItem="L8X-Gs-1yF" secondAttribute="centerX" id="fsa-yh-SgD"/>
+                            <constraint firstItem="r2B-MT-cwV" firstAttribute="centerY" secondItem="L8X-Gs-1yF" secondAttribute="centerY" id="uU4-3R-fRU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Fg-8Z-P6z"/>
                     </view>
                     <navigationItem key="navigationItem" id="h3J-a0-JPj"/>
                     <connections>
                         <outlet property="backgroundView" destination="lB6-dI-xkp" id="KCv-th-tdH"/>
-                        <outlet property="closeButton" destination="L2G-Wu-FfO" id="rcM-ON-7bD"/>
-                        <outlet property="number1" destination="Xoc-xH-xVH" id="nse-2w-j0X"/>
-                        <outlet property="number2" destination="bdh-AA-m5H" id="76N-6y-cHX"/>
-                        <outlet property="number3" destination="KSc-cv-8dy" id="JHq-oe-TBY"/>
-                        <outlet property="price1" destination="lFL-Kb-VaQ" id="kuR-YY-Hon"/>
-                        <outlet property="price2" destination="kqt-i0-yo5" id="44B-g0-5tL"/>
-                        <outlet property="price3" destination="Wun-h2-EpP" id="uft-Od-eno"/>
+                        <outlet property="closeButton" destination="L2G-Wu-FfO" id="Hg4-Mm-Ok7"/>
+                        <outlet property="number1" destination="Sm5-92-mac" id="5CZ-8K-wNy"/>
+                        <outlet property="number2" destination="n6A-6I-3WC" id="JMj-Em-yFD"/>
+                        <outlet property="number3" destination="fEj-iQ-MyW" id="rkN-sy-Rie"/>
+                        <outlet property="price1" destination="LLx-G0-glz" id="3GN-jr-6Wq"/>
+                        <outlet property="price2" destination="kjP-vs-3qL" id="C9p-W6-bgx"/>
+                        <outlet property="price3" destination="W7U-pz-FTe" id="oYV-Tg-Jol"/>
+                        <outlet property="purchaseTitle" destination="Pz2-hN-VKw" id="Lun-Yl-dZb"/>
+                        <outlet property="timesLabel1" destination="EPX-qO-LfG" id="wB3-2y-DQ8"/>
+                        <outlet property="timesLabel2" destination="mnY-Fc-HkC" id="Nju-xS-ysa"/>
+                        <outlet property="timesLabel3" destination="EgY-WS-1aG" id="4LI-QA-OWP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOL-dO-Gx8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1170" y="113"/>
+            <point key="canvasLocation" x="-1171.0144927536232" y="112.5"/>
         </scene>
         <!--Gender View Controller-->
         <scene sceneID="q4o-G6-zPV">
             <objects>
-                <viewController id="zVI-h9-YuM" customClass="GenderViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zVI-h9-YuM" customClass="GenderViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N8v-Yd-JIB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -413,7 +466,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNQ-00-ALg">
                                                 <rect key="frame" x="0.0" y="0.0" width="219.5" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
@@ -421,7 +474,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose your gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2b-ZW-Ofn">
                                                 <rect key="frame" x="0.0" y="61.5" width="219.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -530,7 +583,7 @@
         <!--History View Controller-->
         <scene sceneID="L3X-sW-uk4">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="mwn-XV-YYK" customClass="HistoryViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="mwn-XV-YYK" customClass="HistoryViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XGu-ja-MIM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -602,7 +655,7 @@
         <!--Name Information View Controller-->
         <scene sceneID="thy-t7-M3d">
             <objects>
-                <viewController storyboardIdentifier="NameInformationViewController" id="JML-4n-HWc" customClass="NameInformationViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NameInformationViewController" id="JML-4n-HWc" customClass="NameInformationViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y61-2s-N8J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -613,7 +666,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中文名字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb3-P5-mT4">
                                         <rect key="frame" x="123" y="25.5" width="168" height="49"/>
                                         <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6P-T8-Xqz">
@@ -683,7 +736,7 @@
         <!--Name View Controller-->
         <scene sceneID="pg6-lY-Fqq">
             <objects>
-                <viewController id="TGu-LU-Rhp" customClass="NameViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TGu-LU-Rhp" customClass="NameViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yne-VD-837">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -697,7 +750,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTF-RA-gTy">
                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
@@ -705,7 +758,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-59-UtL">
                                                 <rect key="frame" x="0.0" y="61.5" width="190" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -763,11 +816,13 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCR-EP-DV5">
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="34"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEk-67-zMT">
                                                 <rect key="frame" x="0.0" y="84" width="294" height="34"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -812,7 +867,7 @@
         <!--Country View Controller-->
         <scene sceneID="N3I-bO-SEc">
             <objects>
-                <viewController id="L4F-eK-XCD" customClass="CountryViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="L4F-eK-XCD" customClass="CountryViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7y3-sA-293">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -826,7 +881,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhT-vt-ZRA">
                                                 <rect key="frame" x="0.0" y="0.0" width="224" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
@@ -834,7 +889,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose your country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXO-YU-vQp">
                                                 <rect key="frame" x="0.0" y="61.5" width="224" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -927,7 +982,7 @@
         <!--Birth View Controller-->
         <scene sceneID="acM-Fa-ACH">
             <objects>
-                <viewController id="Bt7-hd-33d" customClass="BirthViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bt7-hd-33d" customClass="BirthViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a56-7q-ST7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -941,7 +996,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-rc-cjJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="229" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
@@ -949,7 +1004,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose your birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvf-66-wFS">
                                                 <rect key="frame" x="0.0" y="61.5" width="229" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1047,7 +1102,7 @@
         <!--Traits View Controller-->
         <scene sceneID="oT0-nj-RyS">
             <objects>
-                <viewController id="JPy-dw-nKb" customClass="TraitsViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JPy-dw-nKb" customClass="TraitsViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0oT-ls-phE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1061,7 +1116,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oh8-mG-a6A">
                                                 <rect key="frame" x="0.0" y="0.0" width="302.5" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
@@ -1069,7 +1124,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the traits you like(one to five)." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob6-sO-RBc">
                                                 <rect key="frame" x="0.0" y="61.5" width="302.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1166,7 +1221,7 @@
         <!--Tips View Controller-->
         <scene sceneID="mCM-1b-a2P">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="IbS-az-QKS" customClass="TipsViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="IbS-az-QKS" customClass="TipsViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xrD-Bw-TSE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1180,7 +1235,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWw-o9-yNa">
                                                 <rect key="frame" x="0.0" y="0.0" width="244.5" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
@@ -1188,7 +1243,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The information of this app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKU-JP-8vp">
                                                 <rect key="frame" x="0.0" y="61.5" width="244.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1286,7 +1341,7 @@
         <!--Preference View Controller-->
         <scene sceneID="w4d-LX-UfJ">
             <objects>
-                <viewController id="eKi-dN-zPg" customClass="PreferenceViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eKi-dN-zPg" customClass="PreferenceViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q2z-D0-hh5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1300,7 +1355,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preference" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHS-6J-RfV">
                                                 <rect key="frame" x="0.0" y="0.0" width="254" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
@@ -1308,7 +1363,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose your preference." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6a-rS-zg8">
                                                 <rect key="frame" x="0.0" y="61.5" width="254" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1378,7 +1433,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you prefer two or three Chinese characters in your name?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noi-01-kfs">
                                                         <rect key="frame" x="40" y="0.0" width="294" height="42"/>
                                                         <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1407,7 +1462,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have already decided to name any Chinese characters in your name, please type in the respective space." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aj-yH-7gI">
                                                         <rect key="frame" x="40" y="0.0" width="294" height="84"/>
                                                         <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1423,16 +1478,19 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="dCv-57-u9D" secondAttribute="height" id="Dee-ZQ-hti"/>
                                                                 </constraints>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ab7-TU-gkE">
                                                                 <rect key="frame" x="20" y="10" width="91.5" height="91.5"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJA-QW-4pY">
                                                                 <rect key="frame" x="222.5" y="10" width="91.5" height="91.5"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -1498,7 +1556,7 @@
         <!--Result View Controller-->
         <scene sceneID="xiH-16-KIM">
             <objects>
-                <viewController storyboardIdentifier="ResultViewController" id="x3C-VP-nme" customClass="ResultViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" id="x3C-VP-nme" customClass="ResultViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uqh-sc-Z7j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1512,7 +1570,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3z-YR-AFC">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="56.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="48"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
@@ -1520,7 +1578,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have saved these names in History" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAj-0M-avY">
                                                 <rect key="frame" x="0.0" y="61.5" width="354" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1603,7 +1661,7 @@
         <!--Home View Controller-->
         <scene sceneID="i3L-LZ-dtz">
             <objects>
-                <viewController id="naf-BR-GVC" customClass="HomeViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="naf-BR-GVC" customClass="HomeViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uFy-uA-bvb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1615,19 +1673,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11Y-Hm-rht">
-                                                <rect key="frame" x="310.5" y="5" width="93.5" height="35"/>
+                                                <rect key="frame" x="280.5" y="5" width="133.5" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="5Oy-pa-HaO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="35"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purchase" translatesAutoresizingMaskIntoConstraints="NO" id="5Oy-pa-HaO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="50"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVb-Uk-3ua">
-                                                        <rect key="frame" x="52" y="17.5" width="0.0" height="0.0"/>
-                                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVb-Uk-3ua">
+                                                        <rect key="frame" x="48.5" y="19" width="36.5" height="12"/>
+                                                        <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSx-0g-2Qn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="50"/>
                                                         <connections>
                                                             <action selector="buyTimesButtonPressed:" destination="naf-BR-GVC" eventType="touchUpInside" id="Ug5-1g-QAy"/>
                                                         </connections>
@@ -1637,11 +1695,11 @@
                                                 <constraints>
                                                     <constraint firstItem="oSx-0g-2Qn" firstAttribute="top" secondItem="11Y-Hm-rht" secondAttribute="top" id="6fX-F3-jfL"/>
                                                     <constraint firstItem="kVb-Uk-3ua" firstAttribute="centerY" secondItem="11Y-Hm-rht" secondAttribute="centerY" id="6pl-cX-pRp"/>
-                                                    <constraint firstAttribute="height" constant="35" id="C1j-f5-bni"/>
+                                                    <constraint firstAttribute="height" constant="50" id="C1j-f5-bni"/>
                                                     <constraint firstAttribute="bottom" secondItem="oSx-0g-2Qn" secondAttribute="bottom" id="JPU-1y-lcd"/>
                                                     <constraint firstItem="5Oy-pa-HaO" firstAttribute="leading" secondItem="11Y-Hm-rht" secondAttribute="leading" id="K4F-d9-XWH"/>
                                                     <constraint firstAttribute="trailing" secondItem="oSx-0g-2Qn" secondAttribute="trailing" id="Kk6-I0-z9k"/>
-                                                    <constraint firstItem="kVb-Uk-3ua" firstAttribute="centerX" secondItem="11Y-Hm-rht" secondAttribute="centerX" constant="5" id="KqJ-hk-EnA"/>
+                                                    <constraint firstItem="kVb-Uk-3ua" firstAttribute="centerX" secondItem="11Y-Hm-rht" secondAttribute="centerX" id="KqJ-hk-EnA"/>
                                                     <constraint firstAttribute="bottom" secondItem="5Oy-pa-HaO" secondAttribute="bottom" id="WkN-RV-ygZ"/>
                                                     <constraint firstItem="oSx-0g-2Qn" firstAttribute="leading" secondItem="11Y-Hm-rht" secondAttribute="leading" id="ZN7-4O-GTr"/>
                                                     <constraint firstAttribute="trailing" secondItem="5Oy-pa-HaO" secondAttribute="trailing" id="eY8-kS-iT0"/>
@@ -1658,7 +1716,7 @@
                                             <constraint firstItem="hRo-tL-76D" firstAttribute="centerX" secondItem="stR-ud-MC9" secondAttribute="centerX" id="JnJ-WP-oU5"/>
                                             <constraint firstItem="11Y-Hm-rht" firstAttribute="top" secondItem="stR-ud-MC9" secondAttribute="top" constant="5" id="K3t-xK-ZsC"/>
                                             <constraint firstItem="hRo-tL-76D" firstAttribute="leading" secondItem="stR-ud-MC9" secondAttribute="leading" constant="60" id="ceh-CW-gcV"/>
-                                            <constraint firstAttribute="trailing" secondItem="11Y-Hm-rht" secondAttribute="trailing" constant="10" id="jrS-Fw-szM"/>
+                                            <constraint firstAttribute="trailing" secondItem="11Y-Hm-rht" secondAttribute="trailing" id="jrS-Fw-szM"/>
                                             <constraint firstItem="hRo-tL-76D" firstAttribute="top" secondItem="stR-ud-MC9" secondAttribute="top" constant="100" id="kLN-qq-W38"/>
                                             <constraint firstItem="hRo-tL-76D" firstAttribute="centerY" secondItem="stR-ud-MC9" secondAttribute="centerY" constant="30" id="z1d-vI-h5Q"/>
                                         </constraints>
@@ -1677,7 +1735,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="18"/>
                                                         <state key="normal" title="開始起名">
-                                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="startButtonPressed:" destination="naf-BR-GVC" eventType="touchUpInside" id="c8C-UG-GaO"/>
@@ -1691,10 +1749,10 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="18"/>
                                                         <state key="normal" title="歷史紀錄">
-                                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="wPe-s1-NyQ" kind="show" id="QBY-Bw-hRy"/>
+                                                            <action selector="historyButtonPressed:" destination="naf-BR-GVC" eventType="touchUpInside" id="gam-zg-2pJ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsO-WV-lpm">
@@ -1705,7 +1763,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="18"/>
                                                         <state key="normal" title="說明">
-                                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <segue destination="yx3-a5-cvg" kind="show" id="B11-Am-djU"/>
@@ -1719,7 +1777,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="18"/>
                                                         <state key="normal" title="聯絡我們">
-                                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="contactUsButtonPressed:" destination="naf-BR-GVC" eventType="touchUpInside" id="tTP-9M-D8g"/>
@@ -1757,6 +1815,7 @@
                         <outlet property="startButton" destination="l52-xR-wUw" id="T1w-G6-pwL"/>
                         <outlet property="tipsButton" destination="zsO-WV-lpm" id="XhX-eO-7Rp"/>
                         <segue destination="bsV-gy-joW" kind="show" identifier="startNaming" id="rWv-33-oyy"/>
+                        <segue destination="wPe-s1-NyQ" kind="show" identifier="goHistory" id="ggu-gH-FGb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FjE-7i-nfC" sceneMemberID="firstResponder"/>
@@ -1783,7 +1842,7 @@
         <!--History View Controller-->
         <scene sceneID="ny6-cx-vgb">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="wPe-s1-NyQ" customClass="HistoryViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="wPe-s1-NyQ" customClass="HistoryViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJi-xf-VZ8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1808,13 +1867,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歷史紀錄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4O-YN-Adp">
                                                 <rect key="frame" x="0.0" y="0.0" width="168" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我們曾經為您取的名字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejZ-Dj-98t">
                                                 <rect key="frame" x="0.0" y="59" width="168" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1860,7 +1919,7 @@
         <!--Tips View Controller-->
         <scene sceneID="lKQ-R6-rhm">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yx3-a5-cvg" customClass="TipsViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yx3-a5-cvg" customClass="TipsViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l1C-Rh-kAE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1874,13 +1933,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="說明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufY-JF-WeU">
                                                 <rect key="frame" x="0.0" y="0.0" width="144" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有關應用程式的說明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kX9-XS-SS9">
                                                 <rect key="frame" x="0.0" y="59" width="144" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1960,7 +2019,7 @@
         <!--Gender View Controller-->
         <scene sceneID="yYg-iO-XZP">
             <objects>
-                <viewController id="bsV-gy-joW" customClass="GenderViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bsV-gy-joW" customClass="GenderViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3w-Ya-KPD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1974,13 +2033,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性 別" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVR-cH-sAP">
                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請選擇寶寶的性別" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enr-UC-l4y">
                                                 <rect key="frame" x="0.0" y="59" width="128" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Light" family="Yuanti TC" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -2093,7 +2152,7 @@
         <!--Name View Controller-->
         <scene sceneID="0Fa-mw-Rts">
             <objects>
-                <viewController id="syj-5L-4Xr" customClass="NameViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="syj-5L-4Xr" customClass="NameViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tvv-aI-8Uo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2107,13 +2166,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓 氏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPu-5f-PU0">
                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請填寫寶寶的姓氏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDR-75-Gky">
                                                 <rect key="frame" x="0.0" y="59" width="128" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -2214,7 +2273,7 @@
         <!--Birth View Controller-->
         <scene sceneID="f5s-Nn-nXv">
             <objects>
-                <viewController id="D0i-4q-a6i" customClass="BirthViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D0i-4q-a6i" customClass="BirthViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oPa-r3-pQY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2228,13 +2287,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Og-i5-rwV">
                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請填寫寶寶的生日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSV-Ai-Tst">
                                                 <rect key="frame" x="0.0" y="59" width="128" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -2332,7 +2391,7 @@
         <!--Traits View Controller-->
         <scene sceneID="soR-Rq-1bW">
             <objects>
-                <viewController id="8rK-5e-h9T" customClass="TraitsViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rK-5e-h9T" customClass="TraitsViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sa4-qg-avh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2346,13 +2405,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期望" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOk-7W-Uwo">
                                                 <rect key="frame" x="0.0" y="0.0" width="216.5" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請選取對寶寶的期望(一至五個)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veY-rF-iW3">
                                                 <rect key="frame" x="0.0" y="59" width="216.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -2449,7 +2508,7 @@
         <!--Preference View Controller-->
         <scene sceneID="XEN-DQ-J9t">
             <objects>
-                <viewController id="X3D-bq-qlQ" customClass="PreferenceViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="X3D-bq-qlQ" customClass="PreferenceViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mfr-ws-dCM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2463,13 +2522,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="其他" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrQ-S7-f9N">
                                                 <rect key="frame" x="0.0" y="0.0" width="112" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請回答以下問題" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5H-d9-1sY">
                                                 <rect key="frame" x="0.0" y="59" width="112" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -2539,7 +2598,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="希望為寶寶取幾個字的名字呢?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYp-R8-3oW">
                                                         <rect key="frame" x="30" y="0.0" width="304" height="30"/>
                                                         <fontDescription key="fontDescription" name="STYuanti-TC-Light" family="Yuanti TC" pointSize="16"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -2568,7 +2627,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如有已經確定位置並決定好放入名字的字，請填入以下空格，可不填" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2n8-sP-FF3">
                                                         <rect key="frame" x="30" y="0.0" width="304" height="37.5"/>
                                                         <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -2659,7 +2718,7 @@
         <!--Result View Controller-->
         <scene sceneID="0ic-P5-991">
             <objects>
-                <viewController id="2Ma-Q3-gJb" customClass="ResultViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Ma-Q3-gJb" customClass="ResultViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7aZ-so-R8u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2673,13 +2732,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVA-dE-HN7">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以下結果都存在歷史紀錄，可隨時查看" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPi-Np-iVV">
                                                 <rect key="frame" x="0.0" y="59" width="374" height="19"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-SC-Light" family="Yuanti SC" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -2764,7 +2823,7 @@
         <!--Name Information View Controller-->
         <scene sceneID="CIO-b6-1WS">
             <objects>
-                <viewController id="NVE-3K-0Ff" customClass="NameInformationViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NVE-3K-0Ff" customClass="NameInformationViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gS5-wH-pMM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2775,7 +2834,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中文名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7n-gV-r3z">
                                         <rect key="frame" x="144" y="25.5" width="126" height="49"/>
                                         <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0x-eK-noB">
@@ -2846,7 +2905,7 @@
         <!--Story Table View Controller-->
         <scene sceneID="tZ7-y8-dFi">
             <objects>
-                <viewController id="uQZ-N1-s0W" customClass="StoryTableViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uQZ-N1-s0W" customClass="StoryTableViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c7J-Y0-pbL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2860,7 +2919,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese Zodiac" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxR-O5-W5f">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="47.5"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="40"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="0.5" height="0.5"/>
@@ -2868,7 +2927,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The story of chinese zodiac" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGJ-wM-fib">
                                                 <rect key="frame" x="0.0" y="52.5" width="280" height="21"/>
                                                 <fontDescription key="fontDescription" name="Centaur" family="Centaur" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -2975,7 +3034,7 @@
         <!--Story Table View Controller-->
         <scene sceneID="Czb-Tz-ibv">
             <objects>
-                <viewController id="gMM-kd-uTx" customClass="StoryTableViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gMM-kd-uTx" customClass="StoryTableViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sbn-oK-Scx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3103,7 +3162,7 @@
         <!--Horoscope Story View Controller-->
         <scene sceneID="Ah1-3W-hij">
             <objects>
-                <viewController id="S7c-xQ-rhG" customClass="HoroscopeStoryViewController" customModule="寶寶起名智能妙算" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S7c-xQ-rhG" customClass="HoroscopeStoryViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="INZ-jl-ch5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3117,7 +3176,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="星座名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvm-fJ-Ile">
                                                 <rect key="frame" x="0.0" y="0.0" width="126" height="49"/>
                                                 <fontDescription key="fontDescription" name="STYuanti-TC-Bold" family="Yuanti TC" pointSize="42"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -3200,18 +3259,20 @@
     <inferredMetricsTieBreakers>
         <segue reference="A1p-kB-Vpf"/>
         <segue reference="15E-w4-p5T"/>
-        <segue reference="BIG-My-qs1"/>
+        <segue reference="D8P-ue-2Jl"/>
         <segue reference="bVf-qJ-UAH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BackButton" width="256" height="256"/>
         <image name="ChineseHomePageLogo" width="150.5" height="263"/>
         <image name="EnglishHomePageLogo" width="252" height="247.5"/>
-        <image name="chinese-coin" width="256" height="256"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
-        <image name="coin" width="1963" height="735"/>
+        <image name="emperor" width="256" height="256"/>
+        <image name="farmer" width="256" height="256"/>
         <image name="male" width="230.5" height="230.5"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
+        <image name="officer" width="256" height="256"/>
+        <image name="purchase" width="1344" height="535.5"/>
         <image name="speaker.2.fill" catalog="system" width="128" height="97"/>
         <namedColor name="Background Color">
             <color red="0.96899998188018799" green="0.9649999737739563" blue="0.85900002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

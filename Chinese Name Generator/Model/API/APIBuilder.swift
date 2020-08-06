@@ -13,10 +13,9 @@ import NVActivityIndicatorView
 class APIBuilder {
     
     var delegate: APIDelegate?
-    
-    let isForeigner = UserDefaults.standard.bool(forKey: "isForeigner")
     let activityIndicator : NVActivityIndicatorView
     var blackView = UIView()
+    let device_id = UIDevice.current.identifierForVendor?.uuidString ?? ""
     
     init() {
         let screenWidth = UIScreen.main.bounds.size.width
@@ -58,7 +57,8 @@ class APIBuilder {
     }
     
     func requestUsedCount() {
-        AF.request("https://sinoname.appspot.com/used_count?device_id=\(UIDevice.current.identifierForVendor?.uuidString ?? "")").response(completionHandler: { (response) in
+        startLoading()
+        AF.request("https://sinoname.appspot.com/used_count?device_id=\(device_id)").response(completionHandler: { (response) in
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             if let data = response.data, let usedCountData = try? decoder.decode(UsedCountData.self, from: data) {
@@ -66,17 +66,17 @@ class APIBuilder {
             } else {
                 self.delegate?.usedCountNotReceived(error: response.error)
             }
+            self.endLoading()
         })
     }
     
     func requestURL() -> String {
         let url = "https://sinoname.appspot.com/create_name?"
-        let device_id = UIDevice.current.identifierForVendor?.uuidString ?? ""
         let gender = UserData.userData(name: "Gender") as! String
         var given_name = ""
         var country = ""
         var surname = ""
-        if isForeigner {
+        if UserData.isForeigner {
             surname = UserData.userData(name: "FirstName") as! String
             given_name = UserData.userData(name: "LastName") as! String
             country = UserData.userData(name: "Country") as! String
@@ -92,7 +92,7 @@ class APIBuilder {
         for trait in traits {
             traitString.append("&trait=\(trait)")
         }
-        if isForeigner {
+        if UserData.isForeigner {
             let enHeader = "device_id=\(device_id)&platform=iOS&app_version=1.0.1&gender=\(gender)&surname=\(surname)&given_name=\(given_name)&country=\(country)&birthday=\(birthday)&num_char=\(num_char)&fixed_surname=\(fixed_surname)&fixed_first_char=\(fixed_first_char)&fixed_second_char=\(fixed_second_char)\(traitString)"
             let enUrl = "\(url)\(enHeader)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
             return enUrl

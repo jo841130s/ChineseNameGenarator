@@ -19,10 +19,28 @@ class NameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTextFields()
         nextButton.addCorner(radious: 5)
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+    }
+    
+    func setupTextFields() {
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        if UserData.isForeigner {
+            firstNameTextField.backgroundColor = .white
+            firstNameTextField.attributedPlaceholder = NSAttributedString(string: "First Name",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+            lastNameTextField.backgroundColor = .white
+            lastNameTextField.attributedPlaceholder = NSAttributedString(string: "Last Name",
+                                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        } else {
+            firstNameTextField.backgroundColor = .white
+            firstNameTextField.attributedPlaceholder = NSAttributedString(string: "姓氏",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        }
     }
 
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -99,6 +117,14 @@ class NameViewController: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+}
+
+extension NameViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
     }
     
 }

@@ -12,12 +12,16 @@ class BuyViewController: UIViewController {
 
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var closeButton: UIButton!
-    @IBOutlet weak var price1: UILabel!
+    @IBOutlet weak var price1: UIButton!
     @IBOutlet weak var number1: UILabel!
-    @IBOutlet weak var price2: UILabel!
+    @IBOutlet weak var price2: UIButton!
     @IBOutlet weak var number2: UILabel!
-    @IBOutlet weak var price3: UILabel!
+    @IBOutlet weak var price3: UIButton!
     @IBOutlet weak var number3: UILabel!
+    @IBOutlet weak var timesLabel1: UILabel!
+    @IBOutlet weak var timesLabel2: UILabel!
+    @IBOutlet weak var timesLabel3: UILabel!
+    @IBOutlet weak var purchaseTitle: UILabel!
     
     var paymentData : [[String:String]] = []
     
@@ -26,20 +30,36 @@ class BuyViewController: UIViewController {
         updateLabel()
         backgroundView.layer.cornerRadius = 10
         closeButton.layer.cornerRadius = 20
-        // Do any additional setup after loading the view.
     }
     
     func updateLabel() {
+        if UserData.isForeigner {
+            purchaseTitle.text = "Select One Package To Purchase."
+            timesLabel1.text = "Times"
+            timesLabel2.text = "Times"
+            timesLabel3.text = "Times"
+        } else {
+            purchaseTitle.text = "請選擇一個方案購買"
+            timesLabel1.text = "次"
+            timesLabel2.text = "次"
+            timesLabel3.text = "次"
+        }
+        price1.addCorner(radious: 5)
+        price2.addCorner(radious: 5)
+        price3.addCorner(radious: 5)
         for data in paymentData {
             switch data["title"] {
-            case "Five Naming Chances":
-                price1.text = data["price"]
+            case "Small Package(12 times)", "五次取名次數":
+                let price = data["price"] ?? ""
+                price1.setTitle("$\(price)", for: .normal)
                 number1.text = "5"
-            case "Twelve Naming Chances":
-                price2.text = data["price"]
+            case "Medium Package(12 times)", "十二次取名次數":
+                let price = data["price"] ?? ""
+                price2.setTitle("$\(price)", for: .normal)
                 number2.text = "12"
-            case "Twenty Naming Chances":
-                price3.text = data["price"]
+            case "Big Package(12 times)", "二十次取名次數":
+                let price = data["price"] ?? ""
+                price3.setTitle("$\(price)", for: .normal)
                 number3.text = "20"
             default:
                 break
@@ -50,14 +70,9 @@ class BuyViewController: UIViewController {
     @IBAction func closeButtonPressed(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func purchaseButtonPressed(_ sender: UIButton) {
+        IAPManager.buy(product: IAPManager.products[sender.tag])
     }
-    */
 
 }

@@ -18,6 +18,7 @@ class CountryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        countryPickerView.setValue(UIColor.black, forKeyPath: "textColor")
         nextButtonView.layer.cornerRadius = 5
         countryPickerView.delegate = self
         countryPickerView.dataSource = self
