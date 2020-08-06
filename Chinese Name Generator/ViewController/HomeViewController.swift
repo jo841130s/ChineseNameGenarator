@@ -11,7 +11,7 @@ import RealmSwift
 import Alamofire
 import MessageUI
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var middleImage: UIImageView!
     @IBOutlet var startButton: UIButton!
@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         apiBuilder.delegate = self
         apiBuilder.requestUsedCount()
         iapManager.delegate = self
