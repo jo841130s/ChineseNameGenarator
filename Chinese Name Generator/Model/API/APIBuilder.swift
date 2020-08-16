@@ -15,7 +15,7 @@ class APIBuilder {
     var delegate: APIDelegate?
     let activityIndicator : NVActivityIndicatorView
     var blackView = UIView()
-    let device_id = UIDevice.current.identifierForVendor?.uuidString ?? ""
+    var device_id = UIDevice.current.identifierForVendor?.uuidString ?? ""
     
     init() {
         let screenWidth = UIScreen.main.bounds.size.width
@@ -29,6 +29,7 @@ class APIBuilder {
         blackView.frame = UIScreen.main.bounds
         blackView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         blackView.addSubview(activityIndicator)
+        device_id = device_id+"Chinese"
     }
     
     func startLoading() {

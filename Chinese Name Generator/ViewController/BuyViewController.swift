@@ -34,7 +34,7 @@ class BuyViewController: UIViewController {
     
     func updateLabel() {
         if UserData.isForeigner {
-            purchaseTitle.text = "Select One Package To Purchase."
+            purchaseTitle.text = "Select One Package and Purchase."
             timesLabel1.text = "Times"
             timesLabel2.text = "Times"
             timesLabel3.text = "Times"
@@ -49,17 +49,17 @@ class BuyViewController: UIViewController {
         price3.addCorner(radious: 5)
         for data in paymentData {
             switch data["title"] {
-            case "Small Package(12 times)", "五次取名次數":
+            case "Small Package(5 times)", "五次取名次數":
                 let price = data["price"] ?? ""
-                price1.setTitle("$\(price)", for: .normal)
+                price1.setTitle("\(price)", for: .normal)
                 number1.text = "5"
             case "Medium Package(12 times)", "十二次取名次數":
                 let price = data["price"] ?? ""
-                price2.setTitle("$\(price)", for: .normal)
+                price2.setTitle("\(price)", for: .normal)
                 number2.text = "12"
-            case "Big Package(12 times)", "二十次取名次數":
+            case "Big Package(20 times)", "二十次取名次數":
                 let price = data["price"] ?? ""
-                price3.setTitle("$\(price)", for: .normal)
+                price3.setTitle("\(price)", for: .normal)
                 number3.text = "20"
             default:
                 break

@@ -8,7 +8,7 @@
 
 import StoreKit
 class IAPManager: NSObject {
-    static let canUsedTimes = 10
+    static let canUsedTimes = 2
     static func buyTimes() -> Int {
         return UserDefaults.standard.integer(forKey: "BuyTimes")
     }
@@ -20,15 +20,9 @@ class IAPManager: NSObject {
     fileprivate var productRequest: SKProductsRequest!
     var apiBuilder = APIBuilder()
     var delegate : IAPManagerDelegate?
-    var type = ""
     
     func getProductIDs() -> [String] {
-        if UserData.isForeigner {
-            type = "English"
-        } else {
-            type = "Chinese"
-        }
-        return ["GuangXin.ChineseNameGenerator\(type).One", "GuangXin.ChineseNameGenerator\(type).Two", "GuangXin.ChineseNameGenerator\(type).Three"]
+        return ["GuangXin.ChineseNameGeneratorChinese.One", "GuangXin.ChineseNameGeneratorChinese.Two", "GuangXin.ChineseNameGeneratorChinese.Three"]
     }
     
     func getProducts() {
@@ -56,7 +50,10 @@ extension IAPManager: SKProductsRequestDelegate {
         print(response.products)
         response.products.forEach {
             print($0.localizedTitle, $0.price, $0.localizedDescription)
-            delegate?.getPaymentInfo(info: ["title":$0.localizedTitle, "price":"\($0.price)"])
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .currency
+            let formattedPrice = formatter.string(from: $0.price) ?? ""
+            delegate?.getPaymentInfo(info: ["title":$0.localizedTitle, "price":"\(formattedPrice)"])
         }
         IAPManager.products = response.products
         DispatchQueue.main.async {
@@ -77,9 +74,9 @@ extension IAPManager: SKPaymentTransactionObserver {
                 apiBuilder.endLoading()
                 let buyTimes = UserDefaults.standard.integer(forKey: "BuyTimes")
                 var addTimes : Int = 0
-                if identifier == "GuangXin.ChineseNameGenerator\(type).One" {
+                if identifier == "GuangXin.ChineseNameGeneratorEnglish.One" {
                     addTimes = 5
-                } else if identifier == "GuangXin.ChineseNameGenerator\(type).Two" {
+                } else if identifier == "GuangXin.ChineseNameGeneratorEnglish.Two" {
                     addTimes = 12
                 } else {
                     addTimes = 20

@@ -27,9 +27,9 @@ class NameViewController: UIViewController {
     }
     
     func setupTextFields() {
-        firstNameTextField.delegate = self
-        lastNameTextField.delegate = self
         if UserData.isForeigner {
+            firstNameTextField.delegate = self
+            lastNameTextField.delegate = self
             firstNameTextField.backgroundColor = .white
             firstNameTextField.attributedPlaceholder = NSAttributedString(string: "First Name",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
@@ -37,6 +37,7 @@ class NameViewController: UIViewController {
             lastNameTextField.attributedPlaceholder = NSAttributedString(string: "Last Name",
                                                                          attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
         } else {
+            firstNameTextField.delegate = self
             firstNameTextField.backgroundColor = .white
             firstNameTextField.attributedPlaceholder = NSAttributedString(string: "姓氏",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])

@@ -50,7 +50,11 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     @IBAction func buyTimesButtonPressed(_ sender: UIButton) {
-        goPurchase()
+        if paymentData.count != 0 {
+            goPurchase()
+        } else {
+            return
+        }
     }
     
     func goPurchase() {
@@ -58,6 +62,8 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
             vc.modalPresentationStyle = .overFullScreen
             vc.paymentData = paymentData
             present(vc, animated: false, completion: nil)
+        } else {
+            print("12345678")
         }
     }
     
@@ -86,7 +92,7 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         if UserData.isForeigner {
             alert = UIAlertController(title: "Oops!", message: "You must purchase to get this function", preferredStyle: .alert)
             okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            puchaseAction = UIAlertAction(title: "purchase", style: .default, handler: { (action) in
+            puchaseAction = UIAlertAction(title: "Purchase", style: .default, handler: { (action) in
                 self.goPurchase()
             })
         } else {
@@ -126,9 +132,9 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func reachUsedLimitAlert() {
-        let alert = UIAlertController(title: "Times of naming used up!", message: "Please buy more", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let purchaseAction = UIAlertAction(title: "Buy", style: .default) { (action) in
+        let alert = UIAlertController(title: "命名次數已使用完畢!", message: "請購買已取得更多次數", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let purchaseAction = UIAlertAction(title: "購買", style: .default) { (action) in
             self.goPurchase()
         }
         alert.addAction(okAction)

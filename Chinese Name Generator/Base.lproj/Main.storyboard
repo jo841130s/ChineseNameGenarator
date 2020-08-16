@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s0F-5B-lkA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KsA-HN-EUd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -43,19 +43,19 @@
                                                 <rect key="frame" x="80" y="89.5" width="254" height="247.5"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXP-tI-jfa">
-                                                <rect key="frame" x="280.5" y="5" width="133.5" height="50"/>
+                                                <rect key="frame" x="296.5" y="5" width="117.5" height="44"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purchase" translatesAutoresizingMaskIntoConstraints="NO" id="E7h-zP-HUY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="44"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VL-xL-EX8">
-                                                        <rect key="frame" x="48.5" y="19" width="36.5" height="12"/>
+                                                        <rect key="frame" x="40.5" y="16" width="36.5" height="12"/>
                                                         <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf3-3f-Nzg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="44"/>
                                                         <connections>
                                                             <action selector="buyTimesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hFm-zc-Tj2"/>
                                                         </connections>
@@ -66,7 +66,7 @@
                                                     <constraint firstItem="E7h-zP-HUY" firstAttribute="leading" secondItem="KXP-tI-jfa" secondAttribute="leading" id="5Sg-Dw-TUx"/>
                                                     <constraint firstItem="E7h-zP-HUY" firstAttribute="top" secondItem="KXP-tI-jfa" secondAttribute="top" id="679-N6-FCm"/>
                                                     <constraint firstItem="Uf3-3f-Nzg" firstAttribute="leading" secondItem="KXP-tI-jfa" secondAttribute="leading" id="Xiz-3a-gXy"/>
-                                                    <constraint firstAttribute="height" constant="50" id="Yyu-Na-xkU"/>
+                                                    <constraint firstAttribute="height" constant="44" id="Yyu-Na-xkU"/>
                                                     <constraint firstAttribute="bottom" secondItem="E7h-zP-HUY" secondAttribute="bottom" id="Zbg-HJ-8cY"/>
                                                     <constraint firstItem="6VL-xL-EX8" firstAttribute="centerX" secondItem="KXP-tI-jfa" secondAttribute="centerX" id="Zv6-Pd-jaX"/>
                                                     <constraint firstAttribute="width" secondItem="KXP-tI-jfa" secondAttribute="height" multiplier="40:15" id="hDu-fB-5oi"/>
@@ -191,7 +191,7 @@
         <!--Buy View Controller-->
         <scene sceneID="kh7-8x-MFv">
             <objects>
-                <viewController storyboardIdentifier="BuyViewController" id="oss-T9-zB2" customClass="BuyViewController" customModule="ChineseName" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BuyViewController" id="oss-T9-zB2" customClass="BuyViewController" customModule="ChineseName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L8X-Gs-1yF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1673,19 +1673,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11Y-Hm-rht">
-                                                <rect key="frame" x="280.5" y="5" width="133.5" height="50"/>
+                                                <rect key="frame" x="296.5" y="5" width="117.5" height="44"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purchase" translatesAutoresizingMaskIntoConstraints="NO" id="5Oy-pa-HaO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="44"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVb-Uk-3ua">
-                                                        <rect key="frame" x="48.5" y="19" width="36.5" height="12"/>
+                                                        <rect key="frame" x="40.5" y="16" width="36.5" height="12"/>
                                                         <fontDescription key="fontDescription" name="LetterGothicStd-Bold" family="Letter Gothic Std" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSx-0g-2Qn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="44"/>
                                                         <connections>
                                                             <action selector="buyTimesButtonPressed:" destination="naf-BR-GVC" eventType="touchUpInside" id="Ug5-1g-QAy"/>
                                                         </connections>
@@ -1695,7 +1695,7 @@
                                                 <constraints>
                                                     <constraint firstItem="oSx-0g-2Qn" firstAttribute="top" secondItem="11Y-Hm-rht" secondAttribute="top" id="6fX-F3-jfL"/>
                                                     <constraint firstItem="kVb-Uk-3ua" firstAttribute="centerY" secondItem="11Y-Hm-rht" secondAttribute="centerY" id="6pl-cX-pRp"/>
-                                                    <constraint firstAttribute="height" constant="50" id="C1j-f5-bni"/>
+                                                    <constraint firstAttribute="height" constant="44" id="C1j-f5-bni"/>
                                                     <constraint firstAttribute="bottom" secondItem="oSx-0g-2Qn" secondAttribute="bottom" id="JPU-1y-lcd"/>
                                                     <constraint firstItem="5Oy-pa-HaO" firstAttribute="leading" secondItem="11Y-Hm-rht" secondAttribute="leading" id="K4F-d9-XWH"/>
                                                     <constraint firstAttribute="trailing" secondItem="oSx-0g-2Qn" secondAttribute="trailing" id="Kk6-I0-z9k"/>
